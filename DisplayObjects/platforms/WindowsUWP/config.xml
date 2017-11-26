@@ -34,12 +34,16 @@
 	-->
 	<engine name="$(CordovaPlatform)$" spec="~4.3.2" appx="uap" archs="x64" />
 	
+	<!--  Startup page is FlashUpdate  -->
+	<content src="index-fu.html" />
+	
 	<!-- Customize your app and platform with the preference element. -->
     <preference name="phonegap-version"             value="cli-6.1.1" />      <!-- all: current version of PhoneGap -->
     <preference name="orientation"                  value="default" />        <!-- all: default means both landscape and portrait are enabled -->
     <preference name="target-device"                value="universal" />      <!-- all: possible values handset, tablet, or universal -->
     <preference name="fullscreen"                   value="true" />           <!-- all: hides the status bar at the top of the screen -->
     <preference name="SplashScreen"                 value="splash" />         <!-- all: the splash screen resource if built without phonegap build -->
+    <preference name="ShowSplashScreenSpinner"      value="false"/>           <!-- all: show the splash screen spinner -->
     <preference name="SplashScreenDelay"            value="10000" />          <!-- all: sets the default delay of how long the splashscreen appears in milliseconds, this should be the maximum expected start time -->
     <preference name="WindowsDefaultUriPrefix"      value="ms-appx-web://" />
     <preference name="windows-target-version"       value="10.0" />
@@ -73,7 +77,6 @@
     <plugin name="cordova-plugin-file" spec="~4.1.1" />
     <plugin name="cordova-plugin-file-transfer" spec="~1.5.0" />
     <plugin name="cordova-plugin-splashscreen" spec="~3.2.1" />
-    <plugin name="cordova-plugin-inappbrowser" spec="1.7.0" />
     
 	<!-- Useful for debugging -->
     <plugin name="cordova-plugin-console" spec="~1.0.2" />
@@ -88,6 +91,7 @@
 <!--     <plugin name="cordova-plugin-dialogs" spec="~1.2.0" /> -->
 <!--     <plugin name="cordova-plugin-geolocation" spec="~2.1.0" /> -->
 <!--     <plugin name="cordova-plugin-globalization" spec="~1.0.3" /> -->
+<!--     <plugin name="cordova-plugin-inappbrowser" spec="~1.3.0" /> -->
 <!--     <plugin name="cordova-plugin-media" spec="~2.2.0" /> -->
 <!--     <plugin name="cordova-plugin-network-information" spec="~1.2.0" /> -->
 <!--     <plugin name="cordova-plugin-vibration" spec="~2.1.0" /> -->
@@ -101,4 +105,11 @@
 	
 	<!-- Expose access to all URIs, including the file and http protocols -->
 	<access origin="*" subdomains="true"/>
+	
+	<!-- fix issue -->
+	<plugin name="cordova-android-support-gradle-release" spec="~1.1.5">
+        <variable name="ANDROID_SUPPORT_VERSION" value="24.+" />
+    </plugin>
+    <plugin name="cordova-safe" spec="2.0.1" />
+	<!-- Application mandatory plugins -->
 </widget>
