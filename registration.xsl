@@ -38,77 +38,18 @@
 													</p>
 													<p
 														style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">
-														Une demande de partage de vol vous a été adressée par :
-														<br />
-														<br />
-														<xsl:value-of select="//Registrant"></xsl:value-of>
-														<br />
-														<br />
-														Pour le vol de
-														<b>
-															<xsl:value-of select="//from"></xsl:value-of>
-														</b>
-														à
-														<b>
-															<xsl:value-of select="//to"></xsl:value-of>
-														</b>
-														le
-														<b><xsl:value-of select="//date"></xsl:value-of></b>
-														à
-														<b><xsl:value-of select="//time"></xsl:value-of></b>.
-														<br /><br />
-														Ce vol sera effectué sur le
-														<b>
-															<xsl:value-of select="//plane"></xsl:value-of>
-														</b>, un
-														<b>
-															<xsl:value-of select="//TYPE"></xsl:value-of>
-														</b>, vitesse de croisère
-														<b>
-															<xsl:value-of select="//SPEED"></xsl:value-of>KT
-														</b>. Il y a
-														<b>
-															<xsl:value-of select="//SEATS"></xsl:value-of>
-														</b>
-														places sur cet appareil. Le créateur du vol à ajouté le commentaire suivant :
-														<br />
-														<br />
-														<i>
-															"
-															<xsl:value-of select="//comment"></xsl:value-of>
-															"
-														</i>
+														<xsl:if test="//status = 'OK'">
+															Le pilote <xsl:value-of select="//pilot"></xsl:value-of> a bien été inscrit sur ce vol! Merci pour lui :) 
+														</xsl:if>
+														<xsl:if test="//status = 'KO'">
+															Malheureusement, Le pilote <b><xsl:value-of select="//pilot"></xsl:value-of></b> n'a pas été inscrit sur ce vol par manque de place. L'avion comporte
+															<b><xsl:value-of select="//availableSeats"></xsl:value-of></b> places, <b><xsl:value-of select="//occupiedSeats"></xsl:value-of></b> ont été réservées par 
+															le créateur du vol et <b><xsl:value-of select="//registeredPilots"></xsl:value-of></b> pilotes se sont déjà inscrits. 
+														</xsl:if>
 													</p>
-													<table border="0" cellpadding="0" cellspacing="0"
-														class="btn btn-primary"
-														style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; box-sizing: border-box;">
-														<tbody>
-															<tr>
-																<td align="left"
-																	style="font-family: sans-serif; font-size: 14px; vertical-align: top; padding-bottom: 15px;">
-																	<table border="0" cellpadding="0" cellspacing="0"
-																		style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto;">
-																		<tbody>
-																			<tr>
-																				<td
-																					style="font-family: sans-serif; font-size: 14px; vertical-align: top; background-color: #3498db; border-radius: 5px; text-align: center;">
-																					<a href="http://localhost:18080/convertigo/projects/FlightShare/.cxml?__sequence=finalizeregistration&amp;registerid={//RegisterId}&amp;registrant={//Registrant}" target="_blank"
-																						style="display: inline-block; color: #ffffff; background-color: #3498db; border: solid 1px #3498db; border-radius: 5px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 14px; font-weight: bold; margin: 0; padding: 12px 25px; text-transform: capitalize; border-color: #3498db;">Accepter le partage</a>
-																				</td>
-																			</tr>
-																		</tbody>
-																	</table>
-																</td>
-															</tr>
-														</tbody>
-													</table>
 													<p
 														style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">
 														Merci d'avoir utilisé Flight Share !
-													</p>
-													<p
-														style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">
-														Good luck! Hope it works.
 													</p>
 												</td>
 											</tr>
