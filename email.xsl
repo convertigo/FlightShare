@@ -159,11 +159,11 @@
 														<b>
 															<xsl:value-of select="//SEATS"></xsl:value-of>
 														</b>
-														places sur cet appareil. dont
+														place(s) sur cet appareil. dont
 														<b>
 															<xsl:value-of select="//occupiedSeats"></xsl:value-of>
 														</b>
-														Sont déjà occupés. Le créateur du vol à ajouté le commentaire suivant :
+														Sont déjà occupée(s). Le créateur du vol à ajouté le commentaire suivant :
 														<br />
 														<br />
 														<i>
