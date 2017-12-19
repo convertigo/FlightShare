@@ -1,3 +1,4 @@
 /_private/
-/ionicTpl/
-/Flashupdate/
+/DisplayObjects/mobile/build
+!/DisplayObjects/mobile/build/assets
+
