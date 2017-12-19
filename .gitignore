@@ -1,4 +1,4 @@
 /_private/
-/DisplayObjects/mobile/build
-!/DisplayObjects/mobile/build/assets
+/DisplayObjects/mobile/*
+!/DisplayObjects/mobile/assets
 
