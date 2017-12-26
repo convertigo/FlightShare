@@ -360,6 +360,12 @@
 /*Begin_c8o_AppConstructor*/
 		/*End_c8o_AppConstructor*/
 /*Begin_c8o_AppInitialization*/
+                if (window["cordova"]) {
+                    if (window["cordova"].platformId == 'android') {
+                        statusBar.backgroundColorByHexString("#253cbc")
+                        statusBar.styleLightContent()
+                    }
+                }
 			/*End_c8o_AppInitialization*/
 /*Begin_c8o_AppFunction*/
 	/*End_c8o_AppFunction*/
