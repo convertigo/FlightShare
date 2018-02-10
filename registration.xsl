@@ -31,7 +31,7 @@
 												<td
 													style="font-family: sans-serif; font-size: 14px; vertical-align: top;">
 													<img src="http://www.aeroclub-atcf.com/img/atcf.png"></img>
-													<h1>Le demande à été traitée.</h1>
+													<h1>Le demande a bien été traitée.</h1>
 													<p
 														style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">
 														Bonjour,
