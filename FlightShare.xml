@@ -348,7 +348,7 @@
 <!--      <Request single-valued variable : doc>                                                                                                          --><variable classname="com.twinsoft.convertigo.beans.variables.RequestableVariable" newPriority="1509632285479" priority="1509632285479"><property name="bSoapArray"><java.lang.Boolean value="false"/></property><property name="cachedKey"><java.lang.Boolean value="true"/></property><property name="comment"><java.lang.String value=""/></property><property name="description"><java.lang.String value="new variable"/></property><property name="isFileUpload"><java.lang.Boolean value="false"/></property><property name="name"><java.lang.String value="doc"/></property><property name="personalizable"><java.lang.Boolean value="false"/></property><property name="required"><java.lang.Boolean value="false"/></property><property name="schemaType"><java.lang.String value="xsd:string"/></property><property isNull="true" name="value"><java.lang.String value=""/></property><property name="visibility"><java.lang.Integer value="0"/></property><property name="wsdl"><java.lang.Boolean value="true"/></property><property name="xmlTypeAffectation"><xmlizable classname="com.twinsoft.convertigo.beans.common.XmlQName"><schemaDefinition pLocalPart="string" pNamespace="http://www.w3.org/2001/XMLSchema"/></xmlizable></property>
 <!--      </Request single-valued variable : doc>                                                                                                         --></variable>
 <!--   </Generic Sequence : RegisterOnFlight>                                                                                                             --></sequence>
-<!--   <Mobile application : MobileApplication>                                                                                                           --><mobileapplication classname="com.twinsoft.convertigo.beans.core.MobileApplication" priority="0"><property name="accessibility"><java.lang.String value="Public"/></property><property name="applicationAuthorEmail"><java.lang.String value="sales@convertigo.com"/></property><property name="applicationAuthorName"><java.lang.String value="Convertigo"/></property><property name="applicationAuthorSite"><java.lang.String value="http://www.convertigo.com"/></property><property name="applicationDescription"><java.lang.String value="Flying Club flight sharing application"/></property><property name="applicationId"><java.lang.String value="com.convertigo.flightshare"/></property><property name="applicationName"><java.lang.String value="Flight Share"/></property><property name="applicationVersion"><java.lang.String value="1.0"/></property><property name="authenticationToken"><java.lang.String value=""/></property><property name="buildMode"><java.lang.String value="full"/></property><property name="comment"><java.lang.String value="Describes the mobile application global properties"/></property><property name="enableFlashUpdate"><java.lang.Boolean value="true"/></property><property name="endpoint"><java.lang.String value="https://trial.convertigo.net/cems"/></property><property name="flashUpdateTimeout"><java.lang.Long value="5000"/></property><property name="fsConnector"><java.lang.String value=""/></property><property name="fsDesignDocument"><java.lang.String value=""/></property><property name="name"><java.lang.String value="MobileApplication"/></property><property name="requireUserConfirmation"><java.lang.Boolean value="false"/></property><property name="splashRemoveMode"><java.lang.String value="beforeUpdate"/></property>
+<!--   <Mobile application : MobileApplication>                                                                                                           --><mobileapplication classname="com.twinsoft.convertigo.beans.core.MobileApplication" priority="0"><property name="accessibility"><java.lang.String value="Public"/></property><property name="applicationAuthorEmail"><java.lang.String value="sales@convertigo.com"/></property><property name="applicationAuthorName"><java.lang.String value="Convertigo"/></property><property name="applicationAuthorSite"><java.lang.String value="http://www.convertigo.com"/></property><property name="applicationDescription"><java.lang.String value="Flying Club flight sharing application"/></property><property name="applicationId"><java.lang.String value="com.convertigo.flightshare"/></property><property name="applicationName"><java.lang.String value="Flight Share"/></property><property name="applicationVersion"><java.lang.String value="1.0"/></property><property name="authenticationToken"><java.lang.String value=""/></property><property name="buildMode"><java.lang.String value="full"/></property><property name="comment"><java.lang.String value="Describes the mobile application global properties"/></property><property name="enableFlashUpdate"><java.lang.Boolean value="true"/></property><property name="endpoint"><java.lang.String value="https://mb.convertigo.net/cems"/></property><property name="flashUpdateTimeout"><java.lang.Long value="5000"/></property><property name="fsConnector"><java.lang.String value=""/></property><property name="fsDesignDocument"><java.lang.String value=""/></property><property name="name"><java.lang.String value="MobileApplication"/></property><property name="requireUserConfirmation"><java.lang.Boolean value="false"/></property><property name="splashRemoveMode"><java.lang.String value="beforeUpdate"/></property>
 <!--      <Android : Android>                                                                                                                             --><mobileplatform classname="com.twinsoft.convertigo.beans.mobileplatforms.Android" priority="0"><property name="androidCertificatePw"><java.lang.String value=""/></property><property name="androidCertificateTitle"><java.lang.String value=""/></property><property name="androidKeystorePw"><java.lang.String value=""/></property><property name="comment"><java.lang.String value="Android 4.4 to 6 for Smartphones and Tablets"/></property><property name="cordovaPlatform"><java.lang.String value="android"/></property><property name="name"><java.lang.String value="Android"/></property>
 <!--      </Android : Android>                                                                                                                            --></mobileplatform>
 <!--      <iOS : iOS>                                                                                                                                     --><mobileplatform classname="com.twinsoft.convertigo.beans.mobileplatforms.IOs" priority="0"><property name="comment"><java.lang.String value="Use&#13;&#10;&#13;&#10;iOSCertificate Title : ConvertigoDistribution&#13;&#10;Password: convertigo91&#13;&#10;&#13;&#10;For production.&#13;&#10;&#13;&#10;Leave empty for Dev mode.&#13;&#10;"/></property><property name="cordovaPlatform"><java.lang.String value="ios"/></property><property name="iOSCertificatePw"><java.lang.String value=""/></property><property name="iOSCertificateTitle"><java.lang.String value=""/></property><property name="name"><java.lang.String value="iOS"/></property>
@@ -813,7 +813,63 @@
     		        limit: 500,
     		        descending: this.router.sharedObject.firstBefore ? this.router.sharedObject.firstBefore : false 
     		    })
-    	        .then(() => {
+    	        .then((data) => {
+    	            let keys: string[] = []
+                    this["usersInfo"] = {}
+                    this["seatsInfo"] = {}
+                    this["seatsByPlane"] = {}
+                
+                
+                    // For each flight , read the 'by' field and push it to the keys array
+                    for (var i=0; i < data.rows.length; i++) {
+                        keys.push(data.rows[i].value.by)
+                    }
+                
+                    // Call the 'users' FS view to get the display name of each user used in the 'by' field 
+                    this.c8o.callJsonObject("fs://flightshare_fullsync.view", {
+                        ddoc: "Design_document",
+                        view: "users"
+                    })
+                    .then((res, param) => {
+                        // Walk the results to associate the 'by' field with the pilot's DisplayName
+                        for (i=0; i< res["rows"].length; i++)  {
+                            // this.c8o.log.debug("Name : " + JSON.stringify(res["rows"][i].value.userinfo.displayName))
+                            this["usersInfo"][res["rows"][i].id] = res["rows"][i].value.userinfo.displayName
+                        }
+                        
+                        // Now Resolve Seat information..
+                        // For each flight , read the 'plane' field and push it to the keys array
+                        keys = [];
+                        for (var i=0; i < data.rows.length; i++) {
+                            keys.push(data.rows[i].value.plane)
+                        }
+    
+                        this.c8o.callJsonObject("fs://flightshare_fullsync.view", {
+                            ddoc: "Design_document",
+                            view: "PlanesByTag",
+                            keys: keys
+                        })
+                        .then((res, param) => {
+                            // Walk the results to associate the 'SEATS' field with the PLANE Id
+                            for (i=0; i< res["rows"].length; i++)  {
+                                this.c8o.log.debug("Plane : " + JSON.stringify(res["rows"][i]))
+                                let planeSeats = res["rows"][i].value.SEATS * 1
+                                this["seatsByPlane"][keys[i]] = planeSeats
+                            }
+                            
+                            // Now for each flight, compute the number of available seats.
+                            for (i=0; i < data.rows.length; i++) {
+                                let flight = data.rows[i]
+                                this["seatsInfo"][flight.id] =
+                                    this["seatsByPlane"][flight.value.plane] * 1 -
+                                    flight.value.occupiedSeats  * 1 -
+                                    (flight.value.registeredPilots ? Object.keys(flight.value.registeredPilots).length : 0)  
+                            }
+                            resolve()
+                            return null
+                        })
+                        return null
+                    })
     	            resolve()
     	        })
     		})
@@ -826,7 +882,7 @@
 //		viewCtrl.dismiss()
 		evt.publish("SettingChanged", {})
 		resolve();
-]]></com.twinsoft.convertigo.beans.common.FormatedContent></xmlizable></property><property name="comment"><java.lang.String value="Trigger a setting change artificially to display the page"/></property><property name="cordova_plugins"><xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector"><com.twinsoft.convertigo.beans.common.XMLVector/></xmlizable></property><property name="isEnabled"><java.lang.Boolean value="true"/></property><property name="module_ng_imports"><xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector"><com.twinsoft.convertigo.beans.common.XMLVector/></xmlizable></property><property name="module_ng_providers"><xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector"><com.twinsoft.convertigo.beans.common.XMLVector/></xmlizable></property><property name="module_ts_imports"><xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector"><com.twinsoft.convertigo.beans.common.XMLVector/></xmlizable></property><property name="name"><java.lang.String value="PublishChanges"/></property><property name="orderedComponents"><xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector"><com.twinsoft.convertigo.beans.common.XMLVector><xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector"><com.twinsoft.convertigo.beans.common.XMLVector/></xmlizable></com.twinsoft.convertigo.beans.common.XMLVector></xmlizable></property><property name="package_dependencies"><xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector"><com.twinsoft.convertigo.beans.common.XMLVector/></xmlizable></property><property name="page_ts_imports"><xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector"><com.twinsoft.convertigo.beans.common.XMLVector><xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector"><com.twinsoft.convertigo.beans.common.XMLVector><java.lang.String value="Events, ViewController"/><java.lang.String value="ionic-angular"/></com.twinsoft.convertigo.beans.common.XMLVector></xmlizable></com.twinsoft.convertigo.beans.common.XMLVector></xmlizable></property>
+]]></com.twinsoft.convertigo.beans.common.FormatedContent></xmlizable></property><property name="comment"><java.lang.String value="Trigger a setting change artificially to display the page"/></property><property name="cordova_plugins"><xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector"><com.twinsoft.convertigo.beans.common.XMLVector/></xmlizable></property><property name="isEnabled"><java.lang.Boolean value="true"/></property><property name="module_ng_imports"><xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector"><com.twinsoft.convertigo.beans.common.XMLVector/></xmlizable></property><property name="module_ng_providers"><xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector"><com.twinsoft.convertigo.beans.common.XMLVector/></xmlizable></property><property name="module_ts_imports"><xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector"><com.twinsoft.convertigo.beans.common.XMLVector/></xmlizable></property><property name="name"><java.lang.String value="PublishChanges"/></property><property name="orderedComponents"><xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector"><com.twinsoft.convertigo.beans.common.XMLVector><xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector"><com.twinsoft.convertigo.beans.common.XMLVector/></xmlizable></com.twinsoft.convertigo.beans.common.XMLVector></xmlizable></property><property name="package_dependencies"><xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector"><com.twinsoft.convertigo.beans.common.XMLVector/></xmlizable></property><property name="page_ts_imports"><xmlizable classname="com.twinsoft.convertigo.beans.common.XMLVector"><com.twinsoft.convertigo.beans.common.XMLVector/></xmlizable></property>
 <!--                  </CustomAction : PublishChanges>                                                                                                    --></mobilecomponent>
 <!--               </CustomAction : SubscribeToSettingChanges>                                                                                            --></mobilecomponent>
 <!--            </PageEvent : PageEvent>                                                                                                                  --></mobilecomponent>
