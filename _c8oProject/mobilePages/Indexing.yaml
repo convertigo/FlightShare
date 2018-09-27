@@ -1,0 +1,223 @@
+comment: This page is there to index the views for the first time the app is launched
+inAutoMenu: false
+segment: Indexing
+title: Title for Indexing
+↓Content [mobile.components.UIDynamicElement-1520963766919]: 
+  beanData: '{"ionBean":"Content"}'
+  tagName: ion-content
+  ↓Grid [mobile.components.UIDynamicElement-1520964009356]: 
+    beanData: '{"ionBean":"Grid","Height":"plain:height:100%"}'
+    tagName: ion-grid
+    ↓GridRow [mobile.components.UIDynamicElement-1520964016330]: 
+      beanData: |
+        '{
+         "ionBean": "GridRow",
+         "Height": "plain:height:80%",
+         "AlignItemsCenter": "plain:align-items-center"
+        }'
+      tagName: ion-row
+      ↓GridCol [mobile.components.UIDynamicElement-1520964020265]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓TextFormat [mobile.components.UIDynamicElement-1520963840548]: 
+          beanData: '{"ionBean":"TextFormat","TextCenter":"plain:text-center"}'
+          tagName: div
+          ↓Directive [mobile.components.UIControlDirective-1521196461996]: 
+            directiveName: If
+            directiveSource: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                - MobileSmartSourceType: script:!global.indexed
+            ↓H1 [mobile.components.UIDynamicElement-1520963872100]: 
+              beanData: |
+                '{
+                 "ionBean": "Heading1",
+                 "ionText": "plain:ion-text",
+                 "IonColor": "plain:primary"
+                }'
+              tagName: h1
+              ↓Text [mobile.components.UIText-1520963847569]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: plain:Nous préparons l'application pour la première utilisation...
+            ↓Icon [mobile.components.UIDynamicElement-1520964156811]: 
+              beanData: |
+                '{
+                 "ionBean": "Icon",
+                 "IconName": "plain:plane",
+                 "IonColor": "plain:primary"
+                }'
+              tagName: ion-icon
+              ↓Style [mobile.components.UIStyle-1520964201138]: 
+                styleContent: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                      →: |
+                        '	font-size: 80pt;
+                        	animation-iteration-count :infinite;
+                        '
+              ↓Attr [mobile.components.UIAttribute-1520964256528]: 
+                attrName: class
+                attrValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: plain:animated bounce
+          ↓Directive1 [mobile.components.UIControlDirective-1521196514942]: 
+            directiveName: If
+            directiveSource: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                - MobileSmartSourceType: script:global.indexed
+            ↓H1 [mobile.components.UIDynamicElement-1521196633991]: 
+              beanData: |
+                '{
+                 "ionBean": "Heading1",
+                 "ionText": "plain:ion-text",
+                 "IonColor": "plain:primary"
+                }'
+              tagName: h1
+              ↓Text [mobile.components.UIText-1521196634140]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: plain:Votre application est prête...
+              ↓Attr [mobile.components.UIAttribute-1521196756226]: 
+                attrName: class
+                attrValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: plain:animated fadeIn
+            ↓Icon [mobile.components.UIDynamicElement-1521196515838]: 
+              beanData: |
+                '{
+                 "ionBean": "Icon",
+                 "IconName": "plain:plane",
+                 "IonColor": "plain:secondary"
+                }'
+              tagName: ion-icon
+              ↓Style [mobile.components.UIStyle-1521196516043]: 
+                styleContent: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                      →: |
+                        '	font-size: 80pt;
+                        	animation-iteration-count :infinite;
+                        '
+        ↓SlidesContainer [mobile.components.UIDynamicElement-1520965274835]: 
+          beanData: '{"ionBean":"Slides"}'
+          tagName: ion-slides
+          ↓SlideItem [mobile.components.UIDynamicElement-1520965295794]: 
+            beanData: '{"ionBean":"Slide"}'
+            tagName: ion-slide
+            ↓H4 [mobile.components.UIDynamicElement-1520965324464]: 
+              beanData: '{"ionBean":"Heading4"}'
+              tagName: h4
+              ↓Text [mobile.components.UIText-1520965332098]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: plain:Créez vos vols dans votre espace personnel. Vous pourrez spécifier l'origine, la destination, l'avion de votre choix et le nombre de siéges (y compris vous) que vous allez occuper dans l'avion.
+              ↓Style [mobile.components.UIStyle-1520965508229]: 
+                styleContent: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                      →: |
+                        '	margin-bottom: 60px;
+                        '
+          ↓SlideItem1 [mobile.components.UIDynamicElement-1520965299603]: 
+            beanData: '{"ionBean":"Slide"}'
+            tagName: ion-slide
+            ↓H4 [mobile.components.UIDynamicElement-1520965701427]: 
+              beanData: '{"ionBean":"Heading4"}'
+              tagName: h4
+              ↓Text [mobile.components.UIText-1520965701584]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: plain:Créez vos vols dans votre espace personnel. Vous pourrez spécifier l'origine, la destination, l'avion de votre choix et le nombre de siéges (y compris vous) que vous allez occuper dans l'avion.
+              ↓Style [mobile.components.UIStyle-1520965701749]: 
+                styleContent: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                      →: |
+                        '	margin-bottom: 60px;
+                        
+                        '
+          ↓SlideItem2 [mobile.components.UIDynamicElement-1520965302303]: 
+            beanData: '{"ionBean":"Slide"}'
+            tagName: ion-slide
+    ↓GridRow1 [mobile.components.UIDynamicElement-1521194521765]: 
+      beanData: |
+        '{
+         "ionBean": "GridRow",
+         "Height": "plain:height:20%",
+         "AlignItemsCenter": "plain:align-items-center"
+        }'
+      tagName: ion-row
+      ↓GridCol [mobile.components.UIDynamicElement-1521194522203]: 
+        beanData: '{"ionBean":"GridCol","AlignItemsEnd":"plain:align-self-end"}'
+        tagName: ion-col
+        ↓TextFormat [mobile.components.UIDynamicElement-1521194522471]: 
+          beanData: '{"ionBean":"TextFormat","TextCenter":"plain:text-center"}'
+          tagName: div
+          ↓Directive [mobile.components.UIControlDirective-1521196344957]: 
+            directiveName: If
+            directiveSource: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                - MobileSmartSourceType: script:global.indexed
+            ↓Button [mobile.components.UIDynamicElement-1521194600258]: 
+              beanData: '{"ionBean":"Button"}'
+              tagName: button
+              ↓Text [mobile.components.UIText-1521194613802]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: plain:Commencer...
+              ↓Attr [mobile.components.UIAttribute-1521196715901]: 
+                attrName: class
+                attrValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: plain:animated fadeIn
+↓PageEvent [mobile.components.UIPageEvent-1520964487452]: 
+  ↓QueryViewAirports [mobile.components.UIDynamicAction-1520964506324]: 
+    beanData: |
+      '{
+       "ionBean": "FullSyncViewAction",
+       "fsview": "plain:FlightShare.flightshare_fullsync.Design_document.AirportsByIACOOrCity",
+       "limit": "script:1"
+      }'
+    ↓QueryViewPlanes [mobile.components.UIDynamicAction-1520964576631]: 
+      beanData: |
+        '{
+         "ionBean": "FullSyncViewAction",
+         "fsview": "plain:FlightShare.flightshare_fullsync.Design_document.PlanesByTag",
+         "limit": "script:1"
+        }'
+      ↓QueryViewFlights [mobile.components.UIDynamicAction-1520964621105]: 
+        beanData: |
+          '{
+           "ionBean": "FullSyncViewAction",
+           "fsview": "plain:FlightShare.flightshare_fullsync.Design_document.Flights",
+           "limit": "script:1"
+          }'
+        ↓QueryViewSharedFlights [mobile.components.UIDynamicAction-1520964726817]: 
+          beanData: |
+            '{
+             "ionBean": "FullSyncViewAction",
+             "fsview": "plain:FlightShare.flightshare_fullsync.Design_document.PublishedFlights",
+             "limit": "script:1"
+            }'
+          ↓SetGlobal [mobile.components.UIDynamicAction-1521196401687]: 
+            beanData: |
+              '{
+               "ionBean": "SetGlobalAction",
+               "Property": "plain:indexed",
+               "Value": "script:true"
+              }'

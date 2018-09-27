@@ -1,0 +1,497 @@
+inAutoMenu: false
+scriptContent: 
+  - xmlizable: 
+    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+      →: |
+        /*Begin_c8o_PageImport*/
+        /*End_c8o_PageImport*/
+        /*Begin_c8o_PageDeclaration*/
+        	/*End_c8o_PageDeclaration*/
+        /*Begin_c8o_PageConstructor*/
+        		/*End_c8o_PageConstructor*/
+        /*Begin_c8o_PageFunction*/
+        	/*End_c8o_PageFunction*/
+segment: SharedFlights
+title: Vols partagés
+↓Header [mobile.components.UIDynamicElement-1508945977194]: 
+  beanData: '{"ionBean":"Header"}'
+  comment: Page header
+  tagName: ion-header
+  ↓NavBar [mobile.components.UIDynamicElement-1508945977208]: 
+    beanData: '{"ionBean":"NavBar","IonColor":"plain:light"}'
+    tagName: ion-navbar
+    ↓BarTitle [mobile.components.UIDynamicElement-1508945977223]: 
+      beanData: '{"ionBean":"BarTitle"}'
+      tagName: ion-title
+      ↓Text [mobile.components.UIText-1508945977241]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:Vols Publiés
+    ↓Button [mobile.components.UIDynamicElement-1508945977260]: 
+      beanData: |
+        '{
+         "ionBean": "Button",
+         "ButtonFormType": "plain:false",
+         "MenuMode": "plain:menuToggle"
+        }'
+      comment: A button to toggle the menu
+      tagName: button
+      ↓Icon [mobile.components.UIDynamicElement-1508945977277]: 
+        beanData: '{"ionBean":"Icon","IconName":"plain:menu"}'
+        tagName: ion-icon
+    ↓ButtonSet [mobile.components.UIDynamicElement-1508945977295]: 
+      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:right"}'
+      tagName: ion-buttons
+      ↓Button [mobile.components.UIDynamicElement-1508945977317]: 
+        beanData: '{"ionBean":"Button","ButtonFormType":"plain:false"}'
+        tagName: button
+        ↓Icon [mobile.components.UIDynamicElement-1508945977338]: 
+          beanData: '{"ionBean":"Icon","IconName":"plain:options"}'
+          tagName: ion-icon
+        ↓Event [mobile.components.UIControlEvent-1519223596562]: 
+          ↓Popover [mobile.components.UIDynamicAction-1519227923727]: 
+            beanData: |
+              '{
+               "ionBean": "PopoverAction",
+               "page": "plain:FlightShare.MobileApplication.Application.FlightConf",
+               "showBackdrop": "plain:true",
+               "enableBackdropDismiss": "plain:true"
+              }'
+↓Content [mobile.components.UIDynamicElement-1508945999552]: 
+  beanData: '{"ionBean":"Content"}'
+  tagName: ion-content
+  ↓List [mobile.components.UIDynamicElement-1509572856435]: 
+    beanData: '{"ionBean":"List"}'
+    tagName: ion-list
+    ↓Directive [mobile.components.UIControlDirective-1509573021875]: 
+      directiveExpression: let i = index
+      directiveSource: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#SHAREDFLIGHTS, {ddoc='Design_document', view='PublishedFlights'}'])?.rows"}
+      ↓Sliding [mobile.components.UIDynamicElement-1509573147492]: 
+        beanData: '{"ionBean":"Sliding"}'
+        tagName: ion-item-sliding
+        ↓Button [mobile.components.UIDynamicElement-1509573147510]: 
+          beanData: |
+            '{
+             "ionBean": "Button",
+             "ButtonFormType": "plain:false",
+             "ButtonType": "plain:ion-item"
+            }'
+          tagName: button
+          ↓Thumbnail [mobile.components.UIDynamicElement-1509573147677]: 
+            beanData: '{"ionBean":"Thumbnail"}'
+            tagName: ion-thumbnail
+            ↓Image [mobile.components.UIDynamicElement-1509573147689]: 
+              beanData: |
+                '{
+                 "ionBean": "Image",
+                 "url": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"''assets\\\/images\\\/'' + item1509573021875?.doc?.PublishedFlight?.plane + ''.jpg''\"}",
+                 "width": "plain:40%"
+                }'
+              selfClose: true
+              tagName: img
+              ↓AdjustImageSize [mobile.components.UIStyle-1519029325667]: 
+                styleContent: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                      →: |
+                        '	width: 110px ! important;
+                        	height: 90px ! important;
+                        '
+              ↓MakeRoundCornerAndShadow [mobile.components.UIStyle-1519135587864]: 
+                styleContent: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                      →: |
+                        '	border-radius: 2px;
+                        	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                        '
+          ↓Event [mobile.components.UIControlEvent-1509573147701]: 
+            attrName: (click)
+            eventName: onClick
+            ↓QueryView [mobile.components.UIDynamicAction-1511723476098]: 
+              beanData: |
+                '{
+                 "ionBean": "FullSyncViewAction",
+                 "marker": "plain:SHOWPUBLISHEDFLIGHTSDETAILS",
+                 "fsview": "plain:FlightShare.flightshare_fullsync.Design_document.PublishedFlightsDetails",
+                 "__live": "plain:ID2",
+                 "include_docs": "plain:true",
+                 "key": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1509573021875?.id\"}"
+                }'
+          ↓Heading1 [mobile.components.UIDynamicElement-1509573147546]: 
+            beanData: '{"ionBean":"Heading1"}'
+            tagName: h1
+            ↓Text [mobile.components.UIText-1509573147587]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509573021875?.doc?.PublishedFlight?.from"}
+            ↓Text2 [mobile.components.UIText-1509573147599]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:-
+            ↓Text1 [mobile.components.UIText-1509573147614]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509573021875?.doc?.PublishedFlight?.to"}
+            ↓Attr [mobile.components.UIAttribute-1519666898695]: 
+              attrName: class
+              attrValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:animated fadeInRight
+            ↓Attr1 [mobile.components.UIAttribute-1519667719637]: 
+              attrName: '[style.animation-delay]'
+              attrValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:0.1 * i  +  's'
+            ↓Attr3 [mobile.components.UIAttribute-1519814630817]: 
+              attrName: '[style.animation-duration]'
+              attrValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:0.1s
+          ↓Heading2 [mobile.components.UIDynamicElement-1509573147627]: 
+            beanData: '{"ionBean":"Heading2"}'
+            tagName: h2
+            ↓Text1 [mobile.components.UIText-1509573147640]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509573021875?.doc?.PublishedFlight?.date"}
+            ↓Attr [mobile.components.UIAttribute-1519667235969]: 
+              attrName: class
+              attrValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:animated fadeInRight
+            ↓Attr1 [mobile.components.UIAttribute-1519667715255]: 
+              attrName: '[style.animation-delay]'
+              attrValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:0.1 * i  +  's'
+            ↓Attr3 [mobile.components.UIAttribute-1519814637069]: 
+              attrName: '[style.animation-duration]'
+              attrValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:0.1s
+          ↓Heading51 [mobile.components.UIDynamicElement-1509574255504]: 
+            beanData: '{"ionBean":"Heading5"}'
+            tagName: h5
+            ↓Attr [mobile.components.UIAttribute-1519667242518]: 
+              attrName: class
+              attrValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:animated fadeInRight
+            ↓Attr1 [mobile.components.UIAttribute-1519667242564]: 
+              attrName: '[style.animation-delay]'
+              attrValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:0.1 * i  +  's'
+            ↓Attr3 [mobile.components.UIAttribute-1519814640746]: 
+              attrName: '[style.animation-duration]'
+              attrValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:0.1s
+            ↓Directive [mobile.components.UIControlDirective-1519917742435]: 
+              directiveName: If
+              directiveSource: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:usersInfo
+              ↓Text1 [mobile.components.UIText-1509574418278]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: 'plain:Par : '
+              ↓Text [mobile.components.UIText-1509574255518]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"usersInfo[item1509573021875?.doc?.PublishedFlight?.by]"}
+          ↓Heading511 [mobile.components.UIDynamicElement-1518453902811]: 
+            beanData: '{"ionBean":"Heading5"}'
+            tagName: h5
+            ↓Directive [mobile.components.UIControlDirective-1518531659307]: 
+              directiveName: If
+              directiveSource: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:seatsInfo != undefined
+              ↓Text1 [mobile.components.UIText-1518453902949]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: plain:Places libres :
+              ↓Text111 [mobile.components.UIText-1518516641699]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"seatsInfo[item1509573021875?.id]"}
+              ↓Text [mobile.components.UIText-1518981068518]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: 'plain: / '
+              ↓Text2 [mobile.components.UIText-1518981083267]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"seatsByPlane[item1509573021875?.value?.plane]"}
+              ↓Directive [mobile.components.UIControlDirective-1518957894376]: 
+                directiveName: If
+                directiveSource: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"seatsInfo[item1509573021875?.id] == 0"}
+                ↓NoMoreSteatsImage [mobile.components.UIDynamicElement-1518955273302]: 
+                  beanData: |
+                    '{
+                     "ionBean": "Image",
+                     "url": "script:''assets\/images\/RedFlag.png''",
+                     "width": "plain:60%"
+                    }'
+                  selfClose: true
+                  tagName: img
+                  ↓Style [mobile.components.UIStyle-1518957557894]: 
+                    styleContent: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                        - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                          →: |
+                            '	position: absolute;
+                            	right : 0px;
+                            	top: 0px;
+                            	z-index: -10;
+                            '
+            ↓Attr [mobile.components.UIAttribute-1519667247070]: 
+              attrName: class
+              attrValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:animated fadeInRight
+            ↓Attr1 [mobile.components.UIAttribute-1519667736455]: 
+              attrName: '[style.animation-delay]'
+              attrValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:0.1 * i  +  's'
+            ↓Attr3 [mobile.components.UIAttribute-1519814645481]: 
+              attrName: '[style.animation-duration]'
+              attrValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:0.1s
+          ↓Heading5 [mobile.components.UIDynamicElement-1509573147652]: 
+            beanData: '{"ionBean":"Heading5"}'
+            tagName: h5
+            ↓Text [mobile.components.UIText-1509573147665]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509573021875?.doc?.PublishedFlight?.comment"}
+            ↓Attr [mobile.components.UIAttribute-1519667251471]: 
+              attrName: class
+              attrValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:animated fadeInRight
+            ↓Attr1 [mobile.components.UIAttribute-1519667756378]: 
+              attrName: '[style.animation-delay]'
+              attrValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:0.1 * i  +  's'
+            ↓Attr3 [mobile.components.UIAttribute-1519814648796]: 
+              attrName: '[style.animation-duration]'
+              attrValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:0.1s
+          ↓Attr3 [mobile.components.UIAttribute-1519814512283]: 
+            attrName: '[style.animation-duration]'
+            attrValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                - MobileSmartSourceType: plain:0.1s
+        ↓SlidingOption [mobile.components.UIDynamicElement-1509573147802]: 
+          beanData: '{"ionBean":"SlidingOption","side":"plain:left"}'
+          tagName: ion-item-options
+          ↓Button [mobile.components.UIDynamicElement-1509573147815]: 
+            beanData: '{"ionBean":"Button","ButtonFormType":"plain:false"}'
+            tagName: button
+            ↓Text [mobile.components.UIText-1509573147829]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:Modifier...
+↓Footer [mobile.components.UIDynamicElement-1508945993860]: 
+  beanData: '{"ionBean":"Footer"}'
+  comment: Page footer
+  tagName: ion-footer
+↓PageEvent [mobile.components.UIPageEvent-1509572889304]: 
+  viewEvent: onWillEnter
+  ↓SubscribeToSettingChanges [mobile.components.UICustomAction-1519307482313]: 
+    actionValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+        - com.twinsoft.convertigo.beans.common.FormatedContent: 
+          →: |
+            '    		if (page["subscribed"]) {
+                		    return;
+            		    }
+                		
+                        let evt = this.getInstance(Events)
+                		evt.subscribe("SettingChanged", () => {
+                		    this.c8o.log.debug(''Settings changed...'')
+                		    
+                            // We have to invert startkey and endkey if descending is true
+                		    let startkey = this.router.sharedObject.onlyFuture ? new Date().getTime() + ''-00:00'' : "0"
+                		    let endkey   =  "999999999999999"
+                		    this.call("fs://flightshare_fullsync.view#SHAREDFLIGHTS", {
+                		        ddoc: "Design_document",
+                		        view: "PublishedFlights",
+                		        __live: "ID1",
+                		        include_docs: true,
+                		        startkey: this.router.sharedObject.firstBefore ? endkey: startkey , 
+                		        endkey:  this.router.sharedObject.firstBefore ? startkey: endkey ,       
+                		        limit: 500,
+                		        descending: this.router.sharedObject.firstBefore ? this.router.sharedObject.firstBefore : false 
+                		    })
+                	        .then((data) => {
+                	            let keys: string[] = []
+                                this["usersInfo"] = {}
+                                this["seatsInfo"] = {}
+                                this["seatsByPlane"] = {}
+                            
+                            
+                                // For each flight , read the ''by'' field and push it to the keys array
+                                for (var i=0; i < data.rows.length; i++) {
+                                    keys.push(data.rows[i].value.by)
+                                }
+                            
+                                // Call the ''users'' FS view to get the display name of each user used in the ''by'' field 
+                                this.c8o.callJsonObject("fs://flightshare_fullsync.view", {
+                                    ddoc: "Design_document",
+                                    view: "users"
+                                })
+                                .then((res, param) => {
+                                    // Walk the results to associate the ''by'' field with the pilot''s DisplayName
+                                    for (i=0; i< res["rows"].length; i++)  {
+                                        // this.c8o.log.debug("Name : " + JSON.stringify(res["rows"][i].value.userinfo.displayName))
+                                        this["usersInfo"][res["rows"][i].id] = res["rows"][i].value.userinfo.displayName
+                                    }
+                                    
+                                    page.c8o.log.debug("USers are : " + JSON.stringify(this["usersInfo"]))
+                                    
+                                    // Now Resolve Seat information..
+                                    // For each flight , read the ''plane'' field and push it to the keys array
+                                    keys = [];
+                                    for (var i=0; i < data.rows.length; i++) {
+                                        keys.push(data.rows[i].value.plane)
+                                    }
+                
+                                    this.c8o.callJsonObject("fs://flightshare_fullsync.view", {
+                                        ddoc: "Design_document",
+                                        view: "PlanesByTag",
+                                        keys: keys
+                                    })
+                                    .then((res, param) => {
+                                        // Walk the results to associate the ''SEATS'' field with the PLANE Id
+                                        for (i=0; i< res["rows"].length; i++)  {
+                                            this.c8o.log.debug("Plane : " + JSON.stringify(res["rows"][i]))
+                                            let planeSeats = res["rows"][i].value.SEATS * 1
+                                            this["seatsByPlane"][keys[i]] = planeSeats
+                                        }
+                                        
+                                        // Now for each flight, compute the number of available seats.
+                                        for (i=0; i < data.rows.length; i++) {
+                                            let flight = data.rows[i]
+                                            
+            /*                          Before occupiedSeats represented the planned occupancy but now it represents the available seats.. 
+                                            this["seatsInfo"][flight.id] =
+                                                this["seatsByPlane"][flight.value.plane] * 1 -
+                                                flight.value.occupiedSeats  * 1 -
+                                                (flight.value.registeredPilots ? Object.keys(flight.value.registeredPilots).length : 0)
+            */                                
+                                            this["seatsInfo"][flight.id] = flight.value.occupiedSeats  * 1 -
+                                                                             (flight.value.registeredPilots ? Object.keys(flight.value.registeredPilots).length : 0)
+                                                
+                                        }
+                                        return null
+                                    })
+                                    return null
+                                })
+                	        })
+                		})
+                		page["subscribed"] = evt;
+                        resolve();
+                '
+    comment: If Setting changes, reexecute a Query with new settings
+    page_ts_imports: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: Events
+              - java.lang.String: 
+                - ↑value: ionic-angular
+    ↓PublishChanges [mobile.components.UICustomAction-1519388635983]: 
+      actionValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+          - com.twinsoft.convertigo.beans.common.FormatedContent: 
+            →: |
+              		page.c8o.log.debug(event ? event.toString():'no event');
+              		let evt = this.getInstance(Events)
+              //		let viewCtrl = this.getInstance(ViewController)
+              //		viewCtrl.dismiss()
+              		evt.publish("SettingChanged", {})
+              		resolve();
+      comment: Trigger a setting change artificially to display the page
+↓PageEvent1 [mobile.components.UIPageEvent-1521123920533]: 
+  viewEvent: onWillLeave
+  ↓UnregsiterEvent [mobile.components.UICustomAction-1521123942589]: 
+    actionValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+        - com.twinsoft.convertigo.beans.common.FormatedContent: 
+          →: |
+            '		page.c8o.log.debug("Shared Flights Page Will Leave....")
+                    let evt: Events = page["subscribed"]
+            		if (evt) {
+            		    evt.unsubscribe("SettingChanged")
+            		    delete page["subscribed"] 
+            	        page.c8o.log.debug("Settings changed unsubscribed....")
+            		}
+            		resolve();
+            '
+    page_ts_imports: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: Events
+              - java.lang.String: 
+                - ↑value: ionic-angular

@@ -1,0 +1,306 @@
+↑isRoot: true
+icon: sync
+scriptContent: 
+  - xmlizable: 
+    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+      →: |
+        '/*Begin_c8o_PageImport*/
+        /*End_c8o_PageImport*/
+        /*Begin_c8o_PageDeclaration*/
+        	/*End_c8o_PageDeclaration*/
+        /*Begin_c8o_PageConstructor*/
+        		/*End_c8o_PageConstructor*/
+        /*Begin_c8o_PageFunction*/
+        	getSyncStatus() {
+        	    if (this.router.sharedObject.FullSyncSyncAction != undefined) {
+        	        if (this.router.sharedObject.FullSyncSyncAction.progress != undefined) {
+                	    let status = Math.round(((this.router.sharedObject.FullSyncSyncAction.progress.current != null ?
+                	            this.router.sharedObject.FullSyncSyncAction.progress.current : 0 ) / 550) * 100) + '' %''
+                	    return status
+        	        }
+        	        return ""
+        	    }
+        	}
+        	/*End_c8o_PageFunction*/
+        '
+segment: Synchronizing
+title: Synchronisation données
+↓Content [mobile.components.UIDynamicElement-1510002573293]: 
+  beanData: '{"ionBean":"Content","IonPadding":"plain:false"}'
+  tagName: ion-content
+  ↓Grid [mobile.components.UIDynamicElement-1510002628795]: 
+    beanData: '{"ionBean":"Grid","Height":"plain:height:100%"}'
+    tagName: ion-grid
+    ↓GridRow1 [mobile.components.UIDynamicElement-1510222281087]: 
+      beanData: '{"ionBean":"GridRow"}'
+      tagName: ion-row
+      ↓GridCol [mobile.components.UIDynamicElement-1510222296332]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓TextFormat1 [mobile.components.UIDynamicElement-1510237701726]: 
+          beanData: '{"ionBean":"TextFormat","TextCenter":"plain:text-center"}'
+          tagName: div
+          ↓Heading1 [mobile.components.UIDynamicElement-1510237565195]: 
+            beanData: |
+              '{
+               "ionBean": "Heading1",
+               "ionText": "plain:ion-text",
+               "IonColor": "plain:primary"
+              }'
+            tagName: h1
+            ↓Text [mobile.components.UIText-1510237577396]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:AERO TOURING CLUB de FRANCE
+          ↓Image [mobile.components.UIDynamicElement-1510223238487]: 
+            beanData: |
+              '{
+               "ionBean": "Image",
+               "url": "script:''assets\/images\/atcf.png''",
+               "width": "plain:50px"
+              }'
+            selfClose: true
+            tagName: img
+          ↓Heading11 [mobile.components.UIDynamicElement-1510238781695]: 
+            beanData: |
+              '{
+               "ionBean": "Heading1",
+               "ionText": "plain:ion-text",
+               "IonColor": "plain:primary"
+              }'
+            tagName: h1
+            ↓Text [mobile.components.UIText-1510238781725]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:"Flight Share"
+          ↓Image1 [mobile.components.UIDynamicElement-1510222152848]: 
+            beanData: |
+              '{
+               "ionBean": "Image",
+               "url": "script:''assets\/images\/touring.jpg''",
+               "width": "plain:100%"
+              }'
+            selfClose: true
+            tagName: img
+            ↓MakeRoundCornerAndShadow [mobile.components.UIStyle-1520155540515]: 
+              styleContent: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                  - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                    →: |
+                      '	border-radius: 5px;
+                      	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                      '
+        ↓TextFormat [mobile.components.UIDynamicElement-1510002665092]: 
+          beanData: '{"ionBean":"TextFormat","TextCenter":"plain:text-center"}'
+          tagName: div
+          ↓H4 [mobile.components.UIDynamicElement-1520404855177]: 
+            beanData: |
+              '{
+               "ionBean": "Heading4",
+               "ionText": "plain:ion-text",
+               "IonColor": "plain:primary"
+              }'
+            tagName: h4
+            ↓Text [mobile.components.UIText-1510002590339]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:Téléchargement des données initiales en cours...
+          ↓Heading21 [mobile.components.UIDynamicElement-1510223380193]: 
+            beanData: '{"ionBean":"Heading2"}'
+            tagName: h2
+            ↓Text [mobile.components.UIText-1510223392800]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: 'plain: '
+          ↓Heading2 [mobile.components.UIDynamicElement-1510153317991]: 
+            beanData: '{"ionBean":"Heading2"}'
+            tagName: h2
+            ↓Text [mobile.components.UIText-1510153330237]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:getSyncStatus()
+          ↓H41 [mobile.components.UIDynamicElement-1520405173913]: 
+            beanData: |
+              '{
+               "ionBean": "Heading4",
+               "ionText": "plain:ion-text",
+               "IonColor": "plain:primary"
+              }'
+            tagName: h4
+            ↓Text [mobile.components.UIText-1520405174306]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:Powered by Convertigo
+      ↓Style [mobile.components.UIStyle-1510222830149]: 
+        isEnabled: false
+        styleContent: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+            - com.twinsoft.convertigo.beans.common.FormatedContent: 
+              →: |
+                '	border: 1px solid blue
+                
+                '
+    ↓GridRow [mobile.components.UIDynamicElement-1510002636557]: 
+      beanData: '{"ionBean":"GridRow"}'
+      isEnabled: false
+      tagName: ion-row
+      ↓GridCol [mobile.components.UIDynamicElement-1510002641667]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓Style [mobile.components.UIStyle-1510221928962]: 
+          styleContent: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+              - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                →: |
+                  '	border: 1px solid red
+                  '
+      ↓Style [mobile.components.UIStyle-1510221975756]: 
+        styleContent: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+            - com.twinsoft.convertigo.beans.common.FormatedContent: 
+              →: |
+                '	border: 1px solid blue
+                
+                '
+  ↓Style [mobile.components.UIStyle-1510222371363]: 
+    isEnabled: false
+    styleContent: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+        - com.twinsoft.convertigo.beans.common.FormatedContent: 
+          →: |
+            '	background-color: silver;
+            '
+↓PageEvent [mobile.components.UIPageEvent-1510002823128]: 
+  ↓IfRunningOnDevice [mobile.components.UIDynamicAction-1512659937536]: 
+    beanData: '{"ionBean":"IfAction","condition":"script:window.cordova"}'
+    comment: Are we running on a device or just in test mode ?
+    ↓TestNetwork [mobile.components.UICustomAction-1535032102884]: 
+      actionValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+          - com.twinsoft.convertigo.beans.common.FormatedContent: 
+            →: |
+              '		if (navigator["connection"]["type"] == ''none'') {
+              		    reject("Network is not connected");
+              		}
+              		else {
+              		    setTimeout(()=> {
+              	            reject("Network is too slow, or not able to reach the server");
+              		    }, 2000);
+              		    page.c8o.callJsonObject(".TestNetwork", {}).then((response : any, parameters:Object) => {
+              	            resolve();
+              		        return null;
+              		    })
+              		}
+              '
+      ↓Failure_Handler [mobile.components.UIActionFailureEvent-1535032144487]: 
+        ↓RootPage [mobile.components.UIDynamicAction-1535032563457]: 
+          beanData: '{"ionBean":"RootPageAction","page":"plain:FlightShare.MobileApplication.Application.Page"}'
+        ↓ToastAction [mobile.components.UIDynamicAction-1535032563519]: 
+          beanData: '{"ionBean":"ToastAction","message":"plain:Le réseau n''est pas disponible. L''application est en mode \"Offline\". Vous pourrez vous reconnecter à tout moment en utilisant l''option \"Synchronisation\" dans le menu."}'
+        ↓Log [mobile.components.UIDynamicAction-1535037437883]: 
+          beanData: '{"ionBean":"LogAction","message":"script:out"}'
+        ↓Error [mobile.components.UIDynamicAction-1535123248486]: 
+          beanData: '{"ionBean":"ErrorAction"}'
+      ↓LoginWithGoogle [mobile.components.UIDynamicAction-1535032572232]: 
+        beanData: '{"ionBean":"GooglePlusLoginAction","webClientId":"plain:465373723999-vbta9svj9t2f6117ja6n3qtle807er1e.apps.googleusercontent.com"}'
+        ↓CallSequence [mobile.components.UIDynamicAction-1535032572295]: 
+          beanData: |
+            '{
+             "ionBean": "CallSequenceAction",
+             "requestable": "plain:FlightShare.Login",
+             "cacheTtl": "plain:86400000"
+            }'
+          ↓email [mobile.components.UIControlVariable-1535032572357]: 
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                - MobileSmartSourceType: script:stack['LoginWithGoogle'].out.email
+          ↓DoDataSync [mobile.components.UIDynamicAction-1535032572422]: 
+            beanData: |
+              '{
+               "ionBean": "FullSyncSyncAction",
+               "requestable": "plain:FlightShare.flightshare_fullsync",
+               "BatchSize": "script:500"
+              }'
+            ↓RootPage [mobile.components.UIDynamicAction-1535032572472]: 
+              beanData: '{"ionBean":"RootPageAction","page":"plain:FlightShare.MobileApplication.Application.Page"}'
+            ↓Post [mobile.components.UIDynamicAction-1535032572521]: 
+              beanData: |
+                '{
+                 "ionBean": "FullSyncPostAction",
+                 "requestable": "plain:FlightShare.flightshare_fullsync",
+                 "_id": "script:stack[''LoginWithGoogle''].out.email",
+                 "_use_policy": "plain:merge"
+                }'
+              ↓userinfo [mobile.components.UIControlVariable-1535032572591]: 
+                varValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: script:stack['LoginWithGoogle'].out
+              ↓c8oGrp [mobile.components.UIControlVariable-1535032572644]: 
+                comment: all users a shared in the ATCF fullSYnc group
+                varValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: plain:ATCF
+            ↓SetUserInformationGlobal [mobile.components.UIDynamicAction-1535032572697]: 
+              beanData: |
+                '{
+                 "ionBean": "SetGlobalAction",
+                 "Property": "plain:currentUser",
+                 "Value": "script:stack[''LoginWithGoogle''].out"
+                }'
+          ↓userProfile [mobile.components.UIControlVariable-1535032572764]: 
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                - MobileSmartSourceType: script:stack['LoginWithGoogle'].out
+  ↓IfRunningOnWebForTests [mobile.components.UIDynamicAction-1512660186634]: 
+    beanData: '{"ionBean":"IfAction","condition":"script:window.cordova == undefined"}'
+    ↓CallSequence [mobile.components.UIDynamicAction-1510002823204]: 
+      beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:FlightShare.Login"}'
+      comment: Use a fake identity for tests
+      ↓email [mobile.components.UIControlVariable-1510002823263]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:olivierp@convertigo.com
+      ↓DoDataSync [mobile.components.UIDynamicAction-1510235462592]: 
+        beanData: '{"ionBean":"FullSyncSyncAction","requestable":"plain:FlightShare.flightshare_fullsync"}'
+        ↓RootPage [mobile.components.UIDynamicAction-1510002875075]: 
+          beanData: '{"ionBean":"RootPageAction","page":"plain:FlightShare.MobileApplication.Application.Page"}'
+        ↓SetUserInformationGlobal [mobile.components.UIDynamicAction-1519289305285]: 
+          beanData: |
+            '{
+             "ionBean": "SetGlobalAction",
+             "Property": "plain:currentUser",
+             "Value": "script:{ email: ''olivierp@convertigo.com'', displayName: ''Olivier Picciotto''}"
+            }'
+  ↓ConfigureGooglePlusPlugin [mobile.components.UICustomAction-1516036537967]: 
+    comment: This is just to decralre the plugin parameter in Config.xml for iOS
+    cordova_plugins: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: cordova-plugin-googleplus
+              - java.lang.String: 
+                - ↑value: 5.2.1
+              - java.lang.String: 
+                - ↑value: '{REVERSED_CLIENT_ID:"com.googleusercontent.apps.465373723999-473lfu4591v78mopjgo96t0m4fqmu17u"}'
