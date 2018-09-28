@@ -5,8 +5,10 @@ scriptContent:
     - com.twinsoft.convertigo.beans.common.FormatedContent: 
       →: |
         '/*Begin_c8o_PageImport*/
+        import {LatLngBoundsLiteral} from ''@agm-core'';
         /*End_c8o_PageImport*/
         /*Begin_c8o_PageDeclaration*/
+        	bounds: LatLngBoundsLiteral = { east: 0, north: 0, south: 0, west: 0 }
         	/*End_c8o_PageDeclaration*/
         /*Begin_c8o_PageConstructor*/
         		/*End_c8o_PageConstructor*/
@@ -643,6 +645,12 @@ title: Title for MyFlightDetails1
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:blue
+          ↓Attr [mobile.components.UIAttribute-1538145882779]: 
+            attrName: '[fitBounds]'
+            attrValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                - MobileSmartSourceType: script:bounds
     ↓Directive21 [mobile.components.UIControlDirective-1512149998659]: 
       directiveName: SwitchCase
       directiveSource: 
@@ -854,4 +862,72 @@ title: Title for MyFlightDetails1
                             resolve()
                             return null;
                         })
+            '
+  ↓fitBoundsPublished [mobile.components.UICustomAction-1538145851595]: 
+    actionValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+        - com.twinsoft.convertigo.beans.common.FormatedContent: 
+          →: |
+            '		page.c8o.log.debug("--------------- fitBoundsPublished START ---------");
+            		
+            		let points = page.listen([''fs://flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS'']).rows
+                    
+                    var myPage:PublishedFlightDetails
+                    myPage = page as PublishedFlightDetails 
+                    
+                    
+                    /* We swap the coordinates if the first airport coordinates are lower than the second, we swap both values
+                        to fit the zoom correctly in the google maps view
+                    
+                        points[2] is the departure airport
+                        points[3] is the destination airport    
+                        
+                        We also handle if the airport of departure is the same as the destination, if that''s the case we just add a little offset
+                        to show the airport properly
+                     */ 
+                    
+                    if(points[3].doc.airport.longitude * 1 == points[2].doc.airport.longitude * 1)
+                    {
+                        let offset: number = 0.03;
+                        myPage.bounds.east = points[2].doc.airport.longitude * 1 + offset;      
+                        myPage.bounds.west = points[3].doc.airport.longitude * 1 - offset;      
+                    }
+                    else
+                    {
+                        if(points[3].doc.airport.longitude * 1 < points[2].doc.airport.longitude * 1)
+                        {
+                            myPage.bounds.east = points[2].doc.airport.longitude * 1      
+                            myPage.bounds.west = points[3].doc.airport.longitude * 1
+                        }
+                        else
+                        {
+                            myPage.bounds.east = points[3].doc.airport.longitude * 1
+                            myPage.bounds.west = points[2].doc.airport.longitude * 1
+                        }
+                    }
+                    
+                    if(points[3].doc.airport.latitude * 1 == points[2].doc.airport.latitude * 1)
+                    {   
+                        let offset: number = 0.03;
+                        myPage.bounds.south = points[2].doc.airport.latitude * 1 - offset;          
+                        myPage.bounds.north = points[3].doc.airport.latitude * 1 + offset;
+                    }
+                    else
+                    {
+                        if(points[2].doc.airport.latitude * 1 < points[3].doc.airport.latitude * 1)
+                        {
+                            myPage.bounds.south = points[2].doc.airport.latitude * 1
+                            myPage.bounds.north = points[3].doc.airport.latitude * 1
+                        }
+                        else
+                        {
+                            myPage.bounds.south = points[3].doc.airport.latitude * 1
+                            myPage.bounds.north = points[2].doc.airport.latitude * 1
+                        }
+                    }   
+            
+                    page.c8o.log.warn("Points: " + JSON.stringify(myPage.bounds));
+            
+                    resolve();
             '
