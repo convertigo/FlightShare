@@ -1,4 +1,4 @@
-↑convertigo: 7.6.0_beta
+↑convertigo: 7.6.0_beta (build 00823-feature-8-ProjectVcsFriendly-7.6.0-beta)
 ↑beans: 7.6.0.m006
 ↓FlightShare [core.Project]: 
   comment: Flying Club flight sharing application
@@ -60,7 +60,7 @@
               /*Begin_c8o_AppFunction*/
               	/*End_c8o_AppFunction*/
       tplProjectName: mobilebuilder_tpl_7_5_3
-      tplProjectVersion: 7.5.3.0
+      tplProjectVersion: 7.5.3.1
       ↓ShowFlightRoute [mobile.components.RouteComponent-1509555963318]: 
         ↓FullSyncEvent [mobile.components.RouteFullsyncEvent-1509555977898]: 
           marker: SHOWFLIGHT

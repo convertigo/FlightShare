@@ -1,4 +1,20 @@
 inAutoMenu: false
+scriptContent: 
+  - xmlizable: 
+    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+      →: |
+        '/*Begin_c8o_PageImport*/
+        import {LatLngBoundsLiteral} from ''@agm-core''
+        /*End_c8o_PageImport*/
+        /*Begin_c8o_PageDeclaration*/
+        	bounds: LatLngBoundsLiteral = { east: 0, north: 0, south: 0, west: 0}
+        	/*End_c8o_PageDeclaration*/
+        /*Begin_c8o_PageConstructor*/
+        		/*End_c8o_PageConstructor*/
+        /*Begin_c8o_PageFunction*/
+        	/*End_c8o_PageFunction*/
+        '
 segment: MyFlightDetails
 title: Title for MyFlightDetails
 ↓Header [mobile.components.UIDynamicElement-1508947481985]: 
@@ -227,7 +243,7 @@ title: Title for MyFlightDetails
                     '{
                      "ionBean": "Button",
                      "ButtonFormType": "plain:false",
-                     "IonColor": "plain:danger",
+                     "IonColor": "plain:primary",
                      "IonShape": "plain:block",
                      "IconPosition": "plain:icon-left"
                     }'
@@ -239,7 +255,7 @@ title: Title for MyFlightDetails
                     textValue: 
                       - xmlizable: 
                         - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                        - MobileSmartSourceType: plain:Supprimer
+                        - MobileSmartSourceType: plain:Modifier
                   ↓Event [mobile.components.UIControlEvent-1508950284639]: 
                     attrName: (click)
                     eventName: onClick
@@ -405,7 +421,80 @@ title: Title for MyFlightDetails
           eventName: (mapClick)
           ↓ToastAction [mobile.components.UIDynamicAction-1510769467189]: 
             beanData: '{"ionBean":"ToastAction"}'
+        ↓Attr1 [mobile.components.UIAttribute-1538145111906]: 
+          attrName: '[fitBounds]'
+          attrValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: script:bounds
 ↓Footer [mobile.components.UIDynamicElement-1508947485828]: 
   beanData: '{"ionBean":"Footer"}'
   comment: Page footer
   tagName: ion-footer
+↓PageEvent [mobile.components.UIPageEvent-1538144990383]: 
+  ↓fitBoundsDetails [mobile.components.UICustomAction-1538145011778]: 
+    actionValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+        - com.twinsoft.convertigo.beans.common.FormatedContent: 
+          →: |
+            '		page.c8o.log.debug("------------------ fitBoundsDetails START -----------------------");
+            		
+            		let points = page.listen([''fs://flightshare_fullsync.view#SHOWFLIGHT'']).rows
+            
+                    var myPage:MyFlightDetails
+                    myPage = page as MyFlightDetails
+                    
+                    
+                    /* We swap the coordinates of the first airport coordinates are lower than the second, we swap both values
+                        to fit the zoom correctly in the google maps view        
+                        
+                        points[2] is the departure airport
+                        points[3] is the destination airport
+                        
+                         We also handle if the airport of departure is the same as the destination, if that''s the case we just add a little offset
+                         to show the airport properly
+                    */
+                    if(points[3].doc.airport.longitude * 1 == points[2].doc.airport.longitude * 1) // if both airports are the same
+                    {
+                        let offset: number = 0.03; // offset to fit the bounds properly around the airport
+                        myPage.bounds.east = points[2].doc.airport.longitude * 1 + offset;      
+                        myPage.bounds.west = points[3].doc.airport.longitude * 1 - offset;      
+                    }
+                    else
+                    {
+                        if(points[3].doc.airport.longitude * 1 < points[2].doc.airport.longitude * 1)
+                        {
+                            myPage.bounds.east = points[2].doc.airport.longitude * 1      
+                            myPage.bounds.west = points[3].doc.airport.longitude * 1
+                        }
+                        else
+                        {
+                            myPage.bounds.east = points[3].doc.airport.longitude * 1
+                            myPage.bounds.west = points[2].doc.airport.longitude * 1
+                        }
+                    } 
+                            
+                    if(points[3].doc.airport.latitude * 1 == points[2].doc.airport.latitude * 1) // if both airports are the same
+                    {   
+                        let offset: number = 0.03; // offset to fit the bounds properly around the airport
+                        myPage.bounds.south = points[2].doc.airport.latitude * 1 - offset;          
+                        myPage.bounds.north = points[3].doc.airport.latitude * 1 + offset;
+                    }
+                    else
+                    {
+                        if(points[2].doc.airport.latitude * 1 < points[3].doc.airport.latitude * 1)
+                        {
+                            myPage.bounds.south = points[2].doc.airport.latitude * 1
+                            myPage.bounds.north = points[3].doc.airport.latitude * 1
+                        }
+                        else
+                        {
+                            myPage.bounds.south = points[3].doc.airport.latitude * 1
+                            myPage.bounds.north = points[2].doc.airport.latitude * 1
+                        }  
+                    }
+                    page.c8o.log.warn("Points: " + JSON.stringify(myPage.bounds))
+                    
+                    resolve();
+                    /*End_c8o_function:CTS1538145011778*/'
