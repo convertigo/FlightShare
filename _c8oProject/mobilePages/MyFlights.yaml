@@ -177,6 +177,7 @@ title: Mes vols
                      "key": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1509123535617.key\"}"
                     }'
                   comment: We query with a valid key, so the AddOrModifyFlight  Page will be displayed in 'Modify' mode
+                  isEnabled: false
                   ↓SetSelectedOptions [mobile.components.UICustomAction-1511110111935]: 
                     actionValue: 
                       - xmlizable: 
@@ -226,6 +227,20 @@ title: Mes vols
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#MODIFYFLIGHT, {ddoc='Design_document', view='Flights'}'])?.rows[0]?.doc?.flight?.time"}
+                ↓CallFullSync [mobile.components.UIDynamicAction-1538149211857]: 
+                  beanData: |
+                    '{
+                     "ionBean": "CallFullSyncAction",
+                     "requestable": "plain:FlightShare.flightshare_fullsync",
+                     "verb": "plain:delete"
+                    }'
+                  ↓docid [mobile.components.UIControlVariable-1538149266553]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509123535617?.doc?._id"}
+                ↓Toast [mobile.components.UIDynamicAction-1538146727045]: 
+                  beanData: '{"ionBean":"ToastAction","message":"plain:Vol supprimé avec succés"}'
   ↓FabContainer [mobile.components.UIDynamicElement-1508947025708]: 
     beanData: |
       '{

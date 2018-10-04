@@ -332,14 +332,164 @@ title: Vols partagés
         ↓SlidingOption [mobile.components.UIDynamicElement-1509573147802]: 
           beanData: '{"ionBean":"SlidingOption","side":"plain:left"}'
           tagName: ion-item-options
-          ↓Button [mobile.components.UIDynamicElement-1509573147815]: 
-            beanData: '{"ionBean":"Button","ButtonFormType":"plain:false"}'
+          ↓ButtonOld [mobile.components.UIDynamicElement-1509573147815]: 
+            beanData: |
+              '{
+               "ionBean": "Button",
+               "ButtonFormType": "plain:false",
+               "IonColor": "plain:danger"
+              }'
+            isEnabled: false
             tagName: button
             ↓Text [mobile.components.UIText-1509573147829]: 
               textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                  - MobileSmartSourceType: plain:Modifier...
+                  - MobileSmartSourceType: plain:Supprimer..
+          ↓Button [mobile.components.UIDynamicElement-1538570541742]: 
+            beanData: |
+              '{
+               "ionBean": "Button",
+               "ButtonFormType": "plain:false",
+               "IonColor": "plain:danger"
+              }'
+            tagName: button
+            ↓Text [mobile.components.UIText-1538570541883]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:Supprimer...
+            ↓Event [mobile.components.UIControlEvent-1538570541942]: 
+              attrName: (click)
+              eventName: onClick
+              ↓CallFullSync [mobile.components.UIDynamicAction-1538570542498]: 
+                beanData: |
+                  '{
+                   "ionBean": "CallFullSyncAction",
+                   "requestable": "plain:FlightShare.flightshare_fullsync",
+                   "verb": "plain:delete"
+                  }'
+                ↓docid [mobile.components.UIControlVariable-1538570542563]: 
+                  varValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                      - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509573021875?.id"}
+              ↓Toast [mobile.components.UIDynamicAction-1538570542611]: 
+                beanData: '{"ionBean":"ToastAction","message":"plain:Vol supprimé avec succés"}'
+          ↓Button1 [mobile.components.UIDynamicElement-1538572952472]: 
+            beanData: |
+              '{
+               "ionBean": "Button",
+               "ButtonFormType": "plain:false",
+               "IonColor": "plain:danger"
+              }'
+            isEnabled: false
+            tagName: button
+            ↓Icon [mobile.components.UIDynamicElement-1538572952584]: 
+              beanData: |
+                '{
+                 "ionBean": "Icon",
+                 "IconName": "plain:clipboard",
+                 "ItemPosition": "plain:item-left"
+                }'
+              tagName: ion-icon
+            ↓Text [mobile.components.UIText-1538572952659]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:Supprimer
+            ↓Event [mobile.components.UIControlEvent-1538572952724]: 
+              attrName: (click)
+              eventName: onClick
+              ↓QueryView_Modify [mobile.components.UIDynamicAction-1538572952782]: 
+                beanData: |
+                  '{
+                   "ionBean": "FullSyncViewAction",
+                   "marker": "plain:MODIFYFLIGHT",
+                   "fsview": "plain:FlightShare.flightshare_fullsync.Design_document.Flights",
+                   "__live": "plain:none",
+                   "include_docs": "plain:true",
+                   "descending": "plain:false",
+                   "key": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1510580345914?.key\"}"
+                  }'
+                comment: We query with a valid key, so the AddOrModifyFlight  Page will be displayed in 'Modify' mode
+                ↓SetSelectedOptions [mobile.components.UICustomAction-1538572952868]: 
+                  actionValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                        →: |
+                          '		let airports = {
+                          
+                          		        FROM: vars.from,
+                          
+                          		        TO: vars.to
+                          
+                          		}
+                          
+                          		page.routerProvider.sharedObject["selectedAirports"] = airports
+                          
+                          		page.routerProvider.sharedObject["selectedPlane"] = {
+                          
+                          		        plane: vars.plane,
+                          
+                          		        seats: vars.seats
+                          
+                          		}
+                          
+                          		page.routerProvider.sharedObject["selectedDate"] = vars.date;
+                          
+                                  page.routerProvider.sharedObject["selectedTime"] = vars.time;
+                          
+                          		resolve();
+                          
+                          '
+                  ↓from [mobile.components.UIControlVariable-1538572953015]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#MODIFYFLIGHT, {ddoc='Design_document', view='Flights'}'])?.rows[0]?.doc?.flight?.from"}
+                  ↓to [mobile.components.UIControlVariable-1538572953098]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#MODIFYFLIGHT, {ddoc='Design_document', view='Flights'}'])?.rows[0]?.doc?.flight?.to"}
+                  ↓plane [mobile.components.UIControlVariable-1538572953219]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#MODIFYFLIGHT, {ddoc='Design_document', view='Flights'}'])?.rows[0]?.doc?.flight?.plane"}
+                  ↓seats [mobile.components.UIControlVariable-1538572953332]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#MODIFYFLIGHT, {ddoc='Design_document', view='Flights'}'])?.rows[0]?.doc?.flight?.occupiedSeats"}
+                  ↓date [mobile.components.UIControlVariable-1538572953413]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#MODIFYFLIGHT, {ddoc='Design_document', view='Flights'}'])?.rows[0]?.doc?.flight?.date"}
+                  ↓time [mobile.components.UIControlVariable-1538572953488]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#MODIFYFLIGHT, {ddoc='Design_document', view='Flights'}'])?.rows[0]?.doc?.flight?.time"}
+              ↓CallFullSync [mobile.components.UIDynamicAction-1538572953560]: 
+                beanData: |
+                  '{
+                   "ionBean": "CallFullSyncAction",
+                   "requestable": "plain:FlightShare.flightshare_fullsync",
+                   "verb": "plain:delete"
+                  }'
+                isEnabled: false
+                ↓docid [mobile.components.UIControlVariable-1538572953635]: 
+                  varValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                      - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509123535617?.doc?._id"}
+              ↓Toast [mobile.components.UIDynamicAction-1538572953693]: 
+                beanData: '{"ionBean":"ToastAction","message":"plain:Vol modifié avec succès"}'
+                isEnabled: false
 ↓Footer [mobile.components.UIDynamicElement-1508945993860]: 
   beanData: '{"ionBean":"Footer"}'
   comment: Page footer
