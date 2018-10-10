@@ -5,12 +5,14 @@ scriptContent:
     - com.twinsoft.convertigo.beans.common.FormatedContent: 
       →: |
         '/*Begin_c8o_PageImport*/
-        import {LatLngBoundsLiteral} from ''@agm-core'';
+        import {LatLngBoundsLiteral} from ''@agm/core'';
         /*End_c8o_PageImport*/
         /*Begin_c8o_PageDeclaration*/
-        	bounds: LatLngBoundsLiteral = { east: 0, north: 0, south: 0, west: 0}
+        	bounds: LatLngBoundsLiteral = { east: 0, north: 0, south: 0, west: 0 }
+        	//bounds: Object
         	/*End_c8o_PageDeclaration*/
         /*Begin_c8o_PageConstructor*/
+        		//this.bounds  = { east: 0, north: 0, south: 0, west: 0}
         		/*End_c8o_PageConstructor*/
         /*Begin_c8o_PageFunction*/
         	/*End_c8o_PageFunction*/
@@ -238,7 +240,7 @@ title: Title for MyFlightDetails
               ↓GridCol [mobile.components.UIDynamicElement-1508948813754]: 
                 beanData: '{"ionBean":"GridCol"}'
                 tagName: ion-col
-                ↓Button [mobile.components.UIDynamicElement-1508948831766]: 
+                ↓ButtonOLD [mobile.components.UIDynamicElement-1508948831766]: 
                   beanData: |
                     '{
                      "ionBean": "Button",
@@ -289,7 +291,7 @@ title: Title for MyFlightDetails
                     '{
                      "ionBean": "Button",
                      "ButtonFormType": "plain:false",
-                     "IonColor": "plain:danger"
+                     "IonColor": "plain:primary"
                     }'
                   tagName: button
                   ↓Icon [mobile.components.UIDynamicElement-1538572142625]: 
@@ -304,20 +306,23 @@ title: Title for MyFlightDetails
                     textValue: 
                       - xmlizable: 
                         - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                        - MobileSmartSourceType: plain:Not good
+                        - MobileSmartSourceType: plain:(*WIP*) Modifier
                   ↓Event [mobile.components.UIControlEvent-1538571751373]: 
                     attrName: (click)
                     eventName: onClick
+                    ↓Toast [mobile.components.UIDynamicAction-1538571751832]: 
+                      beanData: '{"ionBean":"ToastAction","message":"plain:Vol modifié avec succès"}'
+                      isEnabled: false
                     ↓QueryView_Modify [mobile.components.UIDynamicAction-1538571751410]: 
                       beanData: |
                         '{
                          "ionBean": "FullSyncViewAction",
-                         "marker": "plain:MODIFYFLIGHT",
+                         "marker": "plain:",
                          "fsview": "plain:FlightShare.flightshare_fullsync.Design_document.Flights",
                          "__live": "plain:none",
                          "include_docs": "plain:true",
                          "descending": "plain:false",
-                         "key": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1510580345914?.id\"}"
+                         "key": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1510580345914?.key\"}"
                         }'
                       comment: We query with a valid key, so the AddOrModifyFlight  Page will be displayed in 'Modify' mode
                       ↓SetSelectedOptions [mobile.components.UICustomAction-1538571751459]: 
@@ -351,6 +356,7 @@ title: Title for MyFlightDetails
                                 		resolve();
                                 
                                 '
+                        isEnabled: false
                         ↓from [mobile.components.UIControlVariable-1538571751496]: 
                           varValue: 
                             - xmlizable: 
@@ -381,9 +387,45 @@ title: Title for MyFlightDetails
                             - xmlizable: 
                               - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                               - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#MODIFYFLIGHT, {ddoc='Design_document', view='Flights'}'])?.rows[0]?.doc?.flight?.time"}
-                    ↓Toast [mobile.components.UIDynamicAction-1538571751832]: 
-                      beanData: '{"ionBean":"ToastAction","message":"plain:Vol modifié avec succès"}'
-                      isEnabled: false
+                      ↓Log [mobile.components.UIDynamicAction-1538647564962]: 
+                        beanData: |
+                          '{
+                           "ionBean": "LogAction",
+                           "message": "script:JSON.stringify(out)",
+                           "level": "plain:error"
+                          }'
+                      ↓selectedAirports [mobile.components.UIDynamicAction-1538731888496]: 
+                        beanData: |
+                          '{
+                           "ionBean": "SetGlobalAction",
+                           "Property": "plain:selectedAirports",
+                           "Value": "script:{FROM: out.rows[0].doc.flight.from, TO:out.rows[0].doc.flight.to }"
+                          }'
+                      ↓selectedPlane [mobile.components.UIDynamicAction-1538656228028]: 
+                        beanData: |
+                          '{
+                           "ionBean": "SetGlobalAction",
+                           "Property": "plain:selectedPlane",
+                           "Value": "script:{ plane: out.rows[0].doc.flight.plane, seats: out.rows[0].doc.flight.occupiedSeats }"
+                          }'
+                      ↓selectedDate [mobile.components.UIDynamicAction-1538656239981]: 
+                        beanData: |
+                          '{
+                           "ionBean": "SetGlobalAction",
+                           "Property": "plain:selectedDate",
+                           "Value": "script:{ date: out.rows[0].doc.flight.date }"
+                          }'
+                      ↓selectedTime [mobile.components.UIDynamicAction-1538656242428]: 
+                        beanData: |
+                          '{
+                           "ionBean": "SetGlobalAction",
+                           "Property": "plain:selectedTime",
+                           "Value": "script:{ time: out.rows[0].doc.flight.time }"
+                          }'
+                      ↓selectedCom [mobile.components.UIDynamicAction-1539162360741]: 
+                        beanData: '{"ionBean":"SetGlobalAction","Value":"script:{ com: out.rows[0].doc.flight.comment }"}'
+                      ↓PushPage [mobile.components.UIDynamicAction-1538754145267]: 
+                        beanData: '{"ionBean":"PushPageAction","page":"plain:FlightShare.MobileApplication.Application.AddOrModifyFlight"}'
               ↓GridCol1 [mobile.components.UIDynamicElement-1508948907300]: 
                 beanData: '{"ionBean":"GridCol"}'
                 tagName: ion-col
@@ -563,7 +605,9 @@ title: Title for MyFlightDetails
                     {
                         let offset: number = 0.03; // offset to fit the bounds properly around the airport
                         myPage.bounds.east = points[2].doc.airport.longitude * 1 + offset;      
-                        myPage.bounds.west = points[3].doc.airport.longitude * 1 - offset;      
+                        myPage.bounds.west = points[3].doc.airport.longitude * 1 - offset;  
+                        //myPage.bounds["east"] = points[2].doc.airport.longitude * 1 + offset;      
+                        //myPage.bounds["west"] = points[3].doc.airport.longitude * 1 - offset;
                     }
                     else
                     {

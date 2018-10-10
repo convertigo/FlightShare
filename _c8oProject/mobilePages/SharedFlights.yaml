@@ -332,20 +332,6 @@ title: Vols partagés
         ↓SlidingOption [mobile.components.UIDynamicElement-1509573147802]: 
           beanData: '{"ionBean":"SlidingOption","side":"plain:left"}'
           tagName: ion-item-options
-          ↓ButtonOld [mobile.components.UIDynamicElement-1509573147815]: 
-            beanData: |
-              '{
-               "ionBean": "Button",
-               "ButtonFormType": "plain:false",
-               "IonColor": "plain:danger"
-              }'
-            isEnabled: false
-            tagName: button
-            ↓Text [mobile.components.UIText-1509573147829]: 
-              textValue: 
-                - xmlizable: 
-                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                  - MobileSmartSourceType: plain:Supprimer..
           ↓Button [mobile.components.UIDynamicElement-1538570541742]: 
             beanData: |
               '{
@@ -353,6 +339,7 @@ title: Vols partagés
                "ButtonFormType": "plain:false",
                "IonColor": "plain:danger"
               }'
+            isEnabled: false
             tagName: button
             ↓Text [mobile.components.UIText-1538570541883]: 
               textValue: 
@@ -376,14 +363,13 @@ title: Vols partagés
                       - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509573021875?.id"}
               ↓Toast [mobile.components.UIDynamicAction-1538570542611]: 
                 beanData: '{"ionBean":"ToastAction","message":"plain:Vol supprimé avec succés"}'
-          ↓Button1 [mobile.components.UIDynamicElement-1538572952472]: 
+          ↓ButtonOld [mobile.components.UIDynamicElement-1538572952472]: 
             beanData: |
               '{
                "ionBean": "Button",
                "ButtonFormType": "plain:false",
                "IonColor": "plain:danger"
               }'
-            isEnabled: false
             tagName: button
             ↓Icon [mobile.components.UIDynamicElement-1538572952584]: 
               beanData: |
@@ -397,7 +383,7 @@ title: Vols partagés
               textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                  - MobileSmartSourceType: plain:Supprimer
+                  - MobileSmartSourceType: plain:Modif
             ↓Event [mobile.components.UIControlEvent-1538572952724]: 
               attrName: (click)
               eventName: onClick
@@ -474,19 +460,6 @@ title: Vols partagés
                       - xmlizable: 
                         - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                         - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#MODIFYFLIGHT, {ddoc='Design_document', view='Flights'}'])?.rows[0]?.doc?.flight?.time"}
-              ↓CallFullSync [mobile.components.UIDynamicAction-1538572953560]: 
-                beanData: |
-                  '{
-                   "ionBean": "CallFullSyncAction",
-                   "requestable": "plain:FlightShare.flightshare_fullsync",
-                   "verb": "plain:delete"
-                  }'
-                isEnabled: false
-                ↓docid [mobile.components.UIControlVariable-1538572953635]: 
-                  varValue: 
-                    - xmlizable: 
-                      - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                      - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509123535617?.doc?._id"}
               ↓Toast [mobile.components.UIDynamicAction-1538572953693]: 
                 beanData: '{"ionBean":"ToastAction","message":"plain:Vol modifié avec succès"}'
                 isEnabled: false

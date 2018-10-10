@@ -1,4 +1,4 @@
-↑convertigo: 7.6.0_beta (build 00823-feature-8-ProjectVcsFriendly-7.6.0-beta)
+↑convertigo: 7.6.0_beta (build 00988-develop-7.6.0-beta)
 ↑beans: 7.6.0.m006
 ↓FlightShare [core.Project]: 
   comment: Flying Club flight sharing application
@@ -77,15 +77,6 @@
         ↓DataAction [mobile.components.RouteDataActionComponent-1509603272855]: 
           action: push
           page: FlightShare.MobileApplication.Application.PublishedFlightDetails
-      ↓ModifyFlightRoute [mobile.components.RouteComponent-1511089274186]: 
-        ↓FullSyncEvent [mobile.components.RouteFullsyncEvent-1511089299073]: 
-          marker: MODIFYFLIGHT
-          source: FlightShare.flightshare_fullsync
-          verb: view
-        ↓DataAction [mobile.components.RouteDataActionComponent-1511089390479]: 
-          action: push
-          condition: true
-          page: FlightShare.MobileApplication.Application.AddOrModifyFlight
       ↓ShowUserDetails [mobile.components.RouteComponent-1511712824537]: 
         ↓FullSyncEvent [mobile.components.RouteFullsyncEvent-1511712846600]: 
           marker: SHOWUSERDETAILS

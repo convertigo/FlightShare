@@ -28,10 +28,16 @@ title: Title for AddFlight
       beanData: '{"ionBean":"BarTitle"}'
       tagName: ion-title
       ↓Text [mobile.components.UIText-1508950707724]: 
+        isEnabled: false
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: 'source:{"filter":"Database","project":"FlightShare","input":"listen([''fs:\/\/flightshare_fullsync.view#MODIFYFLIGHT, {ddoc=''Design_document'', view=''Flights''}''])?.rows[0]?.id == undefined ? ''Ajouter un vol'': ''Modifier un vol''"}'
+      ↓Text1 [mobile.components.UIText-1538755023008]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:Modifier le vol
 ↓Content [mobile.components.UIDynamicElement-1508950730361]: 
   beanData: '{"ionBean":"Content"}'
   tagName: ion-content
@@ -58,7 +64,7 @@ title: Title for AddFlight
              "Disabled": "plain:true",
              "Placeholder": "plain:Selectionnez dans la liste...",
              "TextAlign": "plain:text-right",
-             "Value": "script:routerProvider.sharedObject[''selectedAirports'']?.FROM"
+             "Value": "script:this.global?.selectedAirports?.FROM"
             }'
           tagName: ion-input
           ↓Event [mobile.components.UIControlEvent-1509004888034]: 
@@ -82,7 +88,7 @@ title: Title for AddFlight
              "Disabled": "plain:true",
              "Placeholder": "plain:Selectionnez dans la liste...",
              "TextAlign": "plain:text-right",
-             "Value": "script:routerProvider.sharedObject[''selectedAirports'']?.TO"
+             "Value": "script:this.global?.selectedAirports?.TO"
             }'
           tagName: ion-input
           ↓Event [mobile.components.UIControlEvent-1509074358925]: 
@@ -122,7 +128,7 @@ title: Title for AddFlight
              "Disabled": "plain:true",
              "Placeholder": "plain:Selectionnez dans la liste...",
              "TextAlign": "plain:text-right",
-             "Value": "script:routerProvider.sharedObject[''selectedPlane'']?.plane"
+             "Value": "script:this.global?.selectedPlane?.plane"
             }'
           tagName: ion-input
           ↓Event [mobile.components.UIControlEvent-1509079272485]: 
@@ -140,7 +146,7 @@ title: Title for AddFlight
         directiveSource: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-            - MobileSmartSourceType: script:router.sharedObject['selectedPlane']?.seats
+            - MobileSmartSourceType: script:this.global?.selectedPlane?.occupiedSeats
         ↓ListItem1111 [mobile.components.UIDynamicElement-1511763946860]: 
           beanData: '{"ionBean":"ListItem"}'
           tagName: ion-item
@@ -157,9 +163,9 @@ title: Title for AddFlight
               '{
                "ionBean": "Range",
                "FormControlName": "plain:occupiedSeats",
-               "DefaultValue": "source:{\"filter\":\"Database\",\"project\":\"FlightShare\",\"input\":\"listen([''fs:\\\/\\\/flightshare_fullsync.view#MODIFYFLIGHT, {ddoc=''Design_document'', view=''Flights''}'']).rows ? listen([''fs:\\\/\\\/flightshare_fullsync.view#MODIFYFLIGHT, {ddoc=''Design_document'', view=''Flights''}''])?.rows[0]?.doc?.flight?.occupiedSeats : ''''\"}",
+               "DefaultValue": "script:this.global?.selectedPlane?.occupiedSeats",
                "Min": "script:0",
-               "Max": "script:router.sharedObject[''selectedPlane''].seats",
+               "Max": "script:this.global?.selectedPlane?.occupiedSeats",
                "Step": "plain:",
                "Pin": "plain:true",
                "Snaps": "plain:true"
@@ -201,7 +207,7 @@ title: Title for AddFlight
              "Disabled": "plain:true",
              "Placeholder": "plain:Date du vol",
              "TextAlign": "plain:text-right",
-             "Value": "script:this.router.sharedObject?.flightDate?.toLocaleDateString(''fr-FR'')"
+             "Value": "script:this.global?.selectedDate?.date"
             }'
           tagName: ion-input
           ↓ControlValidator [mobile.components.UIFormControlValidator-1509566292780]: 
@@ -261,7 +267,7 @@ title: Title for AddFlight
              "displayPicker": "plain:HH:mm",
              "minuteValues": "plain:0,15,30,45",
              "placeholder": "plain:Heure du vol",
-             "Value": "source:{\"filter\":\"Database\",\"project\":\"FlightShare\",\"input\":\"listen([''fs:\\\/\\\/flightshare_fullsync.view#MODIFYFLIGHT, {ddoc=''Design_document'', view=''Flights''}'']).rows ? listen([''fs:\\\/\\\/flightshare_fullsync.view#MODIFYFLIGHT, {ddoc=''Design_document'', view=''Flights''}''])?.rows[0]?.doc?.flight?.time : ''''\"}"
+             "Value": "script:this.global?.selectedTime?.time"
             }'
           tagName: ion-datetime
           ↓ControlValidator [mobile.components.UIFormControlValidator-1509566297493]: 
@@ -282,7 +288,7 @@ title: Title for AddFlight
             '{
              "ionBean": "TextArea",
              "FormControlName": "plain:comment",
-             "Value": "source:{\"filter\":\"Database\",\"project\":\"FlightShare\",\"input\":\"listen([''fs:\\\/\\\/flightshare_fullsync.view#MODIFYFLIGHT, {ddoc=''Design_document'', view=''Flights''}'']).rows ? listen([''fs:\\\/\\\/flightshare_fullsync.view#MODIFYFLIGHT, {ddoc=''Design_document'', view=''Flights''}''])?.rows[0]?.doc?.flight?.comment : ''''\"}"
+             "Value": "script:this.global?.selectedCom?.com"
             }'
           tagName: ion-textarea
     ↓TextFormat [mobile.components.UIDynamicElement-1509117644862]: 
@@ -329,3 +335,4 @@ title: Title for AddFlight
   comment: Page footer
   tagName: ion-footer
 ↓PageEvent [mobile.components.UIPageEvent-1518605721131]: 
+  isEnabled: false

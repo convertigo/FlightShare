@@ -146,6 +146,7 @@ title: Mes vols
                    "key": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1509123535617.key\"}"
                   }'
             ↓Attr [mobile.components.UIAttribute-1538145739368]: 
+            ↓Directive [mobile.components.UIControlDirective-1538646601074]: 
           ↓SlidingOption [mobile.components.UIDynamicElement-1509567716536]: 
             beanData: '{"ionBean":"SlidingOption","side":"plain:left"}'
             tagName: ion-item-options

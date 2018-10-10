@@ -5,7 +5,7 @@ scriptContent:
     - com.twinsoft.convertigo.beans.common.FormatedContent: 
       →: |
         '/*Begin_c8o_PageImport*/
-        import {LatLngBoundsLiteral} from ''@agm-core'';
+        import {LatLngBoundsLiteral} from ''@agm/core'';
         /*End_c8o_PageImport*/
         /*Begin_c8o_PageDeclaration*/
         	bounds: LatLngBoundsLiteral = { east: 0, north: 0, south: 0, west: 0 }
