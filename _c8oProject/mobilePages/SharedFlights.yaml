@@ -128,7 +128,13 @@ title: Vols partagés
           ↓Heading1 [mobile.components.UIDynamicElement-1509573147546]: 
             beanData: '{"ionBean":"Heading1"}'
             tagName: h1
+            ↓Text3 [mobile.components.UIText-1539338873977]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509573021875?.value?.from"}
             ↓Text [mobile.components.UIText-1509573147587]: 
+              isEnabled: false
               textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
@@ -139,6 +145,7 @@ title: Vols partagés
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:-
             ↓Text1 [mobile.components.UIText-1509573147614]: 
+              isEnabled: false
               textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
@@ -161,6 +168,11 @@ title: Vols partagés
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:0.1s
+            ↓Text11 [mobile.components.UIText-1539338836292]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509573021875?.value?.to"}
           ↓Heading2 [mobile.components.UIDynamicElement-1509573147627]: 
             beanData: '{"ionBean":"Heading2"}'
             tagName: h2
@@ -339,7 +351,6 @@ title: Vols partagés
                "ButtonFormType": "plain:false",
                "IonColor": "plain:danger"
               }'
-            isEnabled: false
             tagName: button
             ↓Text [mobile.components.UIText-1538570541883]: 
               textValue: 
@@ -370,6 +381,7 @@ title: Vols partagés
                "ButtonFormType": "plain:false",
                "IonColor": "plain:danger"
               }'
+            isEnabled: false
             tagName: button
             ↓Icon [mobile.components.UIDynamicElement-1538572952584]: 
               beanData: |

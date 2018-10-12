@@ -240,52 +240,6 @@ title: Title for MyFlightDetails
               ↓GridCol [mobile.components.UIDynamicElement-1508948813754]: 
                 beanData: '{"ionBean":"GridCol"}'
                 tagName: ion-col
-                ↓ButtonOLD [mobile.components.UIDynamicElement-1508948831766]: 
-                  beanData: |
-                    '{
-                     "ionBean": "Button",
-                     "ButtonFormType": "plain:false",
-                     "IonColor": "plain:primary",
-                     "IonShape": "plain:block",
-                     "IconPosition": "plain:icon-left"
-                    }'
-                  isEnabled: false
-                  tagName: button
-                  ↓Icon [mobile.components.UIDynamicElement-1508949075433]: 
-                    beanData: '{"ionBean":"Icon","IconName":"plain:clipboard"}'
-                    tagName: ion-icon
-                  ↓Text [mobile.components.UIText-1508948971388]: 
-                    textValue: 
-                      - xmlizable: 
-                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                        - MobileSmartSourceType: plain:Modifier
-                  ↓Event [mobile.components.UIControlEvent-1508950284639]: 
-                    attrName: (click)
-                    eventName: onClick
-                    ↓CallFullSync [mobile.components.UIDynamicAction-1509557079948]: 
-                      beanData: |
-                        '{
-                         "ionBean": "CallFullSyncAction",
-                         "requestable": "plain:FlightShare.flightshare_fullsync",
-                         "verb": "plain:delete"
-                        }'
-                      isEnabled: false
-                      ↓docid [mobile.components.UIControlVariable-1509557147146]: 
-                        varValue: 
-                          - xmlizable: 
-                            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                            - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1510580345914?.id"}
-                      ↓ToastAction [mobile.components.UIDynamicAction-1508950284653]: 
-                        beanData: |
-                          '{
-                           "ionBean": "ToastAction",
-                           "message": "plain:Votre vol a été supprimé.",
-                           "duration": "plain:5000"
-                          }'
-                      ↓PopPage [mobile.components.UIDynamicAction-1510072467165]: 
-                        beanData: '{"ionBean":"PopPageAction"}'
-                    ↓Toast [mobile.components.UIDynamicAction-1538148260687]: 
-                      beanData: '{"ionBean":"ToastAction","message":"plain:(Test) Modif"}'
                 ↓Button1 [mobile.components.UIDynamicElement-1538571751251]: 
                   beanData: |
                     '{
@@ -394,6 +348,7 @@ title: Title for MyFlightDetails
                            "message": "script:JSON.stringify(out)",
                            "level": "plain:error"
                           }'
+                        isEnabled: false
                       ↓selectedAirports [mobile.components.UIDynamicAction-1538731888496]: 
                         beanData: |
                           '{
@@ -406,8 +361,15 @@ title: Title for MyFlightDetails
                           '{
                            "ionBean": "SetGlobalAction",
                            "Property": "plain:selectedPlane",
-                           "Value": "script:{ plane: out.rows[0].doc.flight.plane, seats: out.rows[0].doc.flight.occupiedSeats }"
+                           "Value": "script:{ plane: out.rows[0].doc.flight.plane, seats: out.rows[0].doc.flight.occupiedSeats, max: out.rows[1].doc.plane.SEATS}"
                           }'
+                        ↓Log [mobile.components.UIDynamicAction-1539184697838]: 
+                          beanData: |
+                            '{
+                             "ionBean": "LogAction",
+                             "message": "script:JSON.stringify(out)",
+                             "level": "plain:warn"
+                            }'
                       ↓selectedDate [mobile.components.UIDynamicAction-1538656239981]: 
                         beanData: |
                           '{
@@ -642,7 +604,9 @@ title: Title for MyFlightDetails
                             myPage.bounds.north = points[2].doc.airport.latitude * 1
                         }  
                     }
-                    page.c8o.log.warn("Points: " + JSON.stringify(myPage.bounds))
+                    page.c8o.log.debug("Points: " + JSON.stringify(myPage.bounds))
+                    page.c8o.log.debug("------------------ fitBoundsDetails END -----------------------");
+                        
                     
                     resolve();
                     /*End_c8o_function:CTS1538145011778*/'

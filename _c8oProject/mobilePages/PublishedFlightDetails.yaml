@@ -342,6 +342,12 @@ title: Title for MyFlightDetails1
                     beanData: '{"ionBean":"Heading2"}'
                     tagName: h2
                     ↓Text11 [mobile.components.UIText-1533028539643]: 
+                      isEnabled: false
+                      textValue: 
+                        - xmlizable: 
+                          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                          - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc='Design_document', view='PublishedFlightsDetails', include_docs='true'}'])?.rows[0]?.doc?.PublishedFlight?.occupiedSeats - this[\"RegisteredPilotsNumber\"]"}
+                    ↓Text111 [mobile.components.UIText-1539338715119]: 
                       textValue: 
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
@@ -393,6 +399,7 @@ title: Title for MyFlightDetails1
                          "IonShape": "plain:block",
                          "IconPosition": "plain:icon-left"
                         }'
+                      isEnabled: false
                       tagName: button
                       ↓Icon [mobile.components.UIDynamicElement-1509602578158]: 
                         beanData: '{"ionBean":"Icon","IconName":"plain:trash"}'
@@ -426,6 +433,178 @@ title: Title for MyFlightDetails1
                                  "message": "plain:Votre vol a été supprimé.",
                                  "duration": "plain:5000"
                                 }'
+                    ↓Button1 [mobile.components.UIDynamicElement-1539358709148]: 
+                      beanData: |
+                        '{
+                         "ionBean": "Button",
+                         "ButtonFormType": "plain:false",
+                         "IonColor": "plain:primary"
+                        }'
+                      tagName: button
+                      ↓Icon [mobile.components.UIDynamicElement-1539358709155]: 
+                        beanData: |
+                          '{
+                           "ionBean": "Icon",
+                           "IconName": "plain:clipboard",
+                           "ItemPosition": "plain:item-left"
+                          }'
+                        tagName: ion-icon
+                      ↓Text [mobile.components.UIText-1539358709158]: 
+                        textValue: 
+                          - xmlizable: 
+                            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                            - MobileSmartSourceType: plain:(*WIP*) Modifier
+                      ↓Event [mobile.components.UIControlEvent-1539358709161]: 
+                        attrName: (click)
+                        eventName: onClick
+                        ↓Toast [mobile.components.UIDynamicAction-1539358709164]: 
+                          beanData: '{"ionBean":"ToastAction","message":"plain:Vol modifié avec succès"}'
+                          isEnabled: false
+                        ↓QueryView_Modify [mobile.components.UIDynamicAction-1539358709168]: 
+                          beanData: |
+                            '{
+                             "ionBean": "FullSyncViewAction",
+                             "marker": "plain:",
+                             "fsview": "plain:FlightShare.flightshare_fullsync.Design_document.Flights",
+                             "__live": "plain:none",
+                             "include_docs": "plain:true",
+                             "descending": "plain:false",
+                             "key": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1510580345914?.key\"}"
+                            }'
+                          comment: We query with a valid key, so the AddOrModifyFlight  Page will be displayed in 'Modify' mode
+                          ↓SetSelectedOptions [mobile.components.UICustomAction-1539358709171]: 
+                            actionValue: 
+                              - xmlizable: 
+                                - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                                - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                                  →: |
+                                    '		let airports = {
+                                    
+                                    
+                                    
+                                    		        FROM: vars.from,
+                                    
+                                    
+                                    
+                                    		        TO: vars.to
+                                    
+                                    
+                                    
+                                    		}
+                                    
+                                    
+                                    
+                                    		page.routerProvider.sharedObject["selectedAirports"] = airports
+                                    
+                                    
+                                    
+                                    		page.routerProvider.sharedObject["selectedPlane"] = {
+                                    
+                                    
+                                    
+                                    		        plane: vars.plane,
+                                    
+                                    
+                                    
+                                    		        seats: vars.seats
+                                    
+                                    
+                                    
+                                    		}
+                                    
+                                    
+                                    
+                                    		page.routerProvider.sharedObject["selectedDate"] = vars.date;
+                                    
+                                    
+                                    
+                                            page.routerProvider.sharedObject["selectedTime"] = vars.time;
+                                    
+                                    
+                                    
+                                    		resolve();
+                                    
+                                    
+                                    
+                                    '
+                            isEnabled: false
+                            ↓from [mobile.components.UIControlVariable-1539358709174]: 
+                              varValue: 
+                                - xmlizable: 
+                                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                                  - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#MODIFYFLIGHT, {ddoc='Design_document', view='Flights'}'])?.rows[0]?.doc?.flight?.from"}
+                            ↓to [mobile.components.UIControlVariable-1539358709177]: 
+                              varValue: 
+                                - xmlizable: 
+                                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                                  - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#MODIFYFLIGHT, {ddoc='Design_document', view='Flights'}'])?.rows[0]?.doc?.flight?.to"}
+                            ↓plane [mobile.components.UIControlVariable-1539358709180]: 
+                              varValue: 
+                                - xmlizable: 
+                                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                                  - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#MODIFYFLIGHT, {ddoc='Design_document', view='Flights'}'])?.rows[0]?.doc?.flight?.plane"}
+                            ↓seats [mobile.components.UIControlVariable-1539358709183]: 
+                              varValue: 
+                                - xmlizable: 
+                                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                                  - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#MODIFYFLIGHT, {ddoc='Design_document', view='Flights'}'])?.rows[0]?.doc?.flight?.occupiedSeats"}
+                            ↓date [mobile.components.UIControlVariable-1539358709186]: 
+                              varValue: 
+                                - xmlizable: 
+                                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                                  - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#MODIFYFLIGHT, {ddoc='Design_document', view='Flights'}'])?.rows[0]?.doc?.flight?.date"}
+                            ↓time [mobile.components.UIControlVariable-1539358709189]: 
+                              varValue: 
+                                - xmlizable: 
+                                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                                  - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#MODIFYFLIGHT, {ddoc='Design_document', view='Flights'}'])?.rows[0]?.doc?.flight?.time"}
+                          ↓Log [mobile.components.UIDynamicAction-1539358709192]: 
+                            beanData: |
+                              '{
+                               "ionBean": "LogAction",
+                               "message": "script:JSON.stringify(out)",
+                               "level": "plain:error"
+                              }'
+                            isEnabled: false
+                          ↓selectedAirports [mobile.components.UIDynamicAction-1539358709195]: 
+                            beanData: |
+                              '{
+                               "ionBean": "SetGlobalAction",
+                               "Property": "plain:selectedAirports",
+                               "Value": "script:{FROM: out.rows[0].doc.flight.from, TO:out.rows[0].doc.flight.to }"
+                              }'
+                          ↓selectedPlane [mobile.components.UIDynamicAction-1539358709198]: 
+                            beanData: |
+                              '{
+                               "ionBean": "SetGlobalAction",
+                               "Property": "plain:selectedPlane",
+                               "Value": "script:{ plane: out.rows[0].doc.flight.plane, seats: out.rows[0].doc.flight.occupiedSeats, max: out.rows[1].doc.plane.SEATS}"
+                              }'
+                            ↓Log [mobile.components.UIDynamicAction-1539358709201]: 
+                              beanData: |
+                                '{
+                                 "ionBean": "LogAction",
+                                 "message": "script:JSON.stringify(out)",
+                                 "level": "plain:warn"
+                                }'
+                          ↓selectedDate [mobile.components.UIDynamicAction-1539358709204]: 
+                            beanData: |
+                              '{
+                               "ionBean": "SetGlobalAction",
+                               "Property": "plain:selectedDate",
+                               "Value": "script:{ date: out.rows[0].doc.flight.date }"
+                              }'
+                          ↓selectedTime [mobile.components.UIDynamicAction-1539358709207]: 
+                            beanData: |
+                              '{
+                               "ionBean": "SetGlobalAction",
+                               "Property": "plain:selectedTime",
+                               "Value": "script:{ time: out.rows[0].doc.flight.time }"
+                              }'
+                          ↓selectedCom [mobile.components.UIDynamicAction-1539358709210]: 
+                            beanData: '{"ionBean":"SetGlobalAction","Value":"script:{ com: out.rows[0].doc.flight.comment }"}'
+                          ↓PushPage [mobile.components.UIDynamicAction-1539358709213]: 
+                            beanData: '{"ionBean":"PushPageAction","page":"plain:FlightShare.MobileApplication.Application.AddOrModifyFlight"}'
                 ↓GridCol1 [mobile.components.UIDynamicElement-1509602578249]: 
                   beanData: '{"ionBean":"GridCol"}'
                   tagName: ion-col
@@ -927,7 +1106,8 @@ title: Title for MyFlightDetails1
                         }
                     }   
             
-                    page.c8o.log.warn("Points: " + JSON.stringify(myPage.bounds));
+                    page.c8o.log.debug("Points: " + JSON.stringify(myPage.bounds));
+                    page.c8o.log.debug("--------------- fitBoundsPublished END ---------");
             
                     resolve();
             '
