@@ -1,5 +1,4 @@
-↑convertigo: 7.6.0_beta (build 00988-develop-7.6.0-beta)
-↑beans: 7.6.0.m006
+↑convertigo: 7.6.0.m006
 ↓FlightShare [core.Project]: 
   comment: Flying Club flight sharing application
   corsOrigin: =Origin
@@ -85,16 +84,6 @@
           action: push
           condition: true
           page: FlightShare.MobileApplication.Application.UserDetails
-      ↓ModifyFlightRoute [mobile.components.RouteComponent-1539265870167]: 
-        isEnabled: false
-        ↓FullSyncEvent [mobile.components.RouteFullsyncEvent-1539265891087]: 
-          marker: MODIFYFLIGHT
-          source: FlightShare.flightshare_fullsync
-          verb: view
-        ↓DataAction [mobile.components.RouteDataActionComponent-1539267792314]: 
-          action: push
-          condition: true
-          page: FlightShare.MobileApplication.Application.AddOrModifyFlight
       ↓Menu [mobile.components.UIDynamicMenu-1500890597895]: 
         beanData: '{"ionBean":"Menu"}'
         comment: A menu with all pages added automatically

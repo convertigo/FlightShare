@@ -27,17 +27,11 @@ title: Title for AddFlight
     ↓BarTitle [mobile.components.UIDynamicElement-1508950707708]: 
       beanData: '{"ionBean":"BarTitle"}'
       tagName: ion-title
-      ↓Text [mobile.components.UIText-1508950707724]: 
-        isEnabled: false
-        textValue: 
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-            - MobileSmartSourceType: 'source:{"filter":"Database","project":"FlightShare","input":"listen([''fs:\/\/flightshare_fullsync.view#MODIFYFLIGHT, {ddoc=''Design_document'', view=''Flights''}''])?.rows[0]?.id == undefined ? ''Ajouter un vol'': ''Modifier un vol''"}'
       ↓Text1 [mobile.components.UIText-1538755023008]: 
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-            - MobileSmartSourceType: plain:Modifier le vol
+            - MobileSmartSourceType: 'script:this.navParams.data == ''ADD'' ? ''Ajouter un vol'' : ''Modifier un vol'''
 ↓Content [mobile.components.UIDynamicElement-1508950730361]: 
   beanData: '{"ionBean":"Content"}'
   tagName: ion-content
@@ -142,7 +136,7 @@ title: Title for AddFlight
             ↓CustomAction [mobile.components.UICustomAction-1511764975280]: 
       ↓Directive [mobile.components.UIControlDirective-1511796445817]: 
         comment: Display the seats range field only if we have max seats defined
-        directiveExpression: this.global?.selectedPlane?.seats
+        directiveExpression: this.global?.selectedPlane?.occupiedSeats
         directiveName: If
         directiveSource: 
           - xmlizable: 
@@ -164,7 +158,7 @@ title: Title for AddFlight
               '{
                "ionBean": "Range",
                "FormControlName": "plain:occupiedSeats",
-               "DefaultValue": "script:this.global?.selectedPlane?.seats",
+               "DefaultValue": "script:this.global?.selectedPlane?.occupiedSeats",
                "Min": "script:0",
                "Max": "script:this.global?.selectedPlane?.max",
                "Step": "plain:",
@@ -283,7 +277,7 @@ title: Title for AddFlight
         beanData: '{"ionBean":"ListItem"}'
         tagName: ion-item
         ↓Label [mobile.components.UIDynamicElement-1509076547723]: 
-          beanData: '{"ionBean":"Label"}'
+          beanData: '{"ionBean":"Label","Floating":"plain:floating"}'
           tagName: ion-label
           ↓Text [mobile.components.UIText-1509076547731]: 
             textValue: 
@@ -295,6 +289,8 @@ title: Title for AddFlight
             '{
              "ionBean": "TextArea",
              "FormControlName": "plain:comment",
+             "AreaRows": "plain:1",
+             "AreaCols": "plain:0",
              "Value": "script:this.global?.selectedCom?.com"
             }'
           tagName: ion-textarea
@@ -330,13 +326,15 @@ title: Title for AddFlight
           '{
            "ionBean": "FullSyncPostAction",
            "requestable": "plain:FlightShare.flightshare_fullsync",
-           "_id": "source:{\"filter\":\"Database\",\"project\":\"FlightShare\",\"input\":\"listen([''fs:\\\/\\\/flightshare_fullsync.view#MODIFYFLIGHT, {ddoc=''Design_document'', view=''Flights''}''])?.rows[0]?.id\"}",
+           "_id": "script:this.global?.selectedFlightID?.id",
            "RootKey": "plain:flight"
           }'
         ↓PopPage [mobile.components.UIDynamicAction-1511255907641]: 
           beanData: '{"ionBean":"PopPageAction"}'
-          ↓ToastAction [mobile.components.UIDynamicAction-1511255907595]: 
-            beanData: '{"ionBean":"ToastAction","message":"plain:Le vol est sauvegardé..."}'
+          ↓PopPage [mobile.components.UIDynamicAction-1539878242189]: 
+            beanData: '{"ionBean":"PopPageAction"}'
+            ↓ToastAction [mobile.components.UIDynamicAction-1511255907595]: 
+              beanData: '{"ionBean":"ToastAction","message":"plain:Message à modifier"}'
 ↓Footer [mobile.components.UIDynamicElement-1508950711098]: 
   beanData: '{"ionBean":"Footer"}'
   comment: Page footer

@@ -143,10 +143,44 @@ title: Mes vols
                    "__live": "plain:none",
                    "include_docs": "plain:true",
                    "descending": "plain:false",
-                   "key": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1509123535617.key\"}"
+                   "key": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1509123535617?.key\"}"
                   }'
+                ↓Log [mobile.components.UIDynamicAction-1539854461356]: 
+                  beanData: |
+                    '{
+                     "ionBean": "LogAction",
+                     "message": "script:\"QueryViewShowData --- START ---\"",
+                     "level": "plain:warn"
+                    }'
+                ↓Log1 [mobile.components.UIDynamicAction-1539854488048]: 
+                  beanData: |
+                    '{
+                     "ionBean": "LogAction",
+                     "message": "script:JSON.stringify(out)",
+                     "level": "plain:warn"
+                    }'
+                ↓Log11 [mobile.components.UIDynamicAction-1539854465498]: 
+                  beanData: |
+                    '{
+                     "ionBean": "LogAction",
+                     "message": "script:\"QueryViewShowData --- END ---\"",
+                     "level": "plain:warn"
+                    }'
+              ↓selectedFlightKey [mobile.components.UIDynamicAction-1539874664802]: 
+                beanData: |
+                  '{
+                   "ionBean": "SetGlobalAction",
+                   "Property": "plain:selectedFlightKey",
+                   "Value": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1509123535617?.key\"}"
+                  }'
+                ↓Log [mobile.components.UIDynamicAction-1539877952616]: 
+                  beanData: |
+                    '{
+                     "ionBean": "LogAction",
+                     "message": "script:JSON.stringify(out)",
+                     "level": "plain:warn"
+                    }'
             ↓Attr [mobile.components.UIAttribute-1538145739368]: 
-            ↓Directive [mobile.components.UIControlDirective-1538646601074]: 
           ↓SlidingOption [mobile.components.UIDynamicElement-1509567716536]: 
             beanData: '{"ionBean":"SlidingOption","side":"plain:left"}'
             tagName: ion-item-options
@@ -259,15 +293,13 @@ title: Mes vols
       ↓Event [mobile.components.UIControlEvent-1509005174682]: 
         attrName: (click)
         eventName: onClick
-        ↓QueryView [mobile.components.UIDynamicAction-1511109491603]: 
+        ↓PushPage [mobile.components.UIDynamicAction-1539767302306]: 
           beanData: |
             '{
-             "ionBean": "FullSyncViewAction",
-             "marker": "plain:MODIFYFLIGHT",
-             "fsview": "plain:FlightShare.flightshare_fullsync.Design_document.Flights",
-             "key": "plain:INVALID"
+             "ionBean": "PushPageAction",
+             "page": "plain:FlightShare.MobileApplication.Application.AddOrModifyFlight",
+             "data": "plain:ADD"
             }'
-          comment: Querying with an 'INVALID' key will cause the AddOrModify page to be displayed but with no id field, thus making the page to be 'add' and not 'modify'
 ↓Footer [mobile.components.UIDynamicElement-1508938636875]: 
   beanData: '{"ionBean":"Footer"}'
   comment: Page footer
