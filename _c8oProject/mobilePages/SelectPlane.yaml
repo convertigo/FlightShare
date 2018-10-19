@@ -103,6 +103,21 @@ title: Title for SelectPlane
                         - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509077739049?.value?.SEATS"}
                   ↓PopPage [mobile.components.UIDynamicAction-1511796305799]: 
                     beanData: '{"ionBean":"PopPageAction"}'
+                ↓planeMaxSeats [mobile.components.UIDynamicAction-1539941894256]: 
+                  beanData: |
+                    '{
+                     "ionBean": "SetGlobalAction",
+                     "Property": "plain:planeMaxSeats",
+                     "Value": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1509077739049?.value?.SEATS\"}"
+                    }'
+                  isEnabled: false
+                  ↓Log [mobile.components.UIDynamicAction-1539942382624]: 
+                    beanData: |
+                      '{
+                       "ionBean": "LogAction",
+                       "message": "script:JSON.stringify(out)",
+                       "level": "plain:warn"
+                      }'
             ↓Grid [mobile.components.UIDynamicElement-1509078220498]: 
               beanData: '{"ionBean":"Grid"}'
               tagName: ion-grid

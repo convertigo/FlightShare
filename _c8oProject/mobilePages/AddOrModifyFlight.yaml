@@ -136,8 +136,8 @@ title: Title for AddFlight
             ↓CustomAction [mobile.components.UICustomAction-1511764975280]: 
       ↓Directive [mobile.components.UIControlDirective-1511796445817]: 
         comment: Display the seats range field only if we have max seats defined
-        directiveExpression: this.global?.selectedPlane?.occupiedSeats
         directiveName: If
+        directiveExpression: this.global?.selectedPlane?.occupiedSeats
         directiveSource: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
@@ -183,6 +183,55 @@ title: Title for AddFlight
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:this.global?.selectedPlane?.max
+      ↓OtherIf [mobile.components.UIControlDirective-1539942896456]: 
+        directiveName: If
+        isEnabled: false
+        directiveExpression: this.global?.planeMaxSeats
+        directiveSource: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:
+        ↓ListItem1111 [mobile.components.UIDynamicElement-1539942919168]: 
+          beanData: '{"ionBean":"ListItem"}'
+          tagName: ion-item
+          ↓Label [mobile.components.UIDynamicElement-1539942919171]: 
+            beanData: '{"ionBean":"Label"}'
+            tagName: ion-label
+            ↓Text [mobile.components.UIText-1539942919174]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:Places Libres
+          ↓Range [mobile.components.UIDynamicElement-1539942919177]: 
+            beanData: |
+              '{
+               "ionBean": "Range",
+               "FormControlName": "plain:var1539942919177",
+               "DefaultValue": "plain:0",
+               "Min": "script:0",
+               "Max": "script:this.global?.planeMaxSeats",
+               "Step": "plain:",
+               "Pin": "plain:true",
+               "Snaps": "plain:true"
+              }'
+            comment: the variable used here is occupiedSeats but represensents in fact Free Seats
+            tagName: ion-range
+            ↓Label [mobile.components.UIDynamicElement-1539942919180]: 
+              beanData: '{"ionBean":"Label","RangeLeft":"plain:range-left"}'
+              tagName: ion-label
+              ↓Text [mobile.components.UIText-1539942919183]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: plain:0
+            ↓Label1 [mobile.components.UIDynamicElement-1539942919186]: 
+              beanData: '{"ionBean":"Label","RangeRight":"plain:range-right"}'
+              tagName: ion-label
+              ↓Text [mobile.components.UIText-1539942919189]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: script:this.global?.planeMaxSeats
       ↓DateField [mobile.components.UIDynamicElement-1509076453468]: 
         beanData: '{"ionBean":"ListItem"}'
         tagName: ion-item
@@ -331,10 +380,8 @@ title: Title for AddFlight
           }'
         ↓PopPage [mobile.components.UIDynamicAction-1511255907641]: 
           beanData: '{"ionBean":"PopPageAction"}'
-          ↓PopPage [mobile.components.UIDynamicAction-1539878242189]: 
-            beanData: '{"ionBean":"PopPageAction"}'
-            ↓ToastAction [mobile.components.UIDynamicAction-1511255907595]: 
-              beanData: '{"ionBean":"ToastAction","message":"plain:Message à modifier"}'
+          ↓ModifMsg [mobile.components.UIDynamicAction-1511255907595]: 
+            beanData: '{"ionBean":"ToastAction","message":"plain:Message à remplir"}'
 ↓Footer [mobile.components.UIDynamicElement-1508950711098]: 
   beanData: '{"ionBean":"Footer"}'
   comment: Page footer

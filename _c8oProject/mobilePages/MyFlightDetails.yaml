@@ -246,6 +246,7 @@ title: Title for MyFlightDetails
                      "ionBean": "Button",
                      "ButtonFormType": "plain:false",
                      "IonColor": "plain:dark",
+                     "IonShape": "plain:block",
                      "IconPosition": "plain:icon-left"
                     }'
                   tagName: button
@@ -267,7 +268,7 @@ title: Title for MyFlightDetails
                          "key": "script:this.global?.selectedFlightKey"
                         }'
                       comment: We query with a valid key, so the AddOrModifyFlight  Page will be displayed in 'Modify' mode
-                      ↓Log1 [mobile.components.UIDynamicAction-1539854212723]: 
+                      ↓Log [mobile.components.UIDynamicAction-1539964652720]: 
                         beanData: |
                           '{
                            "ionBean": "LogAction",
@@ -281,13 +282,6 @@ title: Title for MyFlightDetails
                            "Property": "plain:selectedFlightID",
                            "Value": "script:{ id: out.rows[0].id }"
                           }'
-                        ↓Log1 [mobile.components.UIDynamicAction-1539876031181]: 
-                          beanData: |
-                            '{
-                             "ionBean": "LogAction",
-                             "message": "script:JSON.stringify(out)",
-                             "level": "plain:warn"
-                            }'
                       ↓selectedAirports [mobile.components.UIDynamicAction-1539851707697]: 
                         beanData: |
                           '{
@@ -295,13 +289,6 @@ title: Title for MyFlightDetails
                            "Property": "plain:selectedAirports",
                            "Value": "script:{FROM: out.rows[0].doc?.flight?.from, TO:out.rows[0].doc?.flight?.to}"
                           }'
-                        ↓Log [mobile.components.UIDynamicAction-1539851707700]: 
-                          beanData: |
-                            '{
-                             "ionBean": "LogAction",
-                             "message": "script:JSON.stringify(out)",
-                             "level": "plain:warn"
-                            }'
                       ↓selectedPlane [mobile.components.UIDynamicAction-1539851707706]: 
                         beanData: |
                           '{
@@ -309,7 +296,7 @@ title: Title for MyFlightDetails
                            "Property": "plain:selectedPlane",
                            "Value": "script:{ plane: out.rows[0].doc?.flight?.plane, occupiedSeats: out.rows[0].doc?.flight?.occupiedSeats, max: out.rows[1].doc?.plane?.SEATS}"
                           }'
-                        ↓Log [mobile.components.UIDynamicAction-1539851707709]: 
+                        ↓Log1 [mobile.components.UIDynamicAction-1539961730878]: 
                           beanData: |
                             '{
                              "ionBean": "LogAction",
@@ -323,13 +310,6 @@ title: Title for MyFlightDetails
                            "Property": "plain:selectedDate",
                            "Value": "script:{date: out.rows[0].doc?.flight?.date}"
                           }'
-                        ↓Log [mobile.components.UIDynamicAction-1539851707718]: 
-                          beanData: |
-                            '{
-                             "ionBean": "LogAction",
-                             "message": "script:JSON.stringify(out)",
-                             "level": "plain:warn"
-                            }'
                       ↓selectedTime [mobile.components.UIDynamicAction-1539851707724]: 
                         beanData: |
                           '{
@@ -337,13 +317,6 @@ title: Title for MyFlightDetails
                            "Property": "plain:selectedTime",
                            "Value": "script:{time: out.rows[0].doc?.flight?.time}"
                           }'
-                        ↓Log [mobile.components.UIDynamicAction-1539851707727]: 
-                          beanData: |
-                            '{
-                             "ionBean": "LogAction",
-                             "message": "script:JSON.stringify(out)",
-                             "level": "plain:warn"
-                            }'
                       ↓selectedCom [mobile.components.UIDynamicAction-1539851707733]: 
                         beanData: |
                           '{
@@ -351,15 +324,13 @@ title: Title for MyFlightDetails
                            "Property": "plain:selectedCom",
                            "Value": "script:{com: out.rows[0].doc?.flight?.comment}"
                           }'
-                        ↓Log [mobile.components.UIDynamicAction-1539851707736]: 
-                          beanData: |
-                            '{
-                             "ionBean": "LogAction",
-                             "message": "script:JSON.stringify(out)",
-                             "level": "plain:warn"
-                            }'
                       ↓PushPage [mobile.components.UIDynamicAction-1538754145267]: 
-                        beanData: '{"ionBean":"PushPageAction","page":"plain:FlightShare.MobileApplication.Application.AddOrModifyFlight"}'
+                        beanData: |
+                          '{
+                           "ionBean": "PushPageAction",
+                           "page": "plain:FlightShare.MobileApplication.Application.AddOrModifyFlight",
+                           "data": "plain:MODFLIGHT"
+                          }'
                   ↓Text [mobile.components.UIText-1538571751331]: 
                     textValue: 
                       - xmlizable: 

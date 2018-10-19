@@ -145,27 +145,6 @@ title: Mes vols
                    "descending": "plain:false",
                    "key": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1509123535617?.key\"}"
                   }'
-                ↓Log [mobile.components.UIDynamicAction-1539854461356]: 
-                  beanData: |
-                    '{
-                     "ionBean": "LogAction",
-                     "message": "script:\"QueryViewShowData --- START ---\"",
-                     "level": "plain:warn"
-                    }'
-                ↓Log1 [mobile.components.UIDynamicAction-1539854488048]: 
-                  beanData: |
-                    '{
-                     "ionBean": "LogAction",
-                     "message": "script:JSON.stringify(out)",
-                     "level": "plain:warn"
-                    }'
-                ↓Log11 [mobile.components.UIDynamicAction-1539854465498]: 
-                  beanData: |
-                    '{
-                     "ionBean": "LogAction",
-                     "message": "script:\"QueryViewShowData --- END ---\"",
-                     "level": "plain:warn"
-                    }'
               ↓selectedFlightKey [mobile.components.UIDynamicAction-1539874664802]: 
                 beanData: |
                   '{
@@ -173,13 +152,6 @@ title: Mes vols
                    "Property": "plain:selectedFlightKey",
                    "Value": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1509123535617?.key\"}"
                   }'
-                ↓Log [mobile.components.UIDynamicAction-1539877952616]: 
-                  beanData: |
-                    '{
-                     "ionBean": "LogAction",
-                     "message": "script:JSON.stringify(out)",
-                     "level": "plain:warn"
-                    }'
             ↓Attr [mobile.components.UIAttribute-1538145739368]: 
           ↓SlidingOption [mobile.components.UIDynamicElement-1509567716536]: 
             beanData: '{"ionBean":"SlidingOption","side":"plain:left"}'
@@ -298,8 +270,17 @@ title: Mes vols
             '{
              "ionBean": "PushPageAction",
              "page": "plain:FlightShare.MobileApplication.Application.AddOrModifyFlight",
-             "data": "plain:ADD"
+             "data": "plain:ADD",
+             "animate_duration": "script:75"
             }'
+          ↓emptyModFlight [mobile.components.UIDynamicAction-1539938525909]: 
+            beanData: |
+              '{
+               "ionBean": "SetGlobalAction",
+               "Property": "plain:emptyModFlight",
+               "Value": "script:this.global?.selectedFlightID = {}\r\nthis.global?.selectedAirports = {}\r\nthis.global?.selectedPlane = {}\r\nthis.global?.selectedTime = {}\r\nthis.global?.selectedCom = {}"
+              }'
+            isEnabled: false
 ↓Footer [mobile.components.UIDynamicElement-1508938636875]: 
   beanData: '{"ionBean":"Footer"}'
   comment: Page footer
