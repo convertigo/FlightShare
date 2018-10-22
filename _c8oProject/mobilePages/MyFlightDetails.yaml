@@ -268,13 +268,6 @@ title: Title for MyFlightDetails
                          "key": "script:this.global?.selectedFlightKey"
                         }'
                       comment: We query with a valid key, so the AddOrModifyFlight  Page will be displayed in 'Modify' mode
-                      ↓Log [mobile.components.UIDynamicAction-1539964652720]: 
-                        beanData: |
-                          '{
-                           "ionBean": "LogAction",
-                           "message": "script:JSON.stringify(out)",
-                           "level": "plain:warn"
-                          }'
                       ↓selectedFlightID [mobile.components.UIDynamicAction-1539875989564]: 
                         beanData: |
                           '{
@@ -296,13 +289,6 @@ title: Title for MyFlightDetails
                            "Property": "plain:selectedPlane",
                            "Value": "script:{ plane: out.rows[0].doc?.flight?.plane, occupiedSeats: out.rows[0].doc?.flight?.occupiedSeats, max: out.rows[1].doc?.plane?.SEATS}"
                           }'
-                        ↓Log1 [mobile.components.UIDynamicAction-1539961730878]: 
-                          beanData: |
-                            '{
-                             "ionBean": "LogAction",
-                             "message": "script:JSON.stringify(out)",
-                             "level": "plain:warn"
-                            }'
                       ↓selectedDate [mobile.components.UIDynamicAction-1539851707715]: 
                         beanData: |
                           '{

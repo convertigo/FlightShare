@@ -39,7 +39,7 @@ title: Title for AddFlight
     ↓List [mobile.components.UIDynamicElement-1508950839196]: 
       beanData: '{"ionBean":"List"}'
       tagName: ion-list
-      ↓ListItem [mobile.components.UIDynamicElement-1509565178879]: 
+      ↓FROM [mobile.components.UIDynamicElement-1509565178879]: 
         beanData: '{"ionBean":"ListItem"}'
         tagName: ion-item
         ↓Label [mobile.components.UIDynamicElement-1509122730926]: 
@@ -71,7 +71,7 @@ title: Title for AddFlight
                 }'
           ↓ControlValidator [mobile.components.UIFormControlValidator-1509566247830]: 
             required: set
-      ↓ListItem2 [mobile.components.UIDynamicElement-1509565934657]: 
+      ↓TO [mobile.components.UIDynamicElement-1509565934657]: 
         beanData: '{"ionBean":"ListItem"}'
         tagName: ion-item
         ↓Input [mobile.components.UIDynamicElement-1509122723672]: 
@@ -103,7 +103,7 @@ title: Title for AddFlight
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:A :
-      ↓ListItem3 [mobile.components.UIDynamicElement-1509566035107]: 
+      ↓PLANE [mobile.components.UIDynamicElement-1509566035107]: 
         beanData: '{"ionBean":"ListItem"}'
         tagName: ion-item
         ↓Label [mobile.components.UIDynamicElement-1509122225495]: 
@@ -135,7 +135,7 @@ title: Title for AddFlight
             eventName: (change)
             ↓CustomAction [mobile.components.UICustomAction-1511764975280]: 
       ↓Directive [mobile.components.UIControlDirective-1511796445817]: 
-        comment: Display the seats range field only if we have max seats defined
+        comment: If occupiedSeats is defined, we show the 'range' selector with all the current plane data
         directiveName: If
         directiveExpression: this.global?.selectedPlane?.occupiedSeats
         directiveSource: 
@@ -184,9 +184,9 @@ title: Title for AddFlight
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:this.global?.selectedPlane?.max
       ↓OtherIf [mobile.components.UIControlDirective-1539942896456]: 
+        comment: // If occupiedSeats is not defined we get the max plane seats and set occupiedSeats to 1 by default
         directiveName: If
-        isEnabled: false
-        directiveExpression: this.global?.planeMaxSeats
+        directiveExpression: this.global?.selectedPlane?.occupiedSeats == ""
         directiveSource: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
@@ -206,10 +206,10 @@ title: Title for AddFlight
             beanData: |
               '{
                "ionBean": "Range",
-               "FormControlName": "plain:var1539942919177",
-               "DefaultValue": "plain:0",
+               "FormControlName": "plain:occupiedSeats",
+               "DefaultValue": "plain:1",
                "Min": "script:0",
-               "Max": "script:this.global?.planeMaxSeats",
+               "Max": "script:this.global?.selectedPlane?.max",
                "Step": "plain:",
                "Pin": "plain:true",
                "Snaps": "plain:true"
@@ -231,8 +231,8 @@ title: Title for AddFlight
                 textValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                    - MobileSmartSourceType: script:this.global?.planeMaxSeats
-      ↓DateField [mobile.components.UIDynamicElement-1509076453468]: 
+                    - MobileSmartSourceType: script:this.global?.selectedPlane?.max
+      ↓DATE [mobile.components.UIDynamicElement-1509076453468]: 
         beanData: '{"ionBean":"ListItem"}'
         tagName: ion-item
         ↓Label [mobile.components.UIDynamicElement-1509076453477]: 
@@ -297,7 +297,7 @@ title: Title for AddFlight
                    "message": "script:JSON.stringify(out)",
                    "level": "plain:warn"
                   }'
-      ↓ListItem111 [mobile.components.UIDynamicElement-1509118067548]: 
+      ↓TIME [mobile.components.UIDynamicElement-1509118067548]: 
         beanData: '{"ionBean":"ListItem"}'
         tagName: ion-item
         ↓Label [mobile.components.UIDynamicElement-1509118067592]: 
@@ -322,7 +322,7 @@ title: Title for AddFlight
           tagName: ion-datetime
           ↓ControlValidator [mobile.components.UIFormControlValidator-1509566297493]: 
             required: set
-      ↓ListItem11 [mobile.components.UIDynamicElement-1509076547715]: 
+      ↓COMMENT [mobile.components.UIDynamicElement-1509076547715]: 
         beanData: '{"ionBean":"ListItem"}'
         tagName: ion-item
         ↓Label [mobile.components.UIDynamicElement-1509076547723]: 
@@ -381,10 +381,26 @@ title: Title for AddFlight
         ↓PopPage [mobile.components.UIDynamicAction-1511255907641]: 
           beanData: '{"ionBean":"PopPageAction"}'
           ↓ModifMsg [mobile.components.UIDynamicAction-1511255907595]: 
-            beanData: '{"ionBean":"ToastAction","message":"plain:Message à remplir"}'
+            beanData: '{"ionBean":"ToastAction","message":"script:this.global.getPageName == ''add'' ? this.message = ''Vol créé avec succès'' : this.message = ''Modifications réalisées avec succès''"}'
+          ↓PopPage [mobile.components.UIDynamicAction-1540199265674]: 
+            beanData: '{"ionBean":"PopPageAction"}'
 ↓Footer [mobile.components.UIDynamicElement-1508950711098]: 
   beanData: '{"ionBean":"Footer"}'
   comment: Page footer
   tagName: ion-footer
 ↓PageEvent [mobile.components.UIPageEvent-1518605721131]: 
-  isEnabled: false
+  ↓SetGlobal [mobile.components.UIDynamicAction-1540201305681]: 
+    beanData: |
+      '{
+       "ionBean": "SetGlobalAction",
+       "Property": "plain:getPageName",
+       "Value": "script:this.navParams.data == ''ADD'' ? ''add'' : ''modif''"
+      }'
+    comment: We keep the page name here to set the toast message correctly
+    ↓Log [mobile.components.UIDynamicAction-1540202209337]: 
+      beanData: |
+        '{
+         "ionBean": "LogAction",
+         "message": "script:JSON.stringify(out)",
+         "level": "plain:warn"
+        }'
