@@ -140,6 +140,7 @@ title: Synchronisation données
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:Powered by Convertigo
       ↓Style [mobile.components.UIStyle-1510222830149]: 
+        isEnabled: false
         styleContent: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
@@ -148,7 +149,6 @@ title: Synchronisation données
                 '	border: 1px solid blue
                 
                 '
-        isEnabled: false
     ↓GridRow [mobile.components.UIDynamicElement-1510002636557]: 
       beanData: '{"ionBean":"GridRow"}'
       isEnabled: false
@@ -174,6 +174,7 @@ title: Synchronisation données
                 
                 '
   ↓Style [mobile.components.UIStyle-1510222371363]: 
+    isEnabled: false
     styleContent: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
@@ -181,7 +182,6 @@ title: Synchronisation données
           →: |
             '	background-color: silver;
             '
-    isEnabled: false
 ↓PageEvent [mobile.components.UIPageEvent-1510002823128]: 
   ↓IfRunningOnDevice [mobile.components.UIDynamicAction-1512659937536]: 
     beanData: '{"ionBean":"IfAction","condition":"script:window.cordova"}'

@@ -134,104 +134,47 @@ title: Title for AddFlight
             attrName: (change)
             eventName: (change)
             ↓CustomAction [mobile.components.UICustomAction-1511764975280]: 
-      ↓Directive [mobile.components.UIControlDirective-1511796445817]: 
-        comment: If occupiedSeats is defined, we show the 'range' selector with all the current plane data
-        directiveName: If
-        directiveExpression: this.global?.selectedPlane?.occupiedSeats
-        directiveSource: 
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-            - MobileSmartSourceType: source:{}
-        ↓ListItem1111 [mobile.components.UIDynamicElement-1511763946860]: 
-          beanData: '{"ionBean":"ListItem"}'
-          tagName: ion-item
-          ↓Label [mobile.components.UIDynamicElement-1511763946900]: 
-            beanData: '{"ionBean":"Label"}'
+      ↓SEATS [mobile.components.UIDynamicElement-1511763946860]: 
+        beanData: '{"ionBean":"ListItem"}'
+        tagName: ion-item
+        ↓Label [mobile.components.UIDynamicElement-1511763946900]: 
+          beanData: '{"ionBean":"Label"}'
+          tagName: ion-label
+          ↓Text [mobile.components.UIText-1511763946931]: 
+            textValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                - MobileSmartSourceType: plain:Places Libres
+        ↓Range [mobile.components.UIDynamicElement-1511764058444]: 
+          beanData: |
+            '{
+             "ionBean": "Range",
+             "FormControlName": "plain:occupiedSeats",
+             "DefaultValue": "script:this.global?.selectedPlane?.occupiedSeats != undefined ? this.global?.selectedPlane?.occupiedSeats : this.global?.selectedPlane?.max",
+             "Min": "script:0",
+             "Max": "script:this.global?.selectedPlane?.max",
+             "Step": "plain:",
+             "Pin": "plain:true",
+             "Snaps": "plain:true"
+            }'
+          comment: the variable used here is occupiedSeats but represensents in fact Free Seats
+          tagName: ion-range
+          ↓Label [mobile.components.UIDynamicElement-1511764252275]: 
+            beanData: '{"ionBean":"Label","RangeLeft":"plain:range-left"}'
             tagName: ion-label
-            ↓Text [mobile.components.UIText-1511763946931]: 
+            ↓Text [mobile.components.UIText-1511764266891]: 
               textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                  - MobileSmartSourceType: plain:Places Libres
-          ↓Range [mobile.components.UIDynamicElement-1511764058444]: 
-            beanData: |
-              '{
-               "ionBean": "Range",
-               "FormControlName": "plain:occupiedSeats",
-               "DefaultValue": "script:this.global?.selectedPlane?.occupiedSeats",
-               "Min": "script:0",
-               "Max": "script:this.global?.selectedPlane?.max",
-               "Step": "plain:",
-               "Pin": "plain:true",
-               "Snaps": "plain:true"
-              }'
-            comment: the variable used here is occupiedSeats but represensents in fact Free Seats
-            tagName: ion-range
-            ↓Label [mobile.components.UIDynamicElement-1511764252275]: 
-              beanData: '{"ionBean":"Label","RangeLeft":"plain:range-left"}'
-              tagName: ion-label
-              ↓Text [mobile.components.UIText-1511764266891]: 
-                textValue: 
-                  - xmlizable: 
-                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                    - MobileSmartSourceType: plain:0
-            ↓Label1 [mobile.components.UIDynamicElement-1511764256368]: 
-              beanData: '{"ionBean":"Label","RangeRight":"plain:range-right"}'
-              tagName: ion-label
-              ↓Text [mobile.components.UIText-1511764274939]: 
-                textValue: 
-                  - xmlizable: 
-                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                    - MobileSmartSourceType: script:this.global?.selectedPlane?.max
-      ↓OtherIf [mobile.components.UIControlDirective-1539942896456]: 
-        comment: // If occupiedSeats is not defined we get the max plane seats and set occupiedSeats to 1 by default
-        directiveName: If
-        directiveExpression: this.global?.selectedPlane?.occupiedSeats == ""
-        directiveSource: 
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-            - MobileSmartSourceType: script:
-        ↓ListItem1111 [mobile.components.UIDynamicElement-1539942919168]: 
-          beanData: '{"ionBean":"ListItem"}'
-          tagName: ion-item
-          ↓Label [mobile.components.UIDynamicElement-1539942919171]: 
-            beanData: '{"ionBean":"Label"}'
+                  - MobileSmartSourceType: plain:0
+          ↓Label1 [mobile.components.UIDynamicElement-1511764256368]: 
+            beanData: '{"ionBean":"Label","RangeRight":"plain:range-right"}'
             tagName: ion-label
-            ↓Text [mobile.components.UIText-1539942919174]: 
+            ↓Text [mobile.components.UIText-1511764274939]: 
               textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                  - MobileSmartSourceType: plain:Places Libres
-          ↓Range [mobile.components.UIDynamicElement-1539942919177]: 
-            beanData: |
-              '{
-               "ionBean": "Range",
-               "FormControlName": "plain:occupiedSeats",
-               "DefaultValue": "plain:1",
-               "Min": "script:0",
-               "Max": "script:this.global?.selectedPlane?.max",
-               "Step": "plain:",
-               "Pin": "plain:true",
-               "Snaps": "plain:true"
-              }'
-            comment: the variable used here is occupiedSeats but represensents in fact Free Seats
-            tagName: ion-range
-            ↓Label [mobile.components.UIDynamicElement-1539942919180]: 
-              beanData: '{"ionBean":"Label","RangeLeft":"plain:range-left"}'
-              tagName: ion-label
-              ↓Text [mobile.components.UIText-1539942919183]: 
-                textValue: 
-                  - xmlizable: 
-                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                    - MobileSmartSourceType: plain:0
-            ↓Label1 [mobile.components.UIDynamicElement-1539942919186]: 
-              beanData: '{"ionBean":"Label","RangeRight":"plain:range-right"}'
-              tagName: ion-label
-              ↓Text [mobile.components.UIText-1539942919189]: 
-                textValue: 
-                  - xmlizable: 
-                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                    - MobileSmartSourceType: script:this.global?.selectedPlane?.max
+                  - MobileSmartSourceType: script:this.global?.selectedPlane?.max
       ↓DATE [mobile.components.UIDynamicElement-1509076453468]: 
         beanData: '{"ionBean":"ListItem"}'
         tagName: ion-item
