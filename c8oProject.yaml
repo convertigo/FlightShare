@@ -21,7 +21,7 @@
     applicationName: Flight Share
     applicationVersion: 1.0
     comment: Describes the mobile application global properties
-    endpoint: https://mb.convertigo.net/cems
+    endpoint: https://c8o-dev.convertigo.net/cems
     splashRemoveMode: beforeUpdate
     ↓Android [mobileplatforms.Android]: 
       comment: Android 4.4 to 6 for Smartphones and Tablets
@@ -59,7 +59,6 @@
               /*Begin_c8o_AppFunction*/
               	/*End_c8o_AppFunction*/
       tplProjectName: mobilebuilder_tpl_7_6_0
-      tplProjectVersion: 7.6.0.0
       ↓ShowFlightRoute [mobile.components.RouteComponent-1509555963318]: 
         ↓FullSyncEvent [mobile.components.RouteFullsyncEvent-1509555977898]: 
           marker: SHOWFLIGHT

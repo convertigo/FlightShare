@@ -216,6 +216,10 @@ title: Synchronisation données
           beanData: '{"ionBean":"ErrorAction"}'
       ↓LoginWithGoogle [mobile.components.UIDynamicAction-1535032572232]: 
         beanData: '{"ionBean":"GooglePlusLoginAction","webClientId":"plain:465373723999-vbta9svj9t2f6117ja6n3qtle807er1e.apps.googleusercontent.com"}'
+        comment: |
+          'For Android, the app must be signed with a keystore having one of the SHA1 fingerprints found here : 
+          
+          https://console.firebase.google.com/project/flight-share/settings/general/android:com.convertigo.flightshare'
         ↓CallSequence [mobile.components.UIDynamicAction-1535032572295]: 
           beanData: |
             '{
@@ -289,7 +293,7 @@ title: Synchronisation données
              "Property": "plain:currentUser",
              "Value": "script:{ email: ''olivierp@convertigo.com'', displayName: ''Olivier Picciotto''}"
             }'
-  ↓ConfigureGooglePlusPlugin [mobile.components.UICustomAction-1516036537967]: 
+  ↓ConfigureGooglePluginForIOS [mobile.components.UICustomAction-1516036537967]: 
     comment: This is just to decralre the plugin parameter in Config.xml for iOS
     cordova_plugins: 
       - xmlizable: 
