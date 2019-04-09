@@ -315,12 +315,31 @@ var F = {
 				
 				F.copyCordovaFiles(filesToCopy, function () {
 					F.debug("all cordova files writen");
-					window.location.href = F.env.webLocalBase + "/index-fu.html";				
+					// Handle special WKWebView for iOS
+					if (window.Ionic !=  undefined){
+						// Handle special WKWebView for iOS
+						if(window.Ionic.WebView.convertFileSrc){
+							F.moveiOS();
+						}
+						else{
+							F.moveOthers();
+						}
+					}
+					else{
+						F.moveOthers();
+					}				
 				});
 			}
 		});
 	},
 	
+	moveiOS: function () {
+		window.location.href = window.Ionic.WebView.convertFileSrc(F.env.webLocalBase + "/index-fu.html");
+	},
+	
+	moveOthers: function () {
+		window.location.href = F.env.webLocalBase + "/index-fu.html";
+	},
 	copyCordovaFiles: function (files, success) {
 		var curFile = 0;
 		
