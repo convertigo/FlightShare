@@ -152,9 +152,6 @@ title: Mes vols
                    "Property": "plain:selectedFlightKey",
                    "Value": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1509123535617?.key\"}"
                   }'
-              ↓PopPage [mobile.components.UIDynamicAction-1540197868344]: 
-                beanData: '{"ionBean":"PopPageAction"}'
-                isEnabled: false
             ↓Attr [mobile.components.UIAttribute-1538145739368]: 
           ↓SlidingOption [mobile.components.UIDynamicElement-1509567716536]: 
             beanData: '{"ionBean":"SlidingOption","side":"plain:left"}'

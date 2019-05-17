@@ -845,8 +845,8 @@ title: Title for MyFlightDetails1
                      "quality": "script:60",
                      "destinationType": "plain:FILE_URI",
                      "sourceType": "plain:PHOTOLIBRARY",
-                     "targetWidth": "script:false",
-                     "targetHeight": "script:false",
+                     "targetWidth": "plain:",
+                     "targetHeight": "plain:",
                      "mediaType": "plain:PICTURE"
                     }'
                   comment: We will use the output out as an attachment name but
@@ -856,7 +856,7 @@ title: Title for MyFlightDetails1
                        "ionBean": "FullSyncPutAttachmentAction",
                        "requestable": "plain:FlightShare.flightshare_fullsync",
                        "docid": "source:{\"filter\":\"Database\",\"project\":\"FlightShare\",\"input\":\"listen([''fs:\\\/\\\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc=''Design_document'', view=''PublishedFlightsDetails'', include_docs=''true''}''])?.rows[0]?.id\"}",
-                       "name": "script:out.substring(out.lastIndexOf(''\/'') + 1)",
+                       "name": "script:out.href ? out.href.substring(out.href.lastIndexOf(''\/'') + 1) : out.substring(out.lastIndexOf(''\/'') + 1)",
                        "content_type": "plain:image\/jpg",
                        "content": "script:out"
                       }'
@@ -881,8 +881,8 @@ title: Title for MyFlightDetails1
                     '{
                      "ionBean": "CameraAction",
                      "quality": "script:60",
-                     "targetWidth": "script:false",
-                     "targetHeight": "script:false",
+                     "targetWidth": "plain:",
+                     "targetHeight": "plain:",
                      "mediaType": "plain:VIDEO"
                     }'
                   ↓PutAttachment [mobile.components.UIDynamicAction-1515168628419]: 
@@ -891,7 +891,7 @@ title: Title for MyFlightDetails1
                        "ionBean": "FullSyncPutAttachmentAction",
                        "requestable": "plain:FlightShare.flightshare_fullsync",
                        "docid": "source:{\"filter\":\"Database\",\"project\":\"FlightShare\",\"input\":\"listen([''fs:\\\/\\\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc=''Design_document'', view=''PublishedFlightsDetails'', include_docs=''true''}''])?.rows[0]?.id\"}",
-                       "name": "script:out.href.substring(out.href.lastIndexOf(''\/'')+1)",
+                       "name": "script:out.href ? out.href.substring(out.href.lastIndexOf(''\/'') + 1): out.substring(out.lastIndexOf(''\/'') + 1)",
                        "content_type": "plain:image\/jpg",
                        "content": "script:out"
                       }'

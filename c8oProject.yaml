@@ -2,7 +2,7 @@
 ↓FlightShare [core.Project]: 
   comment: Flying Club flight sharing application
   corsOrigin: =Origin
-  version: 1.4
+  version: 2.0
   ↓flightshare_fullsync [connectors.FullSyncConnector]: 🗏 connectors/flightshare_fullsync.yaml
   ↓CreateFlight [sequences.GenericSequence]: 🗏 sequences/CreateFlight.yaml
   ↓FillAirports [sequences.GenericSequence]: 🗏 sequences/FillAirports.yaml
@@ -21,7 +21,7 @@
     applicationName: Flight Share
     applicationVersion: 1.0
     comment: Describes the mobile application global properties
-    endpoint: https://c8o-dev.convertigo.net/cems
+    endpoint: http://192.168.100.223:18080/convertigo
     splashRemoveMode: beforeUpdate
     ↓Android [mobileplatforms.Android]: 
       comment: Android 4.4 to 6 for Smartphones and Tablets
