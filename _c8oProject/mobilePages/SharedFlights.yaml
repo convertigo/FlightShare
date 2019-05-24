@@ -1,3 +1,4 @@
+comment: Shared flight page, displaying shared flights
 inAutoMenu: false
 scriptContent: 
   - xmlizable: 

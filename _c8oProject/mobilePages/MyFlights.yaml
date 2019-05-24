@@ -1,3 +1,4 @@
+comment: My flights page displaying flights for the current user
 inAutoMenu: false
 segment: MyFlights
 title: Mes vols

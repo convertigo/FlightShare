@@ -1,0 +1,48 @@
+↑isRoot: true
+segment: path-to-nodatapage1
+title: Title for NoDataPage1
+↓Content [mobile.components.UIDynamicElement-1558706996684]: 
+  beanData: '{"ionBean":"Content"}'
+  tagName: ion-content
+  ↓Grid [mobile.components.UIDynamicElement-1558706996687]: 
+    beanData: '{"ionBean":"Grid","Height":"plain:height:100%"}'
+    tagName: ion-grid
+    ↓GridRow [mobile.components.UIDynamicElement-1558706996690]: 
+      beanData: |
+        '{
+         "ionBean": "GridRow",
+         "Height": "plain:height:100%",
+         "AlignItemsCenter": "plain:align-items-center"
+        }'
+      tagName: ion-row
+      ↓GridCol [mobile.components.UIDynamicElement-1558706996693]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓TextFormat [mobile.components.UIDynamicElement-1558706996696]: 
+          beanData: '{"ionBean":"TextFormat","TextCenter":"plain:text-center"}'
+          tagName: div
+          ↓Icon [mobile.components.UIDynamicElement-1558706996699]: 
+            beanData: |
+              '{
+               "ionBean": "Icon",
+               "IconName": "plain:notifications-outline",
+               "IonColor": "plain:light"
+              }'
+            tagName: ion-icon
+            ↓Style [mobile.components.UIStyle-1558706996702]: 
+              styleContent: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                  - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                    →: |
+                      '	transform: scale(5.0);
+                      	padding-bottom: 10px;
+                      '
+          ↓H1 [mobile.components.UIDynamicElement-1558706996711]: 
+            beanData: '{"ionBean":"Heading1"}'
+            tagName: h1
+            ↓Text [mobile.components.UIText-1558706996714]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:Chargement en cours...

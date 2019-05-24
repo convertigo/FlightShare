@@ -21,7 +21,6 @@
     applicationName: Flight Share
     applicationVersion: 1.0
     comment: Describes the mobile application global properties
-    endpoint: http://192.168.100.223:18080/convertigo
     splashRemoveMode: beforeUpdate
     ↓Android [mobileplatforms.Android]: 
       comment: Android 4.4 to 6 for Smartphones and Tablets
@@ -177,6 +176,8 @@
       ↓UserList [mobile.components.PageComponent-1511716843845]: 🗏 mobilePages/UserList.yaml
       ↓FlightConf [mobile.components.PageComponent-1519224942435]: 🗏 mobilePages/FlightConf.yaml
       ↓Indexing [mobile.components.PageComponent-1520963727353]: 🗏 mobilePages/Indexing.yaml
+      ↓NoDataPage [mobile.components.PageComponent-1558529968009]: 🗏 mobilePages/NoDataPage.yaml
+      ↓LoadingPage [mobile.components.PageComponent-1558706996635]: 🗏 mobilePages/LoadingPage.yaml
       ↓Theme [mobile.components.UITheme-1491635018260]: 
         comment: Global color themes can be customized here
         styleContent: 
@@ -289,6 +290,24 @@
                 .menu-inner ion-icon {
                 	padding-right: 20px
                 }'
+      ↓AppEvent [mobile.components.UIAppEvent-1558102302674]: 
+      ↓AppEvent1 [mobile.components.UIAppEvent-1558102312338]: 
+        appEvent: onAppResume
+      ↓AppEvent2 [mobile.components.UIAppEvent-1558102349374]: 
+        appEvent: onAppResize
+      ↓AppEvent3 [mobile.components.UIAppEvent-1558358372546]: 
+        appEvent: onNetworkChanged
+        ↓IfServerReachable [mobile.components.UIDynamicAction-1558361172070]: 
+          beanData: '{"ionBean":"IfAction","condition":"script:parent.out == \"Reachable\""}'
+          comment: if Reachable,
+          ↓PushSyncPage [mobile.components.UIDynamicAction-1558428350958]: 
+            beanData: '{"ionBean":"PushPageAction","page":"plain:FlightShare.MobileApplication.Application.Synchronizing"}'
+            comment: Push the sync page
+        ↓IfOffLine [mobile.components.UIDynamicAction-1558543309035]: 
+          beanData: '{"ionBean":"IfAction","condition":"script:parent.out == \"Offline\""}'
+          comment: if Offline,
+          ↓Toast [mobile.components.UIDynamicAction-1558625197986]: 
+            beanData: '{"ionBean":"ToastAction","message":"plain:Vous êtes hors connexion, l''application va démarrer normalement et va synchroniser ses données dès que le réseau est disponible"}'
   ↓CouchDb_schema [references.ImportXsdSchemaReference]: 
     urlpath: http://localhost:18080/convertigo/xsd/couchdb/CouchDb.xsd
   ↓lib_FullSyncGrp_reference [references.ProjectSchemaReference]: 

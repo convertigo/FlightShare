@@ -1,4 +1,4 @@
-comment: My First Page as root page
+comment: My First Page as root page containing the tabs
 icon: plane
 scriptContent: 
   - xmlizable: 
@@ -37,27 +37,3 @@ title: Liste des vols
     tabpage: FlightShare.MobileApplication.Application.SharedFlights
     tagName: ion-tab
 ↓PageEvent [mobile.components.UIPageEvent-1519320898814]: 
-  ↓GetData [mobile.components.UIDynamicAction-1519320911361]: 
-    beanData: |
-      '{
-       "ionBean": "FullSyncGetAction",
-       "requestable": "plain:FlightShare.flightshare_fullsync",
-       "_id": "script:this.router.sharedObject.currentUser?.email"
-      }'
-    comment: Get User profile from database using current user's email as docid
-    ↓SetGlobalOnlyFuture [mobile.components.UIDynamicAction-1519321062261]: 
-      beanData: |
-        '{
-         "ionBean": "SetGlobalAction",
-         "Property": "plain:onlyFuture",
-         "Value": "source:{\"filter\":\"Database\",\"project\":\"FlightShare\",\"input\":\"listen([''fs:\\\/\\\/flightshare_fullsync.get, {ddoc=''Design_document'', view=''users'', include_docs=''false''}''])?.settings?.settings?.onlyFuture\"}"
-        }'
-      comment: Set the onlyFuture property
-    ↓SetGlobalFirstBefore [mobile.components.UIDynamicAction-1519321067429]: 
-      beanData: |
-        '{
-         "ionBean": "SetGlobalAction",
-         "Property": "plain:firstBefore",
-         "Value": "source:{\"filter\":\"Database\",\"project\":\"FlightShare\",\"input\":\"listen([''fs:\\\/\\\/flightshare_fullsync.get, {ddoc=''Design_document'', view=''users'', include_docs=''false''}''])?.settings?.settings?.firstBefore\"}"
-        }'
-      comment: Set the firstBefore property

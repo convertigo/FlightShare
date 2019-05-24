@@ -1,4 +1,4 @@
-↑isRoot: true
+comment: The sync page will login and sync data, then root to the main page
 icon: tablet-landscape
 scriptContent: 
   - xmlizable: 
@@ -205,7 +205,9 @@ title: Synchronisation données
               		    })
               		}
               '
+      isEnabled: false
       ↓Failure_Handler [mobile.components.UIActionFailureEvent-1535032144487]: 
+        isEnabled: false
         ↓RootPage [mobile.components.UIDynamicAction-1535032563457]: 
           beanData: '{"ionBean":"RootPageAction","page":"plain:FlightShare.MobileApplication.Application.Page"}'
         ↓ToastAction [mobile.components.UIDynamicAction-1535032563519]: 
@@ -214,64 +216,64 @@ title: Synchronisation données
           beanData: '{"ionBean":"LogAction","message":"script:out"}'
         ↓Error [mobile.components.UIDynamicAction-1535123248486]: 
           beanData: '{"ionBean":"ErrorAction"}'
-      ↓LoginWithGoogle [mobile.components.UIDynamicAction-1535032572232]: 
-        beanData: '{"ionBean":"GooglePlusLoginAction","webClientId":"plain:465373723999-vbta9svj9t2f6117ja6n3qtle807er1e.apps.googleusercontent.com"}'
-        comment: |
-          'For Android, the app must be signed with a keystore having one of the SHA1 fingerprints found here : 
-          
-          https://console.firebase.google.com/project/flight-share/settings/general/android:com.convertigo.flightshare'
-        ↓CallSequence [mobile.components.UIDynamicAction-1535032572295]: 
+    ↓LoginWithGoogle [mobile.components.UIDynamicAction-1535032572232]: 
+      beanData: '{"ionBean":"GooglePlusLoginAction","webClientId":"plain:465373723999-vbta9svj9t2f6117ja6n3qtle807er1e.apps.googleusercontent.com"}'
+      comment: |
+        'For Android, the app must be signed with a keystore having one of the SHA1 fingerprints found here : 
+        
+        https://console.firebase.google.com/project/flight-share/settings/general/android:com.convertigo.flightshare'
+      ↓CallSequence [mobile.components.UIDynamicAction-1535032572295]: 
+        beanData: |
+          '{
+           "ionBean": "CallSequenceAction",
+           "requestable": "plain:FlightShare.Login",
+           "cacheTtl": "plain:86400000"
+          }'
+        ↓email [mobile.components.UIControlVariable-1535032572357]: 
+          varValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: script:stack['LoginWithGoogle'].out.email
+        ↓DoDataSync [mobile.components.UIDynamicAction-1535032572422]: 
           beanData: |
             '{
-             "ionBean": "CallSequenceAction",
-             "requestable": "plain:FlightShare.Login",
-             "cacheTtl": "plain:86400000"
+             "ionBean": "FullSyncSyncAction",
+             "requestable": "plain:FlightShare.flightshare_fullsync",
+             "BatchSize": "script:500"
             }'
-          ↓email [mobile.components.UIControlVariable-1535032572357]: 
-            varValue: 
-              - xmlizable: 
-                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                - MobileSmartSourceType: script:stack['LoginWithGoogle'].out.email
-          ↓DoDataSync [mobile.components.UIDynamicAction-1535032572422]: 
+          ↓RootPage [mobile.components.UIDynamicAction-1535032572472]: 
+            beanData: '{"ionBean":"RootPageAction","page":"plain:FlightShare.MobileApplication.Application.Page"}'
+          ↓Post [mobile.components.UIDynamicAction-1535032572521]: 
             beanData: |
               '{
-               "ionBean": "FullSyncSyncAction",
+               "ionBean": "FullSyncPostAction",
                "requestable": "plain:FlightShare.flightshare_fullsync",
-               "BatchSize": "script:500"
+               "_id": "script:stack[''LoginWithGoogle''].out.email",
+               "_use_policy": "plain:merge"
               }'
-            ↓RootPage [mobile.components.UIDynamicAction-1535032572472]: 
-              beanData: '{"ionBean":"RootPageAction","page":"plain:FlightShare.MobileApplication.Application.Page"}'
-            ↓Post [mobile.components.UIDynamicAction-1535032572521]: 
-              beanData: |
-                '{
-                 "ionBean": "FullSyncPostAction",
-                 "requestable": "plain:FlightShare.flightshare_fullsync",
-                 "_id": "script:stack[''LoginWithGoogle''].out.email",
-                 "_use_policy": "plain:merge"
-                }'
-              ↓userinfo [mobile.components.UIControlVariable-1535032572591]: 
-                varValue: 
-                  - xmlizable: 
-                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                    - MobileSmartSourceType: script:stack['LoginWithGoogle'].out
-              ↓c8oGrp [mobile.components.UIControlVariable-1535032572644]: 
-                comment: all users a shared in the ATCF fullSYnc group
-                varValue: 
-                  - xmlizable: 
-                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                    - MobileSmartSourceType: plain:ATCF
-            ↓SetUserInformationGlobal [mobile.components.UIDynamicAction-1535032572697]: 
-              beanData: |
-                '{
-                 "ionBean": "SetGlobalAction",
-                 "Property": "plain:currentUser",
-                 "Value": "script:stack[''LoginWithGoogle''].out"
-                }'
-          ↓userProfile [mobile.components.UIControlVariable-1535032572764]: 
-            varValue: 
-              - xmlizable: 
-                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                - MobileSmartSourceType: script:stack['LoginWithGoogle'].out
+            ↓userinfo [mobile.components.UIControlVariable-1535032572591]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:stack['LoginWithGoogle'].out
+            ↓c8oGrp [mobile.components.UIControlVariable-1535032572644]: 
+              comment: all users a shared in the ATCF fullSYnc group
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:ATCF
+          ↓SetUserInformationGlobal [mobile.components.UIDynamicAction-1535032572697]: 
+            beanData: |
+              '{
+               "ionBean": "SetGlobalAction",
+               "Property": "plain:currentUser",
+               "Value": "script:stack[''LoginWithGoogle''].out"
+              }'
+        ↓userProfile [mobile.components.UIControlVariable-1535032572764]: 
+          varValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: script:stack['LoginWithGoogle'].out
   ↓IfRunningOnWebForTests [mobile.components.UIDynamicAction-1512660186634]: 
     beanData: '{"ionBean":"IfAction","condition":"script:window.cordova == undefined"}'
     ↓CallSequence [mobile.components.UIDynamicAction-1510002823204]: 
@@ -284,8 +286,27 @@ title: Synchronisation données
             - MobileSmartSourceType: plain:olivierp@convertigo.com
       ↓DoDataSync [mobile.components.UIDynamicAction-1510235462592]: 
         beanData: '{"ionBean":"FullSyncSyncAction","requestable":"plain:FlightShare.flightshare_fullsync"}'
-        ↓RootPage [mobile.components.UIDynamicAction-1510002875075]: 
-          beanData: '{"ionBean":"RootPageAction","page":"plain:FlightShare.MobileApplication.Application.Page"}'
+        ↓Post [mobile.components.UIDynamicAction-1558543554010]: 
+          beanData: |
+            '{
+             "ionBean": "FullSyncPostAction",
+             "requestable": "plain:FlightShare.flightshare_fullsync",
+             "_id": "script:''olivierp@convertigo.com''",
+             "_use_policy": "plain:merge"
+            }'
+          ↓userinfo [mobile.components.UIControlVariable-1558543554013]: 
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                - MobileSmartSourceType: script:'olivierp@convertigo.com'
+          ↓c8oGrp [mobile.components.UIControlVariable-1558543554016]: 
+            comment: all users a shared in the ATCF fullSYnc group
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                - MobileSmartSourceType: plain:ATCF
+          ↓RootPage [mobile.components.UIDynamicAction-1510002875075]: 
+            beanData: '{"ionBean":"RootPageAction","page":"plain:FlightShare.MobileApplication.Application.Page"}'
         ↓SetUserInformationGlobal [mobile.components.UIDynamicAction-1519289305285]: 
           beanData: |
             '{
