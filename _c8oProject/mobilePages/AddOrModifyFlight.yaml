@@ -333,13 +333,13 @@ title: Title for AddFlight
   tagName: ion-footer
 ↓PageEvent [mobile.components.UIPageEvent-1518605721131]: 
   ↓SetGlobal [mobile.components.UIDynamicAction-1540201305681]: 
+    comment: We keep the page name here to set the toast message correctly
     beanData: |
       '{
        "ionBean": "SetGlobalAction",
        "Property": "plain:getPageName",
        "Value": "script:this.navParams.data == ''ADD'' ? ''add'' : ''modif''"
       }'
-    comment: We keep the page name here to set the toast message correctly
     ↓Log [mobile.components.UIDynamicAction-1540202209337]: 
       beanData: |
         '{

@@ -1,4 +1,5 @@
 ↑isRoot: true
+inAutoMenu: false
 segment: path-to-nodatapage1
 title: Title for NoDataPage1
 ↓Content [mobile.components.UIDynamicElement-1558706996684]: 
@@ -21,23 +22,28 @@ title: Title for NoDataPage1
         ↓TextFormat [mobile.components.UIDynamicElement-1558706996696]: 
           beanData: '{"ionBean":"TextFormat","TextCenter":"plain:text-center"}'
           tagName: div
-          ↓Icon [mobile.components.UIDynamicElement-1558706996699]: 
+          ↓Heading1 [mobile.components.UIDynamicElement-1559135496041]: 
             beanData: |
               '{
-               "ionBean": "Icon",
-               "IconName": "plain:notifications-outline",
-               "IonColor": "plain:light"
+               "ionBean": "Heading1",
+               "ionText": "plain:ion-text",
+               "IonColor": "plain:primary"
               }'
-            tagName: ion-icon
-            ↓Style [mobile.components.UIStyle-1558706996702]: 
-              styleContent: 
+            tagName: h1
+            ↓Text [mobile.components.UIText-1559135496044]: 
+              textValue: 
                 - xmlizable: 
-                  - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
-                  - com.twinsoft.convertigo.beans.common.FormatedContent: 
-                    →: |
-                      '	transform: scale(5.0);
-                      	padding-bottom: 10px;
-                      '
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:AERO TOURING CLUB de FRANCE
+          ↓Image [mobile.components.UIDynamicElement-1559135334374]: 
+            beanData: |
+              '{
+               "ionBean": "Image",
+               "url": "script:''assets\/images\/atcf.png''",
+               "width": "plain:80px"
+              }'
+            selfClose: true
+            tagName: img
           ↓H1 [mobile.components.UIDynamicElement-1558706996711]: 
             beanData: '{"ionBean":"Heading1"}'
             tagName: h1
@@ -46,3 +52,43 @@ title: Title for NoDataPage1
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:Chargement en cours...
+          ↓Image1 [mobile.components.UIDynamicElement-1559135334377]: 
+            beanData: |
+              '{
+               "ionBean": "Image",
+               "url": "script:''assets\/images\/touring.jpg''",
+               "width": "plain:100%"
+              }'
+            selfClose: true
+            tagName: img
+            ↓MakeRoundCornerAndShadow [mobile.components.UIStyle-1559135334380]: 
+              styleContent: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                  - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                    →: |
+                      '	border-radius: 5px;
+                      	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                      '
+          ↓H41 [mobile.components.UIDynamicElement-1520405173913]: 
+            beanData: |
+              '{
+               "ionBean": "Heading4",
+               "ionText": "plain:ion-text",
+               "IonColor": "plain:primary"
+              }'
+            tagName: h4
+            ↓Text [mobile.components.UIText-1520405174306]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:Powered by Convertigo
+          ↓Image11 [mobile.components.UIDynamicElement-1559135732870]: 
+            beanData: |
+              '{
+               "ionBean": "Image",
+               "url": "script:''assets\/images\/logofix.png''",
+               "width": "plain:100px"
+              }'
+            selfClose: true
+            tagName: img

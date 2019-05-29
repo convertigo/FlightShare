@@ -109,7 +109,6 @@
                  "height": "plain:70px",
                  "alt": "script:router.sharedObject.currentUser?.imageUrl"
                 }'
-              isEnabled: false
               selfClose: true
               tagName: img
             ↓Attr [mobile.components.UIAttribute-1511688753099]: 
@@ -125,6 +124,7 @@
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: script:router.sharedObject.currentUser
+              isEnabled: false
               ↓FSImage [mobile.components.UIDynamicElement-1519977317720]: 
                 beanData: |
                   '{
@@ -162,6 +162,39 @@
               beanData: '{"ionBean":"MenuAutoItems"}'
               itemtitle: ''''''
               tagName: button
+      ↓SaveAndCloseModal [mobile.components.UIActionStack-1558952218139]: 
+        ↓Post [mobile.components.UIDynamicAction-1558543554010]: 
+          beanData: |
+            '{
+             "ionBean": "FullSyncPostAction",
+             "requestable": "plain:FlightShare.flightshare_fullsync",
+             "_id": "script:params.UserInfo.email",
+             "_use_policy": "plain:merge"
+            }'
+          ↓userinfo [mobile.components.UIControlVariable-1558543554013]: 
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                - MobileSmartSourceType: script:params.UserInfo
+          ↓c8oGrp [mobile.components.UIControlVariable-1558543554016]: 
+            comment: all users a shared in the ATCF fullSYnc group
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                - MobileSmartSourceType: plain:ATCF
+          ↓CloseModal [mobile.components.UIDynamicAction-1559056948381]: 
+            beanData: '{"ionBean":"CloseModalAction"}'
+            ↓RootPage [mobile.components.UIDynamicAction-1510002875075]: 
+              beanData: '{"ionBean":"RootPageAction","page":"plain:FlightShare.MobileApplication.Application.Page"}'
+        ↓SetUserInformationGlobal [mobile.components.UIDynamicAction-1519289305285]: 
+          beanData: |
+            '{
+             "ionBean": "SetGlobalAction",
+             "Property": "plain:currentUser",
+             "Value": "script:params.UserInfo"
+            }'
+        ↓UserInfo [mobile.components.UIStackVariable-1558952363666]: 
+          comment: The whole data structure coming from a Google login
       ↓Synchronizing [mobile.components.PageComponent-1510002425268]: 🗏 mobilePages/Synchronizing.yaml
       ↓Page [mobile.components.PageComponent-1500538678074]: 🗏 mobilePages/Page.yaml
       ↓MyFlights [mobile.components.PageComponent-1508938153011]: 🗏 mobilePages/MyFlights.yaml
@@ -296,18 +329,30 @@
       ↓AppEvent2 [mobile.components.UIAppEvent-1558102349374]: 
         appEvent: onAppResize
       ↓AppEvent3 [mobile.components.UIAppEvent-1558358372546]: 
-        appEvent: onNetworkChanged
-        ↓IfServerReachable [mobile.components.UIDynamicAction-1558361172070]: 
-          beanData: '{"ionBean":"IfAction","condition":"script:parent.out == \"Reachable\""}'
-          comment: if Reachable,
-          ↓PushSyncPage [mobile.components.UIDynamicAction-1558428350958]: 
-            beanData: '{"ionBean":"PushPageAction","page":"plain:FlightShare.MobileApplication.Application.Synchronizing"}'
-            comment: Push the sync page
-        ↓IfOffLine [mobile.components.UIDynamicAction-1558543309035]: 
-          beanData: '{"ionBean":"IfAction","condition":"script:parent.out == \"Offline\""}'
-          comment: if Offline,
-          ↓Toast [mobile.components.UIDynamicAction-1558625197986]: 
-            beanData: '{"ionBean":"ToastAction","message":"plain:Vous êtes hors connexion, l''application va démarrer normalement et va synchroniser ses données dès que le réseau est disponible"}'
+        appEvent: onNetworkReachable
+        ↓PopoverSyncPage [mobile.components.UIDynamicAction-1559037053830]: 
+          beanData: |
+            '{
+             "ionBean": "PopoverAction",
+             "page": "plain:FlightShare.MobileApplication.Application.Synchronizing",
+             "showBackdrop": "plain:true",
+             "enableBackdropDismiss": "plain:true"
+            }'
+      ↓AppEvent31 [mobile.components.UIAppEvent-1559036201576]: 
+        appEvent: onNetworkOffline
+        ↓Toast [mobile.components.UIDynamicAction-1559036201585]: 
+          beanData: '{"ionBean":"ToastAction","message":"plain:Vous êtes hors connexion, l''application va démarrer normalement et va synchroniser ses données dès que le réseau est disponible"}'
+        ↓IfNotAlreadyStarted [mobile.components.UIDynamicAction-1559134137074]: 
+          beanData: '{"ionBean":"IfAction","condition":"script:!this.global?.AlreadyStarted"}'
+          ↓SetGlobal [mobile.components.UIDynamicAction-1559134115011]: 
+            beanData: |
+              '{
+               "ionBean": "SetGlobalAction",
+               "Property": "plain:AlreadyStarted",
+               "Value": "script:true"
+              }'
+          ↓RootPage [mobile.components.UIDynamicAction-1559134607859]: 
+            beanData: '{"ionBean":"RootPageAction","page":"plain:FlightShare.MobileApplication.Application.Page"}'
   ↓CouchDb_schema [references.ImportXsdSchemaReference]: 
     urlpath: http://localhost:18080/convertigo/xsd/couchdb/CouchDb.xsd
   ↓lib_FullSyncGrp_reference [references.ProjectSchemaReference]: 

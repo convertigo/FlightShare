@@ -111,13 +111,13 @@ title: Title for SelectPlane
                      "Value": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1509077739049?.value?.SEATS\"}"
                     }'
                   ↓chMaxSeats [mobile.components.UIDynamicAction-1540198867620]: 
+                    comment: This variable set occupiedSeats to 1 and max (seats) to the selected plane's max seats
                     beanData: |
                       '{
                        "ionBean": "SetGlobalAction",
                        "Property": "plain:chMaxSeats",
                        "Value": "script:this.global?.selectedPlane?.max = out\r\nthis.global?.selectedPlane?.occupiedSeats = \"\""
                       }'
-                    comment: This variable set occupiedSeats to 1 and max (seats) to the selected plane's max seats
             ↓Grid [mobile.components.UIDynamicElement-1509078220498]: 
               beanData: '{"ionBean":"Grid"}'
               tagName: ion-grid

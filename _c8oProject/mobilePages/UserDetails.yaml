@@ -131,8 +131,8 @@ title: Liste des utilisateurs
                  "quality": "script:60",
                  "destinationType": "plain:FILE_URI",
                  "sourceType": "plain:PHOTOLIBRARY",
-                 "targetWidth": "script:false",
-                 "targetHeight": "script:false",
+                 "targetWidth": "plain:",
+                 "targetHeight": "plain:",
                  "mediaType": "plain:PICTURE"
                 }'
               ↓PutAttachment [mobile.components.UIDynamicAction-1519036893825]: 
@@ -174,8 +174,8 @@ title: Liste des utilisateurs
                 '{
                  "ionBean": "CameraAction",
                  "quality": "script:60",
-                 "targetWidth": "script:false",
-                 "targetHeight": "script:false",
+                 "targetWidth": "plain:false",
+                 "targetHeight": "plain:false",
                  "mediaType": "plain:VIDEO"
                 }'
               ↓ResetImageCache [mobile.components.UIDynamicAction-1519036894005]: 

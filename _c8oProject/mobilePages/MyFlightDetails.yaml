@@ -257,6 +257,7 @@ title: Title for MyFlightDetails
                     attrName: (click)
                     eventName: onClick
                     ↓QueryView_Modify [mobile.components.UIDynamicAction-1538571751410]: 
+                      comment: We query with a valid key, so the AddOrModifyFlight  Page will be displayed in 'Modify' mode
                       beanData: |
                         '{
                          "ionBean": "FullSyncViewAction",
@@ -267,7 +268,6 @@ title: Title for MyFlightDetails
                          "descending": "plain:false",
                          "key": "script:this.global?.selectedFlightKey"
                         }'
-                      comment: We query with a valid key, so the AddOrModifyFlight  Page will be displayed in 'Modify' mode
                       ↓selectedFlightID [mobile.components.UIDynamicAction-1539875989564]: 
                         beanData: |
                           '{
