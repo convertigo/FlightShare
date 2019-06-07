@@ -80,8 +80,6 @@ title: Liste des utilisateurs
               selfClose: true
               tagName: img
         ↓Event [mobile.components.UIControlEvent-1511717790831]: 
-          attrName: (click)
-          eventName: onClick
           ↓GetData [mobile.components.UIDynamicAction-1519120142160]: 
             beanData: |
               '{

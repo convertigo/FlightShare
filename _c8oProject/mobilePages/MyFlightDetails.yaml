@@ -254,10 +254,7 @@ title: Title for MyFlightDetails
                     beanData: '{"ionBean":"Icon","IconName":"plain:clipboard"}'
                     tagName: ion-icon
                   ↓Event [mobile.components.UIControlEvent-1538571751373]: 
-                    attrName: (click)
-                    eventName: onClick
                     ↓QueryView_Modify [mobile.components.UIDynamicAction-1538571751410]: 
-                      comment: We query with a valid key, so the AddOrModifyFlight  Page will be displayed in 'Modify' mode
                       beanData: |
                         '{
                          "ionBean": "FullSyncViewAction",
@@ -268,6 +265,7 @@ title: Title for MyFlightDetails
                          "descending": "plain:false",
                          "key": "script:this.global?.selectedFlightKey"
                         }'
+                      comment: We query with a valid key, so the AddOrModifyFlight  Page will be displayed in 'Modify' mode
                       ↓selectedFlightID [mobile.components.UIDynamicAction-1539875989564]: 
                         beanData: |
                           '{
@@ -343,8 +341,6 @@ title: Title for MyFlightDetails
                         - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                         - MobileSmartSourceType: plain:Partager
                   ↓Event [mobile.components.UIControlEvent-1508949915203]: 
-                    attrName: (click)
-                    eventName: onClick
                     ↓Post [mobile.components.UIDynamicAction-1511282493385]: 
                       beanData: |
                         '{

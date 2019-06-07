@@ -122,8 +122,6 @@ title: Liste des utilisateurs
             comment: Image galley
             tagName: ion-icon
           ↓Event [mobile.components.UIControlEvent-1519036893721]: 
-            attrName: (click)
-            eventName: onClick
             ↓Camera [mobile.components.UIDynamicAction-1519036893776]: 
               beanData: |
                 '{
@@ -167,8 +165,6 @@ title: Liste des utilisateurs
             comment: Camera
             tagName: ion-icon
           ↓Event [mobile.components.UIControlEvent-1519036893936]: 
-            attrName: (click)
-            eventName: onClick
             ↓Camera [mobile.components.UIDynamicAction-1519036893970]: 
               beanData: |
                 '{

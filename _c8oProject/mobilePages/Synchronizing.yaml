@@ -102,14 +102,14 @@ title: Synchronisation données
                   - MobileSmartSourceType: script:getSyncStatus()
 ↓PageEvent [mobile.components.UIPageEvent-1510002823128]: 
   ↓IfRunningOnDevice [mobile.components.UIDynamicAction-1512659937536]: 
-    comment: Are we running on a device or just in test mode ?
     beanData: '{"ionBean":"IfAction","condition":"script:window.cordova"}'
+    comment: Are we running on a device or just in test mode ?
     ↓LoginWithGoogle [mobile.components.UIDynamicAction-1535032572232]: 
+      beanData: '{"ionBean":"GooglePlusLoginAction","webClientId":"plain:465373723999-vbta9svj9t2f6117ja6n3qtle807er1e.apps.googleusercontent.com"}'
       comment: |
         'For Android, the app must be signed with a keystore having one of the SHA1 fingerprints found here : 
         
         https://console.firebase.google.com/project/flight-share/settings/general/android:com.convertigo.flightshare'
-      beanData: '{"ionBean":"GooglePlusLoginAction","webClientId":"plain:465373723999-vbta9svj9t2f6117ja6n3qtle807er1e.apps.googleusercontent.com"}'
       ↓CallSequence [mobile.components.UIDynamicAction-1535032572295]: 
         beanData: |
           '{
@@ -145,8 +145,8 @@ title: Synchronisation données
   ↓IfRunningOnWebForTests [mobile.components.UIDynamicAction-1512660186634]: 
     beanData: '{"ionBean":"IfAction","condition":"script:window.cordova == undefined"}'
     ↓CallSequence [mobile.components.UIDynamicAction-1510002823204]: 
-      comment: Use a fake identity for tests
       beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:FlightShare.Login"}'
+      comment: Use a fake identity for tests
       ↓email [mobile.components.UIControlVariable-1510002823263]: 
         varValue: 
           - xmlizable: 
@@ -177,3 +177,66 @@ title: Synchronisation données
                 - ↑value: 5.2.1
               - java.lang.String: 
                 - ↑value: '{REVERSED_CLIENT_ID:"com.googleusercontent.apps.465373723999-473lfu4591v78mopjgo96t0m4fqmu17u"}'
+  ↓AddPageTransitions [mobile.components.UICustomAction-1559640816967]: 
+    cordova_plugins: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: com.telerik.plugins.nativepagetransitions
+              - java.lang.String: 
+                - ↑value: 0.6.5
+              - java.lang.String: 
+                - ↑value: '{}'
+    module_ng_providers: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: NativePageTransitions
+    module_ts_imports: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: NativePageTransitions
+              - java.lang.String: 
+                - ↑value: '@ionic-native/native-page-transitions/ngx'
+    package_dependencies: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: '@ionic-native/native-page-transitions'
+              - java.lang.String: 
+                - ↑value: 5.7.0
+    page_ts_imports: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: NativePageTransitions
+              - java.lang.String: 
+                - ↑value: '@ionic-native/native-page-transitions/ngx'
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: NativeTransitionOptions 
+              - java.lang.String: 
+                - ↑value: '@ionic-native/native-page-transitions/ngx'

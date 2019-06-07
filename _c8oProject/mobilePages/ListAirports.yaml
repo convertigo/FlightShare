@@ -152,8 +152,6 @@ title: Title for ListAirports
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1508990922923?.value?.country"}
           ↓Event1 [mobile.components.UIControlEvent-1509073185598]: 
-            attrName: (click)
-            eventName: onClick
             ↓CustomAction [mobile.components.UICustomAction-1512750424581]: 
               actionValue: 
                 - xmlizable: 

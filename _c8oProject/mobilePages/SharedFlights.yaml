@@ -114,8 +114,6 @@ title: Vols partagés
                         	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                         '
           ↓Event [mobile.components.UIControlEvent-1509573147701]: 
-            attrName: (click)
-            eventName: onClick
             ↓QueryView [mobile.components.UIDynamicAction-1511723476098]: 
               beanData: |
                 '{
@@ -127,21 +125,21 @@ title: Vols partagés
                  "key": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1509573021875?.id\"}"
                 }'
             ↓selectedPubFlightKey [mobile.components.UIDynamicAction-1539940385774]: 
-              isEnabled: false
               beanData: |
                 '{
                  "ionBean": "SetGlobalAction",
                  "Property": "plain:selectedPubFlightKey",
                  "Value": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1509573021875?.key\"}"
                 }'
+              isEnabled: false
               ↓Log1 [mobile.components.UIDynamicAction-1539940473902]: 
-                isEnabled: false
                 beanData: |
                   '{
                    "ionBean": "LogAction",
                    "message": "script:JSON.stringify(out)",
                    "level": "plain:warn"
                   }'
+                isEnabled: false
           ↓Heading1 [mobile.components.UIDynamicElement-1509573147546]: 
             beanData: '{"ionBean":"Heading1"}'
             tagName: h1
@@ -375,8 +373,6 @@ title: Vols partagés
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:Supprimer...
             ↓Event [mobile.components.UIControlEvent-1538570541942]: 
-              attrName: (click)
-              eventName: onClick
               ↓CallFullSync [mobile.components.UIDynamicAction-1538570542498]: 
                 beanData: |
                   '{

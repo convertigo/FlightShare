@@ -21,6 +21,7 @@
     applicationName: Flight Share
     applicationVersion: 1.0
     comment: Describes the mobile application global properties
+    endpoint: https://c8o-dev.convertigo.com/cems
     splashRemoveMode: beforeUpdate
     ↓Android [mobileplatforms.Android]: 
       comment: Android 4.4 to 6 for Smartphones and Tablets

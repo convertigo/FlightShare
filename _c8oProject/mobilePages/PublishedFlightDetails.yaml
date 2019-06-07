@@ -417,10 +417,9 @@ title: Title for MyFlightDetails1
                         attrName: (click)
                         eventName: onClick
                         ↓Toast [mobile.components.UIDynamicAction-1539358709164]: 
-                          isEnabled: false
                           beanData: '{"ionBean":"ToastAction","message":"plain:Vol modifié avec succès"}'
+                          isEnabled: false
                         ↓QueryView_ModifyPub [mobile.components.UIDynamicAction-1539939223755]: 
-                          comment: We query with a valid key, so the AddOrModifyFlight  Page will be displayed in 'Modify' mode
                           beanData: |
                             '{
                              "ionBean": "FullSyncViewAction",
@@ -431,14 +430,15 @@ title: Title for MyFlightDetails1
                              "descending": "plain:false",
                              "key": "script:this.global?.selectedPubFlightKey"
                             }'
+                          comment: We query with a valid key, so the AddOrModifyFlight  Page will be displayed in 'Modify' mode
                           ↓Log1 [mobile.components.UIDynamicAction-1539939223758]: 
-                            isEnabled: false
                             beanData: |
                               '{
                                "ionBean": "LogAction",
                                "message": "script:JSON.stringify(out)",
                                "level": "plain:warn"
                               }'
+                            isEnabled: false
                           ↓selectedFlightID [mobile.components.UIDynamicAction-1539939223761]: 
                             beanData: |
                               '{
@@ -526,8 +526,6 @@ title: Title for MyFlightDetails1
                             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                             - MobileSmartSourceType: plain:S'inscrire
                       ↓Event [mobile.components.UIControlEvent-1509602578312]: 
-                        attrName: (click)
-                        eventName: onClick
                         ↓CallFullSync [mobile.components.UIDynamicAction-1509602578327]: 
                           beanData: |
                             '{
@@ -601,8 +599,6 @@ title: Title for MyFlightDetails1
                       - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                       - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"usersInfo[item1509637919301]"}
               ↓Event [mobile.components.UIControlEvent-1510479747325]: 
-                attrName: (click)
-                eventName: onClick
                 ↓QueryView [mobile.components.UIDynamicAction-1511710864554]: 
                   beanData: |
                     '{
@@ -836,10 +832,7 @@ title: Title for MyFlightDetails1
                 comment: Image gallery icon
                 tagName: ion-icon
               ↓Event [mobile.components.UIControlEvent-1519031020783]: 
-                attrName: (click)
-                eventName: onClick
                 ↓Camera [mobile.components.UIDynamicAction-1519031020865]: 
-                  comment: We will use the output out as an attachment name but
                   beanData: |
                     '{
                      "ionBean": "CameraAction",
@@ -850,8 +843,8 @@ title: Title for MyFlightDetails1
                      "targetHeight": "plain:",
                      "mediaType": "plain:PICTURE"
                     }'
+                  comment: We will use the output out as an attachment name but
                   ↓PutAttachment [mobile.components.UIDynamicAction-1519031020987]: 
-                    comment: We use the out.substring(out.lastIndexOf('/') +1) to strip off the path given back for the attachment as this causes a FullSync replication error due to /  characters 
                     beanData: |
                       '{
                        "ionBean": "FullSyncPutAttachmentAction",
@@ -861,6 +854,7 @@ title: Title for MyFlightDetails1
                        "content_type": "plain:image\/jpg",
                        "content": "script:out"
                       }'
+                    comment: We use the out.substring(out.lastIndexOf('/') +1) to strip off the path given back for the attachment as this causes a FullSync replication error due to /  characters 
             ↓FabButton1 [mobile.components.UIDynamicElement-1519029945850]: 
               beanData: '{"ionBean":"FabButton"}'
               tagName: button
@@ -874,8 +868,6 @@ title: Title for MyFlightDetails1
                 comment: Camera Icon
                 tagName: ion-icon
               ↓Event [mobile.components.UIControlEvent-1512150194936]: 
-                attrName: (click)
-                eventName: onClick
                 ↓Camera [mobile.components.UIDynamicAction-1512150209680]: 
                   beanData: |
                     '{

@@ -39,8 +39,6 @@ title: Mes vols
           beanData: '{"ionBean":"Icon","IconName":"plain:more"}'
           tagName: ion-icon
         ↓Event [mobile.components.UIControlEvent-1509567534524]: 
-          attrName: (click)
-          eventName: onClick
           ↓PushPage [mobile.components.UIDynamicAction-1509567542901]: 
             beanData: '{"ionBean":"PushPageAction","page":"plain:FlightShare.MobileApplication.Application.Configuration"}'
 ↓Content [mobile.components.UIDynamicElement-1508938479598]: 
@@ -133,8 +131,6 @@ title: Mes vols
                           	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                           '
             ↓Event [mobile.components.UIControlEvent-1508949681151]: 
-              attrName: (click)
-              eventName: onClick
               ↓QueryView_Show [mobile.components.UIDynamicAction-1510667807485]: 
                 beanData: |
                   '{
@@ -171,11 +167,7 @@ title: Mes vols
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: plain:Supprimer...
               ↓Event [mobile.components.UIControlEvent-1510809114530]: 
-                attrName: (click)
-                eventName: onClick
                 ↓QueryView_Modify [mobile.components.UIDynamicAction-1511088911094]: 
-                  comment: We query with a valid key, so the AddOrModifyFlight  Page will be displayed in 'Modify' mode
-                  isEnabled: false
                   beanData: |
                     '{
                      "ionBean": "FullSyncViewAction",
@@ -186,6 +178,8 @@ title: Mes vols
                      "descending": "plain:false",
                      "key": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1509123535617.key\"}"
                     }'
+                  comment: We query with a valid key, so the AddOrModifyFlight  Page will be displayed in 'Modify' mode
+                  isEnabled: false
                   ↓SetSelectedOptions [mobile.components.UICustomAction-1511110111935]: 
                     actionValue: 
                       - xmlizable: 
@@ -264,8 +258,6 @@ title: Mes vols
         beanData: '{"ionBean":"Icon"}'
         tagName: ion-icon
       ↓Event [mobile.components.UIControlEvent-1509005174682]: 
-        attrName: (click)
-        eventName: onClick
         ↓PushPage [mobile.components.UIDynamicAction-1539767302306]: 
           beanData: |
             '{

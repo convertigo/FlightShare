@@ -46,8 +46,6 @@ title: Configuration
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
           - MobileSmartSourceType: plain:Réinitialiser la base
     ↓Event [mobile.components.UIControlEvent-1509567127402]: 
-      attrName: (click)
-      eventName: onClick
       ↓CallFullSync [mobile.components.UIDynamicAction-1509567144064]: 
         beanData: |
           '{
@@ -88,8 +86,6 @@ title: Configuration
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
           - MobileSmartSourceType: plain:Relancer une synchronisation
     ↓Event [mobile.components.UIControlEvent-1509977830843]: 
-      attrName: (click)
-      eventName: onClick
       ↓CallSequence [mobile.components.UIDynamicAction-1509978139918]: 
         beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:FlightShare.Login"}'
         ↓CallFullSync [mobile.components.UIDynamicAction-1509978139943]: 
