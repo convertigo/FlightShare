@@ -183,8 +183,8 @@
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:ATCF
-          ↓CloseModal [mobile.components.UIDynamicAction-1559056948381]: 
-            beanData: '{"ionBean":"CloseModalAction"}'
+          ↓ClosePopover [mobile.components.UIDynamicAction-1559983007104]: 
+            beanData: '{"ionBean":"ClosePopoverAction"}'
             ↓RootPage [mobile.components.UIDynamicAction-1510002875075]: 
               beanData: '{"ionBean":"RootPageAction","page":"plain:FlightShare.MobileApplication.Application.Page"}'
         ↓SetUserInformationGlobal [mobile.components.UIDynamicAction-1519289305285]: 

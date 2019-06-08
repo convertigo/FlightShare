@@ -17,7 +17,7 @@ scriptContent:
         	    if (this.router.sharedObject.FullSyncSyncAction != undefined) {
         	        if (this.router.sharedObject.FullSyncSyncAction.progress != undefined) {
                 	    let status = Math.round(((this.router.sharedObject.FullSyncSyncAction.progress.current != null ?
-                	            this.router.sharedObject.FullSyncSyncAction.progress.current : 0 ) / 550) * 100) + '' %''
+                	            this.router.sharedObject.FullSyncSyncAction.progress.current : 0 ) / 550) * 100)
                 	    return status
         	        }
         	        return ""
@@ -95,11 +95,10 @@ title: Synchronisation données
           ↓Heading2 [mobile.components.UIDynamicElement-1510153317991]: 
             beanData: '{"ionBean":"Heading2"}'
             tagName: h2
-            ↓Text [mobile.components.UIText-1510153330237]: 
-              textValue: 
-                - xmlizable: 
-                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                  - MobileSmartSourceType: script:getSyncStatus()
+            ↓ProgressBar [mobile.components.UIDynamicElement-1559984017605]: 
+              beanData: '{"ionBean":"ProgressBar","progress":"script:router.sharedObject?.FullSyncSyncAction?.progress?.current \/ 550 * 100"}'
+              comment: There are 550 objects on the database so we calc a % according to this
+              tagName: progress-bar
 ↓PageEvent [mobile.components.UIPageEvent-1510002823128]: 
   ↓IfRunningOnDevice [mobile.components.UIDynamicAction-1512659937536]: 
     beanData: '{"ionBean":"IfAction","condition":"script:window.cordova"}'
