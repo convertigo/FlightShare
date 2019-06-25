@@ -3,50 +3,50 @@ inAutoMenu: false
 segment: MyFlights
 title: Mes vols
 ↓Header [mobile.components.UIDynamicElement-1508938649849]: 
+  beanData: '{"ionBean":"Header"}'
   comment: Page header
   tagName: ion-header
-  beanData: '{"ionBean":"Header"}'
   ↓NavBar [mobile.components.UIDynamicElement-1508938649858]: 
-    tagName: ion-navbar
     beanData: '{"ionBean":"NavBar","IonColor":"plain:light"}'
+    tagName: ion-navbar
     ↓BarTitle [mobile.components.UIDynamicElement-1508938649865]: 
-      tagName: ion-title
       beanData: '{"ionBean":"BarTitle"}'
+      tagName: ion-title
       ↓Text [mobile.components.UIText-1508938649873]: 
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: plain:ATCF Flight Share
     ↓Button [mobile.components.UIDynamicElement-1508938649880]: 
-      comment: A button to toggle the menu
-      tagName: button
       beanData: |
         '{
          "ionBean": "Button",
          "ButtonFormType": "plain:false",
          "MenuMode": "plain:menuToggle"
         }'
+      comment: A button to toggle the menu
+      tagName: button
       ↓Icon [mobile.components.UIDynamicElement-1508938649886]: 
-        tagName: ion-icon
         beanData: '{"ionBean":"Icon","IconName":"plain:menu"}'
+        tagName: ion-icon
     ↓ButtonSet [mobile.components.UIDynamicElement-1508938649892]: 
-      tagName: ion-buttons
       beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:right"}'
+      tagName: ion-buttons
       ↓Button [mobile.components.UIDynamicElement-1508938649898]: 
-        tagName: button
         beanData: '{"ionBean":"Button","ButtonFormType":"plain:false"}'
+        tagName: button
         ↓Icon [mobile.components.UIDynamicElement-1508938649905]: 
-          tagName: ion-icon
           beanData: '{"ionBean":"Icon","IconName":"plain:more"}'
+          tagName: ion-icon
         ↓Event [mobile.components.UIControlEvent-1509567534524]: 
           ↓PushPage [mobile.components.UIDynamicAction-1509567542901]: 
             beanData: '{"ionBean":"PushPageAction","page":"plain:FlightShare.MobileApplication.Application.Configuration"}'
 ↓Content [mobile.components.UIDynamicElement-1508938479598]: 
-  tagName: ion-content
   beanData: '{"ionBean":"Content"}'
+  tagName: ion-content
   ↓List [mobile.components.UIDynamicElement-1508946367389]: 
-    tagName: ion-list
     beanData: '{"ionBean":"List"}'
+    tagName: ion-list
     ↓Directive [mobile.components.UIControlDirective-1509123535617]: 
       directiveSource: 
         - xmlizable: 
@@ -59,19 +59,19 @@ title: Mes vols
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509123535617?.doc?.flight"}
         ↓Sliding [mobile.components.UIDynamicElement-1509567747544]: 
-          tagName: ion-item-sliding
           beanData: '{"ionBean":"Sliding"}'
+          tagName: ion-item-sliding
           ↓Button [mobile.components.UIDynamicElement-1508946606685]: 
-            tagName: button
             beanData: |
               '{
                "ionBean": "Button",
                "ButtonFormType": "plain:false",
                "ButtonType": "plain:ion-item"
               }'
+            tagName: button
             ↓Heading1 [mobile.components.UIDynamicElement-1508946391995]: 
-              tagName: h1
               beanData: '{"ionBean":"Heading1"}'
+              tagName: h1
               ↓Text [mobile.components.UIText-1508946399286]: 
                 textValue: 
                   - xmlizable: 
@@ -88,28 +88,28 @@ title: Mes vols
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509123535617?.doc.flight.to"}
             ↓Heading2 [mobile.components.UIDynamicElement-1508946642743]: 
-              tagName: h2
               beanData: '{"ionBean":"Heading2"}'
+              tagName: h2
               ↓Text1 [mobile.components.UIText-1509555731704]: 
                 textValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509123535617?.doc.flight.date"}
             ↓Heading5 [mobile.components.UIDynamicElement-1508946957755]: 
-              tagName: h5
               beanData: '{"ionBean":"Heading5"}'
+              tagName: h5
               ↓Text [mobile.components.UIText-1508946970768]: 
                 textValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509123535617?.doc.flight.comment"}
             ↓Thumbnail [mobile.components.UIDynamicElement-1508946926556]: 
-              tagName: ion-thumbnail
               beanData: '{"ionBean":"Thumbnail"}'
+              tagName: ion-thumbnail
               ↓Image [mobile.components.UIDynamicElement-1508946753302]: 
+                beanData: '{"ionBean":"Image","url":"source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"''assets\\\/images\\\/'' + item1509123535617?.doc.flight.plane + ''.jpg''\"}"}'
                 selfClose: true
                 tagName: img
-                beanData: '{"ionBean":"Image","url":"source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"''assets\\\/images\\\/'' + item1509123535617?.doc.flight.plane + ''.jpg''\"}"}'
                 ↓AdjustImageSize [mobile.components.UIStyle-1519029532780]: 
                   styleContent: 
                     - xmlizable: 
@@ -151,16 +151,16 @@ title: Mes vols
                   }'
             ↓Attr [mobile.components.UIAttribute-1538145739368]: 
           ↓SlidingOption [mobile.components.UIDynamicElement-1509567716536]: 
-            tagName: ion-item-options
             beanData: '{"ionBean":"SlidingOption","side":"plain:left"}'
+            tagName: ion-item-options
             ↓Button [mobile.components.UIDynamicElement-1509567801880]: 
-              tagName: button
               beanData: |
                 '{
                  "ionBean": "Button",
                  "ButtonFormType": "plain:false",
                  "IonColor": "plain:danger"
                 }'
+              tagName: button
               ↓Text [mobile.components.UIText-1509567810831]: 
                 textValue: 
                   - xmlizable: 
@@ -168,8 +168,6 @@ title: Mes vols
                     - MobileSmartSourceType: plain:Supprimer...
               ↓Event [mobile.components.UIControlEvent-1510809114530]: 
                 ↓QueryView_Modify [mobile.components.UIDynamicAction-1511088911094]: 
-                  comment: We query with a valid key, so the AddOrModifyFlight  Page will be displayed in 'Modify' mode
-                  isEnabled: false
                   beanData: |
                     '{
                      "ionBean": "FullSyncViewAction",
@@ -180,6 +178,8 @@ title: Mes vols
                      "descending": "plain:false",
                      "key": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1509123535617.key\"}"
                     }'
+                  comment: We query with a valid key, so the AddOrModifyFlight  Page will be displayed in 'Modify' mode
+                  isEnabled: false
                   ↓SetSelectedOptions [mobile.components.UICustomAction-1511110111935]: 
                     actionValue: 
                       - xmlizable: 
@@ -244,19 +244,19 @@ title: Mes vols
                 ↓Toast [mobile.components.UIDynamicAction-1538146727045]: 
                   beanData: '{"ionBean":"ToastAction","message":"plain:Vol supprimé avec succés"}'
   ↓FabContainer [mobile.components.UIDynamicElement-1508947025708]: 
-    tagName: ion-fab
     beanData: |
       '{
        "ionBean": "FabContainer",
        "HorzPosition": "plain:right",
        "VertPosition": "plain:bottom"
       }'
+    tagName: ion-fab
     ↓FabButton [mobile.components.UIDynamicElement-1508947006453]: 
-      tagName: button
       beanData: '{"ionBean":"FabButton"}'
+      tagName: button
       ↓Icon [mobile.components.UIDynamicElement-1508947058743]: 
-        tagName: ion-icon
         beanData: '{"ionBean":"Icon"}'
+        tagName: ion-icon
       ↓Event [mobile.components.UIControlEvent-1509005174682]: 
         ↓PushPage [mobile.components.UIDynamicAction-1539767302306]: 
           beanData: |
@@ -274,9 +274,9 @@ title: Mes vols
                "Value": "script:this.global?.selectedFlightID = {}\r\nthis.global?.selectedAirports = {}\r\nthis.global?.selectedPlane = {}\r\nthis.global?.selectedDate = {}\r\nthis.global?.selectedTime = {}\r\nthis.global?.selectedCom = {}"
               }'
 ↓Footer [mobile.components.UIDynamicElement-1508938636875]: 
+  beanData: '{"ionBean":"Footer"}'
   comment: Page footer
   tagName: ion-footer
-  beanData: '{"ionBean":"Footer"}'
 ↓PageEvent [mobile.components.UIPageEvent-1509123338731]: 
   ↓QueryView [mobile.components.UIDynamicAction-1510665398290]: 
     beanData: |

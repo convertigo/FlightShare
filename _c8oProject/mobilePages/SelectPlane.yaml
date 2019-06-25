@@ -2,34 +2,33 @@ inAutoMenu: false
 segment: SelectPlane
 title: Title for SelectPlane
 ↓Header [mobile.components.UIDynamicElement-1509076997047]: 
+  beanData: '{"ionBean":"Header"}'
   comment: Page header
   tagName: ion-header
-  beanData: '{"ionBean":"Header"}'
   ↓NavBar [mobile.components.UIDynamicElement-1509076997057]: 
-    tagName: ion-navbar
     beanData: '{"ionBean":"NavBar","IonColor":"plain:light"}'
+    tagName: ion-navbar
     ↓BarTitle [mobile.components.UIDynamicElement-1509076997066]: 
-      tagName: ion-title
       beanData: '{"ionBean":"BarTitle"}'
+      tagName: ion-title
       ↓Text [mobile.components.UIText-1509076997079]: 
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: plain:Selection Avion
     ↓ButtonSet [mobile.components.UIDynamicElement-1509076997093]: 
-      tagName: ion-buttons
       beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:right"}'
+      tagName: ion-buttons
       ↓Button [mobile.components.UIDynamicElement-1509076997104]: 
-        tagName: button
         beanData: '{"ionBean":"Button","ButtonFormType":"plain:false"}'
+        tagName: button
         ↓Icon [mobile.components.UIDynamicElement-1509076997110]: 
-          tagName: ion-icon
           beanData: '{"ionBean":"Icon","IconName":"plain:more"}'
+          tagName: ion-icon
 ↓Content [mobile.components.UIDynamicElement-1509077019078]: 
-  tagName: ion-content
   beanData: '{"ionBean":"Content"}'
+  tagName: ion-content
   ↓Slides [mobile.components.UIDynamicElement-1509077195671]: 
-    tagName: ion-slides
     beanData: |
       '{
        "ionBean": "Slides",
@@ -46,29 +45,30 @@ title: Title for SelectPlane
        "Effect": "script:slide",
        "Loop": "script:false"
       }'
+    tagName: ion-slides
     ↓Directive [mobile.components.UIControlDirective-1509077739049]: 
       directiveSource: 
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
           - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#PLANES, {ddoc='Design_document', view='PlanesByTag'}'])?.rows"}
       ↓Slide [mobile.components.UIDynamicElement-1509077203352]: 
-        tagName: ion-slide
         beanData: '{"ionBean":"Slide"}'
+        tagName: ion-slide
         ↓TextFormat [mobile.components.UIDynamicElement-1509077912423]: 
-          tagName: div
           beanData: '{"ionBean":"TextFormat","TextLeft":"plain:text-left"}'
+          tagName: div
           ↓Card [mobile.components.UIDynamicElement-1509078819943]: 
-            tagName: ion-card
             beanData: '{"ionBean":"Card"}'
+            tagName: ion-card
             ↓Image1 [mobile.components.UIDynamicElement-1509077309776]: 
-              selfClose: true
-              tagName: img
               beanData: |
                 '{
                  "ionBean": "Image",
                  "url": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"''assets\\\/images\\\/'' + item1509077739049?.value?.TAG + ''.jpg''\"}",
                  "width": "plain:100%"
                 }'
+              selfClose: true
+              tagName: img
               ↓Style [mobile.components.UIStyle-1509078060688]: 
                 styleContent: 
                   - xmlizable: 
@@ -111,39 +111,39 @@ title: Title for SelectPlane
                      "Value": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1509077739049?.value?.SEATS\"}"
                     }'
                   ↓chMaxSeats [mobile.components.UIDynamicAction-1540198867620]: 
-                    comment: This variable set occupiedSeats to 1 and max (seats) to the selected plane's max seats
                     beanData: |
                       '{
                        "ionBean": "SetGlobalAction",
                        "Property": "plain:chMaxSeats",
                        "Value": "script:this.global?.selectedPlane?.max = out\r\nthis.global?.selectedPlane?.occupiedSeats = \"\""
                       }'
+                    comment: This variable set occupiedSeats to 1 and max (seats) to the selected plane's max seats
             ↓Grid [mobile.components.UIDynamicElement-1509078220498]: 
-              tagName: ion-grid
               beanData: '{"ionBean":"Grid"}'
+              tagName: ion-grid
               ↓GridRow [mobile.components.UIDynamicElement-1509078233708]: 
-                tagName: ion-row
                 beanData: '{"ionBean":"GridRow"}'
+                tagName: ion-row
                 ↓GridCol [mobile.components.UIDynamicElement-1509078239806]: 
-                  tagName: ion-col
                   beanData: '{"ionBean":"GridCol"}'
+                  tagName: ion-col
                   ↓Heading1 [mobile.components.UIDynamicElement-1509077815275]: 
-                    tagName: h1
                     beanData: '{"ionBean":"Heading1"}'
+                    tagName: h1
                     ↓Text [mobile.components.UIText-1509077826420]: 
                       textValue: 
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509077739049?.value?.TAG"}
                 ↓GridCol1 [mobile.components.UIDynamicElement-1509078250460]: 
-                  tagName: ion-col
                   beanData: '{"ionBean":"GridCol"}'
+                  tagName: ion-col
                   ↓TextFormat [mobile.components.UIDynamicElement-1509078530730]: 
-                    tagName: div
                     beanData: '{"ionBean":"TextFormat","TextRight":"plain:text-right"}'
+                    tagName: div
                     ↓Heading1 [mobile.components.UIDynamicElement-1509078509303]: 
-                      tagName: h1
                       beanData: '{"ionBean":"Heading1"}'
+                      tagName: h1
                       ↓Text1 [mobile.components.UIText-1509078594799]: 
                         textValue: 
                           - xmlizable: 
@@ -155,28 +155,28 @@ title: Title for SelectPlane
                             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                             - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509077739049?.value?.SEATS"}
               ↓GridRow1 [mobile.components.UIDynamicElement-1509078349269]: 
-                tagName: ion-row
                 beanData: '{"ionBean":"GridRow"}'
+                tagName: ion-row
                 ↓GridCol [mobile.components.UIDynamicElement-1509078349276]: 
-                  tagName: ion-col
                   beanData: '{"ionBean":"GridCol"}'
+                  tagName: ion-col
                   ↓Heading3 [mobile.components.UIDynamicElement-1509078127830]: 
-                    tagName: h3
                     beanData: '{"ionBean":"Heading3"}'
+                    tagName: h3
                     ↓Text [mobile.components.UIText-1509078136839]: 
                       textValue: 
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509077739049?.value?.TYPE"}
                 ↓GridCol1 [mobile.components.UIDynamicElement-1509078349297]: 
-                  tagName: ion-col
                   beanData: '{"ionBean":"GridCol"}'
+                  tagName: ion-col
                   ↓TextFormat [mobile.components.UIDynamicElement-1509079078737]: 
-                    tagName: div
                     beanData: '{"ionBean":"TextFormat","TextRight":"plain:text-right"}'
+                    tagName: div
                     ↓Heading3 [mobile.components.UIDynamicElement-1509078655630]: 
-                      tagName: h3
                       beanData: '{"ionBean":"Heading3"}'
+                      tagName: h3
                       ↓Text1 [mobile.components.UIText-1509078685649]: 
                         textValue: 
                           - xmlizable: 
@@ -193,9 +193,9 @@ title: Title for SelectPlane
                             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                             - MobileSmartSourceType: 'plain: Kt'
 ↓Footer [mobile.components.UIDynamicElement-1509077007584]: 
+  beanData: '{"ionBean":"Footer"}'
   comment: Page footer
   tagName: ion-footer
-  beanData: '{"ionBean":"Footer"}'
 ↓PageEvent [mobile.components.UIPageEvent-1509077047510]: 
   ↓CallFullSync [mobile.components.UIDynamicAction-1509077047533]: 
     beanData: |

@@ -85,59 +85,59 @@ scriptContent:
 segment: MyFlightDetails1
 title: Title for MyFlightDetails1
 ↓Header [mobile.components.UIDynamicElement-1509602577359]: 
+  beanData: '{"ionBean":"Header"}'
   comment: Page header
   tagName: ion-header
-  beanData: '{"ionBean":"Header"}'
   ↓NavBar [mobile.components.UIDynamicElement-1509602577374]: 
-    tagName: ion-navbar
     beanData: '{"ionBean":"NavBar","IonColor":"plain:light"}'
+    tagName: ion-navbar
     ↓BarTitle [mobile.components.UIDynamicElement-1509602577391]: 
-      tagName: ion-title
       beanData: '{"ionBean":"BarTitle"}'
+      tagName: ion-title
       ↓Text [mobile.components.UIText-1509602577407]: 
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: plain:Détails du vol partagé
 ↓Content [mobile.components.UIDynamicElement-1509602577465]: 
-  tagName: ion-content
   beanData: '{"ionBean":"Content"}'
+  tagName: ion-content
   ↓Form [mobile.components.UIForm-1510088890358]: 
     ↓Segment [mobile.components.UIDynamicElement-1510088578772]: 
-      tagName: ion-segment
       beanData: |
         '{
          "ionBean": "Segment",
          "FormControlName": "plain:Display",
          "Name": "plain:Flights"
         }'
+      tagName: ion-segment
       ↓SegmentButton [mobile.components.UIDynamicElement-1510088584880]: 
-        tagName: ion-segment-button
         beanData: '{"ionBean":"SegmentButton","Name":"plain:Flights"}'
+        tagName: ion-segment-button
         ↓Text [mobile.components.UIText-1510088642660]: 
           textValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Vol
       ↓SegmentButton1 [mobile.components.UIDynamicElement-1510088591992]: 
-        tagName: ion-segment-button
         beanData: '{"ionBean":"SegmentButton","Name":"plain:Pilots"}'
+        tagName: ion-segment-button
         ↓Text [mobile.components.UIText-1510088665244]: 
           textValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Pilotes
       ↓SegmentButton2 [mobile.components.UIDynamicElement-1510089213991]: 
-        tagName: ion-segment-button
         beanData: '{"ionBean":"SegmentButton","Name":"plain:Map"}'
+        tagName: ion-segment-button
         ↓Text [mobile.components.UIText-1510089221654]: 
           textValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Carte
       ↓SegmentButton21 [mobile.components.UIDynamicElement-1512149961734]: 
-        tagName: ion-segment-button
         beanData: '{"ionBean":"SegmentButton","Name":"plain:Photos"}'
+        tagName: ion-segment-button
         ↓Text [mobile.components.UIText-1512149961856]: 
           textValue: 
             - xmlizable: 
@@ -156,8 +156,8 @@ title: Title for MyFlightDetails1
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
           - MobileSmartSourceType: script:"Flights"
       ↓Card [mobile.components.UIDynamicElement-1509602577477]: 
-        tagName: ion-card
         beanData: '{"ionBean":"Card"}'
+        tagName: ion-card
         ↓Directive [mobile.components.UIControlDirective-1510071870317]: 
           directiveName: If
           directiveSource: 
@@ -165,32 +165,32 @@ title: Title for MyFlightDetails1
               - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
               - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc='Design_document', view='PublishedFlights'}'])?.rows"}
           ↓Image1 [mobile.components.UIDynamicElement-1509602577492]: 
-            selfClose: true
-            tagName: img
             beanData: |
               '{
                "ionBean": "Image",
                "url": "source:{\"filter\":\"Database\",\"project\":\"FlightShare\",\"input\":\"''assets\\\/images\\\/'' + listen([''fs:\\\/\\\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc=''Design_document'', view=''PublishedFlights''}''])?.rows[0]?.doc?.PublishedFlight?.plane + ''.jpg''\"}",
                "width": "plain:100%"
               }'
+            selfClose: true
+            tagName: img
           ↓CardContent [mobile.components.UIDynamicElement-1509602577506]: 
-            tagName: ion-card-content
             beanData: '{"ionBean":"CardContent"}'
+            tagName: ion-card-content
             ↓Grid [mobile.components.UIDynamicElement-1509602577519]: 
-              tagName: ion-grid
               beanData: '{"ionBean":"Grid"}'
+              tagName: ion-grid
               ↓GridRow [mobile.components.UIDynamicElement-1509602577533]: 
-                tagName: ion-row
                 beanData: '{"ionBean":"GridRow"}'
+                tagName: ion-row
                 ↓GridCol [mobile.components.UIDynamicElement-1509602577547]: 
-                  tagName: ion-col
                   beanData: '{"ionBean":"GridCol"}'
+                  tagName: ion-col
                   ↓TextFormat [mobile.components.UIDynamicElement-1509602577560]: 
-                    tagName: div
                     beanData: '{"ionBean":"TextFormat","TextLeft":"plain:text-left"}'
+                    tagName: div
                     ↓Heading1 [mobile.components.UIDynamicElement-1509602577573]: 
-                      tagName: h1
                       beanData: '{"ionBean":"Heading1"}'
+                      tagName: h1
                       ↓Text [mobile.components.UIText-1509602577587]: 
                         textValue: 
                           - xmlizable: 
@@ -202,11 +202,11 @@ title: Title for MyFlightDetails1
                             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                             - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc='Design_document', view='PublishedFlights'}'])?.rows[0]?.doc?.PublishedFlight?.from"}
                 ↓GridCol1 [mobile.components.UIDynamicElement-1509602577616]: 
-                  tagName: ion-col
                   beanData: '{"ionBean":"GridCol"}'
+                  tagName: ion-col
                   ↓Heading1 [mobile.components.UIDynamicElement-1509602577629]: 
-                    tagName: h1
                     beanData: '{"ionBean":"Heading1"}'
+                    tagName: h1
                     ↓Text [mobile.components.UIText-1509602577642]: 
                       textValue: 
                         - xmlizable: 
@@ -218,14 +218,14 @@ title: Title for MyFlightDetails1
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc='Design_document', view='PublishedFlights'}'])?.rows[0]?.doc?.PublishedFlight?.to"}
               ↓GridRow1 [mobile.components.UIDynamicElement-1509602577749]: 
-                tagName: ion-row
                 beanData: '{"ionBean":"GridRow"}'
+                tagName: ion-row
                 ↓GridCol [mobile.components.UIDynamicElement-1509602577764]: 
-                  tagName: ion-col
                   beanData: '{"ionBean":"GridCol"}'
+                  tagName: ion-col
                   ↓Heading4 [mobile.components.UIDynamicElement-1509602577778]: 
-                    tagName: h4
                     beanData: '{"ionBean":"Heading4"}'
+                    tagName: h4
                     ↓Text11 [mobile.components.UIText-1509602577793]: 
                       textValue: 
                         - xmlizable: 
@@ -242,50 +242,50 @@ title: Title for MyFlightDetails1
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc='Design_document', view='PublishedFlights'}'])?.rows[2]?.doc?.airport?.name"}
               ↓GridRow11 [mobile.components.UIDynamicElement-1509602577839]: 
-                tagName: ion-row
                 beanData: '{"ionBean":"GridRow"}'
+                tagName: ion-row
                 ↓GridCol [mobile.components.UIDynamicElement-1509602577854]: 
-                  tagName: ion-col
                   beanData: '{"ionBean":"GridCol"}'
+                  tagName: ion-col
                   ↓Heading2 [mobile.components.UIDynamicElement-1509602577869]: 
-                    tagName: h2
                     beanData: '{"ionBean":"Heading2"}'
+                    tagName: h2
                     ↓Text [mobile.components.UIText-1509602577886]: 
                       textValue: 
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: plain:Date :
                 ↓GridCol1 [mobile.components.UIDynamicElement-1509602577901]: 
-                  tagName: ion-col
                   beanData: '{"ionBean":"GridCol"}'
+                  tagName: ion-col
                   ↓Heading2 [mobile.components.UIDynamicElement-1509602577925]: 
-                    tagName: h2
                     beanData: '{"ionBean":"Heading2"}'
+                    tagName: h2
                     ↓Text11 [mobile.components.UIText-1509602577945]: 
                       textValue: 
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc='Design_document', view='PublishedFlights'}'])?.rows[0]?.doc?.PublishedFlight?.date"}
               ↓GridRow111 [mobile.components.UIDynamicElement-1509602577962]: 
-                tagName: ion-row
                 beanData: '{"ionBean":"GridRow"}'
+                tagName: ion-row
                 ↓GridCol [mobile.components.UIDynamicElement-1509602577981]: 
-                  tagName: ion-col
                   beanData: '{"ionBean":"GridCol"}'
+                  tagName: ion-col
                   ↓Heading2 [mobile.components.UIDynamicElement-1509602577997]: 
-                    tagName: h2
                     beanData: '{"ionBean":"Heading2"}'
+                    tagName: h2
                     ↓Text [mobile.components.UIText-1509602578017]: 
                       textValue: 
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: plain:Heure :
                 ↓GridCol1 [mobile.components.UIDynamicElement-1509602578040]: 
-                  tagName: ion-col
                   beanData: '{"ionBean":"GridCol"}'
+                  tagName: ion-col
                   ↓Heading2 [mobile.components.UIDynamicElement-1509602578058]: 
-                    tagName: h2
                     beanData: '{"ionBean":"Heading2"}'
+                    tagName: h2
                     ↓Text11 [mobile.components.UIText-1509602578077]: 
                       textValue: 
                         - xmlizable: 
@@ -297,50 +297,50 @@ title: Title for MyFlightDetails1
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: 'plain: Local'
               ↓GridRow1112 [mobile.components.UIDynamicElement-1509604331955]: 
-                tagName: ion-row
                 beanData: '{"ionBean":"GridRow"}'
+                tagName: ion-row
                 ↓GridCol [mobile.components.UIDynamicElement-1509604331972]: 
-                  tagName: ion-col
                   beanData: '{"ionBean":"GridCol"}'
+                  tagName: ion-col
                   ↓Heading2 [mobile.components.UIDynamicElement-1509604331989]: 
-                    tagName: h2
                     beanData: '{"ionBean":"Heading2"}'
+                    tagName: h2
                     ↓Text [mobile.components.UIText-1509604332008]: 
                       textValue: 
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: plain:Proposé par :
                 ↓GridCol1 [mobile.components.UIDynamicElement-1509604332023]: 
-                  tagName: ion-col
                   beanData: '{"ionBean":"GridCol"}'
+                  tagName: ion-col
                   ↓Heading2 [mobile.components.UIDynamicElement-1509604332039]: 
-                    tagName: h2
                     beanData: '{"ionBean":"Heading2"}'
+                    tagName: h2
                     ↓Text11 [mobile.components.UIText-1509604332055]: 
                       textValue: 
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: 'source:{"filter":"Database","project":"FlightShare","input":"usersInfo ? usersInfo[listen([''fs:\/\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc=''Design_document'', view=''PublishedFlights''}''])?.rows[0]?.doc?.PublishedFlight?.by] : ''''"}'
               ↓GridRow111211 [mobile.components.UIDynamicElement-1533028538050]: 
-                tagName: ion-row
                 beanData: '{"ionBean":"GridRow"}'
+                tagName: ion-row
                 ↓GridCol [mobile.components.UIDynamicElement-1533028538434]: 
-                  tagName: ion-col
                   beanData: '{"ionBean":"GridCol"}'
+                  tagName: ion-col
                   ↓Heading2 [mobile.components.UIDynamicElement-1533028538773]: 
-                    tagName: h2
                     beanData: '{"ionBean":"Heading2"}'
+                    tagName: h2
                     ↓Text [mobile.components.UIText-1533028538970]: 
                       textValue: 
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: plain:Places disponibles
                 ↓GridCol1 [mobile.components.UIDynamicElement-1533028539167]: 
-                  tagName: ion-col
                   beanData: '{"ionBean":"GridCol"}'
+                  tagName: ion-col
                   ↓Heading2 [mobile.components.UIDynamicElement-1533028539413]: 
-                    tagName: h2
                     beanData: '{"ionBean":"Heading2"}'
+                    tagName: h2
                     ↓Text11 [mobile.components.UIText-1533028539643]: 
                       isEnabled: false
                       textValue: 
@@ -353,36 +353,36 @@ title: Title for MyFlightDetails1
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc='Design_document', view='PublishedFlightsDetails', include_docs='true'}'])?.rows[0]?.doc?.PublishedFlight?.occupiedSeats - this[\"RegisteredPilotsNumber\"]"}
               ↓GridRow11121 [mobile.components.UIDynamicElement-1511798618040]: 
-                tagName: ion-row
                 beanData: '{"ionBean":"GridRow"}'
+                tagName: ion-row
                 ↓GridCol [mobile.components.UIDynamicElement-1511798618084]: 
-                  tagName: ion-col
                   beanData: '{"ionBean":"GridCol"}'
+                  tagName: ion-col
                   ↓Heading2 [mobile.components.UIDynamicElement-1511798618111]: 
-                    tagName: h2
                     beanData: '{"ionBean":"Heading2"}'
+                    tagName: h2
                     ↓Text [mobile.components.UIText-1511798618139]: 
                       textValue: 
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: plain:Commentaires
                 ↓GridCol1 [mobile.components.UIDynamicElement-1511798618165]: 
-                  tagName: ion-col
                   beanData: '{"ionBean":"GridCol"}'
+                  tagName: ion-col
                   ↓Heading2 [mobile.components.UIDynamicElement-1511798618193]: 
-                    tagName: h2
                     beanData: '{"ionBean":"Heading2"}'
+                    tagName: h2
                     ↓Text11 [mobile.components.UIText-1511798618218]: 
                       textValue: 
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc='Design_document', view='PublishedFlightsDetails', include_docs='true'}'])?.rows[0]?.doc?.PublishedFlight?.comment"}
               ↓GridRow1111 [mobile.components.UIDynamicElement-1509602578112]: 
-                tagName: ion-row
                 beanData: '{"ionBean":"GridRow"}'
+                tagName: ion-row
                 ↓GridCol [mobile.components.UIDynamicElement-1509602578128]: 
-                  tagName: ion-col
                   beanData: '{"ionBean":"GridCol"}'
+                  tagName: ion-col
                   ↓Directive [mobile.components.UIControlDirective-1511977666080]: 
                     comment: Only if current user is the Owner of the flight
                     directiveName: If
@@ -391,8 +391,6 @@ title: Title for MyFlightDetails1
                         - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                         - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc='Design_document', view='PublishedFlightsDetails', include_docs='true'}'])?.rows[0]?.doc?.PublishedFlight?.by == router.sharedObject.currentUser?.email"}
                     ↓Button1 [mobile.components.UIDynamicElement-1539358709148]: 
-                      isEnabled: false
-                      tagName: button
                       beanData: |
                         '{
                          "ionBean": "Button",
@@ -400,14 +398,16 @@ title: Title for MyFlightDetails1
                          "IonColor": "plain:dark",
                          "IconPosition": "plain:icon-left"
                         }'
+                      isEnabled: false
+                      tagName: button
                       ↓Icon [mobile.components.UIDynamicElement-1539358709155]: 
-                        tagName: ion-icon
                         beanData: |
                           '{
                            "ionBean": "Icon",
                            "IconName": "plain:clipboard",
                            "ItemPosition": "plain:item-left"
                           }'
+                        tagName: ion-icon
                       ↓Text [mobile.components.UIText-1539358709158]: 
                         textValue: 
                           - xmlizable: 
@@ -417,10 +417,9 @@ title: Title for MyFlightDetails1
                         attrName: (click)
                         eventName: onClick
                         ↓Toast [mobile.components.UIDynamicAction-1539358709164]: 
-                          isEnabled: false
                           beanData: '{"ionBean":"ToastAction","message":"plain:Vol modifié avec succès"}'
+                          isEnabled: false
                         ↓QueryView_ModifyPub [mobile.components.UIDynamicAction-1539939223755]: 
-                          comment: We query with a valid key, so the AddOrModifyFlight  Page will be displayed in 'Modify' mode
                           beanData: |
                             '{
                              "ionBean": "FullSyncViewAction",
@@ -431,14 +430,15 @@ title: Title for MyFlightDetails1
                              "descending": "plain:false",
                              "key": "script:this.global?.selectedPubFlightKey"
                             }'
+                          comment: We query with a valid key, so the AddOrModifyFlight  Page will be displayed in 'Modify' mode
                           ↓Log1 [mobile.components.UIDynamicAction-1539939223758]: 
-                            isEnabled: false
                             beanData: |
                               '{
                                "ionBean": "LogAction",
                                "message": "script:JSON.stringify(out)",
                                "level": "plain:warn"
                               }'
+                            isEnabled: false
                           ↓selectedFlightID [mobile.components.UIDynamicAction-1539939223761]: 
                             beanData: |
                               '{
@@ -499,8 +499,8 @@ title: Title for MyFlightDetails1
                           ↓PushPage [mobile.components.UIDynamicAction-1539939223797]: 
                             beanData: '{"ionBean":"PushPageAction","page":"plain:FlightShare.MobileApplication.Application.AddOrModifyFlight"}'
                 ↓GridCol1 [mobile.components.UIDynamicElement-1509602578249]: 
-                  tagName: ion-col
                   beanData: '{"ionBean":"GridCol"}'
+                  tagName: ion-col
                   ↓Directive [mobile.components.UIControlDirective-1511724836179]: 
                     comment: Only if current user is different from owner of the flight
                     directiveName: If
@@ -509,7 +509,6 @@ title: Title for MyFlightDetails1
                         - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                         - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc='Design_document', view='PublishedFlightsDetails', include_docs='true'}'])?.rows[0]?.doc?.PublishedFlight?.by != router.sharedObject.currentUser?.email"}
                     ↓Button [mobile.components.UIDynamicElement-1509602578265]: 
-                      tagName: button
                       beanData: |
                         '{
                          "ionBean": "Button",
@@ -517,9 +516,10 @@ title: Title for MyFlightDetails1
                          "IonShape": "plain:block",
                          "IconPosition": "plain:icon-left"
                         }'
+                      tagName: button
                       ↓Icon [mobile.components.UIDynamicElement-1509602578282]: 
-                        tagName: ion-icon
                         beanData: '{"ionBean":"Icon","IconName":"plain:share"}'
+                        tagName: ion-icon
                       ↓Text [mobile.components.UIText-1509602578297]: 
                         textValue: 
                           - xmlizable: 
@@ -552,11 +552,11 @@ title: Title for MyFlightDetails1
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
           - MobileSmartSourceType: script:"Pilots"
       ↓List [mobile.components.UIDynamicElement-1509637891807]: 
-        tagName: ion-list
         beanData: '{"ionBean":"List"}'
+        tagName: ion-list
         ↓Listheader [mobile.components.UIDynamicElement-1509639644136]: 
-          tagName: ion-list-header
           beanData: '{"ionBean":"Listheader"}'
+          tagName: ion-list-header
           ↓Text [mobile.components.UIText-1509639614111]: 
             textValue: 
               - xmlizable: 
@@ -568,31 +568,31 @@ title: Title for MyFlightDetails1
               - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
               - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"generateArray(listen(['fs:\/\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc='Design_document', view='PublishedFlightsDetails', include_docs='true'}'])?.rows[0]?.doc?.PublishedFlight?.registeredPilots)"}
           ↓ListItem [mobile.components.UIDynamicElement-1509637909185]: 
+            beanData: '{"ionBean":"ListItem"}'
             isEnabled: false
             tagName: ion-item
-            beanData: '{"ionBean":"ListItem"}'
             ↓Heading2 [mobile.components.UIDynamicElement-1509638255277]: 
-              tagName: h2
               beanData: '{"ionBean":"Heading2"}'
+              tagName: h2
               ↓Text [mobile.components.UIText-1509638264007]: 
                 textValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509637919301"}
           ↓Sliding [mobile.components.UIDynamicElement-1510479746824]: 
-            tagName: ion-item-sliding
             beanData: '{"ionBean":"Sliding"}'
+            tagName: ion-item-sliding
             ↓Button [mobile.components.UIDynamicElement-1510479746859]: 
-              tagName: button
               beanData: |
                 '{
                  "ionBean": "Button",
                  "ButtonFormType": "plain:false",
                  "ButtonType": "plain:ion-item"
                 }'
+              tagName: button
               ↓Heading1 [mobile.components.UIDynamicElement-1510479746893]: 
-                tagName: h1
                 beanData: '{"ionBean":"Heading1"}'
+                tagName: h1
                 ↓Text [mobile.components.UIText-1510479746930]: 
                   textValue: 
                     - xmlizable: 
@@ -608,16 +608,16 @@ title: Title for MyFlightDetails1
                      "key": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1509637919301\"}"
                     }'
             ↓SlidingOption [mobile.components.UIDynamicElement-1510479747534]: 
-              tagName: ion-item-options
               beanData: '{"ionBean":"SlidingOption","side":"plain:left"}'
+              tagName: ion-item-options
               ↓Button [mobile.components.UIDynamicElement-1510479747571]: 
-                tagName: button
                 beanData: |
                   '{
                    "ionBean": "Button",
                    "ButtonFormType": "plain:false",
                    "IonColor": "plain:danger"
                   }'
+                tagName: button
                 ↓Text [mobile.components.UIText-1510479747612]: 
                   textValue: 
                     - xmlizable: 
@@ -630,13 +630,12 @@ title: Title for MyFlightDetails1
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
           - MobileSmartSourceType: script:"Map"
       ↓Heading2 [mobile.components.UIDynamicElement-1510089389651]: 
-        tagName: h2
         beanData: '{"ionBean":"Heading2"}'
+        tagName: h2
       ↓SpanTag [mobile.components.UIDynamicElement-1510089458989]: 
-        tagName: span
         beanData: '{"ionBean":"SpanTag"}'
+        tagName: span
         ↓GoogleMap [mobile.components.UIDynamicElement-1509602578378]: 
-          tagName: agm-map
           beanData: |
             '{
              "ionBean": "GoogleMap",
@@ -644,6 +643,7 @@ title: Title for MyFlightDetails1
              "Longitude": "source:{\"filter\":\"Database\",\"project\":\"FlightShare\",\"input\":\"listen([''fs:\\\/\\\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc=''Design_document'', view=''PublishedFlightsDetails'', include_docs=''true''}''])?.rows[3]?.doc?.airport?.longitude * 1\"}",
              "Height": "script:''90%''"
             }'
+          tagName: agm-map
           ↓Style [mobile.components.UIStyle-1510089480885]: 
             styleContent: 
               - xmlizable: 
@@ -666,7 +666,6 @@ title: Title for MyFlightDetails1
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1511723177563?.doc?.airport"}
                 ↓MapMarker [mobile.components.UIDynamicElement-1511723177624]: 
-                  tagName: agm-marker
                   beanData: |
                     '{
                      "ionBean": "MapMarker",
@@ -674,20 +673,21 @@ title: Title for MyFlightDetails1
                      "Longitude": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1511723177563?.doc?.airport?.longitude * 1\"}",
                      "Title": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1511723177563?.doc?.airport?.name\"}"
                     }'
+                  tagName: agm-marker
                   ↓MapInfoWindow [mobile.components.UIDynamicElement-1511723177652]: 
-                    tagName: agm-info-window
                     beanData: '{"ionBean":"MapInfoWindow"}'
+                    tagName: agm-info-window
                     ↓Heading1 [mobile.components.UIDynamicElement-1511723177679]: 
-                      tagName: h1
                       beanData: '{"ionBean":"Heading1"}'
+                      tagName: h1
                       ↓Text [mobile.components.UIText-1511723177713]: 
                         textValue: 
                           - xmlizable: 
                             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                             - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1511723177563?.doc?.airport?.id"}
                     ↓Heading4 [mobile.components.UIDynamicElement-1511723177741]: 
-                      tagName: h4
                       beanData: '{"ionBean":"Heading4"}'
+                      tagName: h4
                       ↓Text [mobile.components.UIText-1511723177768]: 
                         textValue: 
                           - xmlizable: 
@@ -726,38 +726,36 @@ title: Title for MyFlightDetails1
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
           - MobileSmartSourceType: script:"Photos"
       ↓Heading2 [mobile.components.UIDynamicElement-1512149998702]: 
-        tagName: h2
         beanData: |
           '{
            "ionBean": "Heading2",
            "ionText": "plain:ion-text",
            "IonColor": "plain:light"
           }'
+        tagName: h2
         ↓TextFormat [mobile.components.UIDynamicElement-1515521089433]: 
-          tagName: div
           beanData: '{"ionBean":"TextFormat","TextCenter":"plain:text-center"}'
+          tagName: div
           ↓Text [mobile.components.UIText-1515521068227]: 
             textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Glisser une photo sur la gauche pour l'effacer...
       ↓ListContainer [mobile.components.UIDynamicElement-1516116797578]: 
-        tagName: ion-list
         beanData: '{"ionBean":"List"}'
+        tagName: ion-list
         ↓Directive1 [mobile.components.UIControlDirective-1515578761631]: 
           directiveSource: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
               - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"generateKeysArray(listen(['fs:\/\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc='Design_document', view='PublishedFlightsDetails', include_docs='true'}'])?.rows[0]?.doc?._attachments)"}
           ↓SlidingItem [mobile.components.UIDynamicElement-1516116982788]: 
-            tagName: ion-item-sliding
             beanData: '{"ionBean":"Sliding"}'
+            tagName: ion-item-sliding
             ↓GenericItem [mobile.components.UIDynamicElement-1516118636533]: 
-              tagName: ion-item
               beanData: '{"ionBean":"ListItem"}'
+              tagName: ion-item
               ↓FSImage [mobile.components.UIDynamicElement-1518289194872]: 
-                selfClose: true
-                tagName: img
                 beanData: |
                   '{
                    "ionBean": "FSImage",
@@ -768,9 +766,11 @@ title: Title for MyFlightDetails1
                    "width": "plain:100%",
                    "alt": "plain:Photo"
                   }'
+                selfClose: true
+                tagName: img
             ↓SlidingOption [mobile.components.UIDynamicElement-1516117053511]: 
-              tagName: ion-item-options
               beanData: '{"ionBean":"SlidingOption"}'
+              tagName: ion-item-options
               ↓Directive [mobile.components.UIControlDirective-1521644083689]: 
                 directiveName: If
                 directiveSource: 
@@ -778,8 +778,8 @@ title: Title for MyFlightDetails1
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: script:this?.enableModify
                 ↓Button [mobile.components.UIDynamicElement-1516117070342]: 
-                  tagName: button
                   beanData: '{"ionBean":"Button","ButtonFormType":"plain:false"}'
+                  tagName: button
                   ↓Text [mobile.components.UIText-1516117081023]: 
                     textValue: 
                       - xmlizable: 
@@ -797,13 +797,13 @@ title: Title for MyFlightDetails1
                       ↓Toast [mobile.components.UIDynamicAction-1516114729772]: 
                         beanData: '{"ionBean":"ToastAction","message":"plain:La photo a été supprimée..."}'
       ↓FabContainer [mobile.components.UIDynamicElement-1512150116667]: 
-        tagName: ion-fab
         beanData: |
           '{
            "ionBean": "FabContainer",
            "HorzPosition": "plain:right",
            "VertPosition": "plain:bottom"
           }'
+        tagName: ion-fab
         ↓Directive [mobile.components.UIControlDirective-1521566202492]: 
           directiveName: If
           directiveSource: 
@@ -811,29 +811,28 @@ title: Title for MyFlightDetails1
               - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
               - MobileSmartSourceType: script:this?.enableModify
           ↓FabButton [mobile.components.UIDynamicElement-1512150058378]: 
-            tagName: button
             beanData: '{"ionBean":"FabButton"}'
+            tagName: button
             ↓Icon [mobile.components.UIDynamicElement-1512150078244]: 
-              tagName: ion-icon
               beanData: '{"ionBean":"Icon"}'
+              tagName: ion-icon
           ↓FabList [mobile.components.UIDynamicElement-1519029917935]: 
-            tagName: ion-fab-list
             beanData: '{"ionBean":"FabList","side":"plain:top"}'
+            tagName: ion-fab-list
             ↓FabButton11 [mobile.components.UIDynamicElement-1519029943668]: 
-              tagName: button
               beanData: '{"ionBean":"FabButton"}'
+              tagName: button
               ↓IconImagesGallery [mobile.components.UIDynamicElement-1519029953373]: 
-                comment: Image gallery icon
-                tagName: ion-icon
                 beanData: |
                   '{
                    "ionBean": "Icon",
                    "IconName": "plain:images",
                    "IonColor": "plain:primary"
                   }'
+                comment: Image gallery icon
+                tagName: ion-icon
               ↓Event [mobile.components.UIControlEvent-1519031020783]: 
                 ↓Camera [mobile.components.UIDynamicAction-1519031020865]: 
-                  comment: We will use the output out as an attachment name but
                   beanData: |
                     '{
                      "ionBean": "CameraAction",
@@ -844,8 +843,8 @@ title: Title for MyFlightDetails1
                      "targetHeight": "plain:",
                      "mediaType": "plain:PICTURE"
                     }'
+                  comment: We will use the output out as an attachment name but
                   ↓PutAttachment [mobile.components.UIDynamicAction-1519031020987]: 
-                    comment: We use the out.substring(out.lastIndexOf('/') +1) to strip off the path given back for the attachment as this causes a FullSync replication error due to /  characters 
                     beanData: |
                       '{
                        "ionBean": "FullSyncPutAttachmentAction",
@@ -855,18 +854,19 @@ title: Title for MyFlightDetails1
                        "content_type": "plain:image\/jpg",
                        "content": "script:out"
                       }'
+                    comment: We use the out.substring(out.lastIndexOf('/') +1) to strip off the path given back for the attachment as this causes a FullSync replication error due to /  characters 
             ↓FabButton1 [mobile.components.UIDynamicElement-1519029945850]: 
-              tagName: button
               beanData: '{"ionBean":"FabButton"}'
+              tagName: button
               ↓IconCamera [mobile.components.UIDynamicElement-1519029956297]: 
-                comment: Camera Icon
-                tagName: ion-icon
                 beanData: |
                   '{
                    "ionBean": "Icon",
                    "IconName": "plain:camera",
                    "IonColor": "plain:primary"
                   }'
+                comment: Camera Icon
+                tagName: ion-icon
               ↓Event [mobile.components.UIControlEvent-1512150194936]: 
                 ↓Camera [mobile.components.UIDynamicAction-1512150209680]: 
                   beanData: |
@@ -888,9 +888,9 @@ title: Title for MyFlightDetails1
                        "content": "script:out"
                       }'
 ↓Footer [mobile.components.UIDynamicElement-1509602578395]: 
+  beanData: '{"ionBean":"Footer"}'
   comment: Page footer
   tagName: ion-footer
-  beanData: '{"ionBean":"Footer"}'
 ↓PageEvent [mobile.components.UIPageEvent-1520336236617]: 
   ↓ComputeUserList [mobile.components.UICustomAction-1520336249908]: 
     actionValue: 

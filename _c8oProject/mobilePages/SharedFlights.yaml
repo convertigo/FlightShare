@@ -16,41 +16,41 @@ scriptContent:
 segment: SharedFlights
 title: Vols partagés
 ↓Header [mobile.components.UIDynamicElement-1508945977194]: 
+  beanData: '{"ionBean":"Header"}'
   comment: Page header
   tagName: ion-header
-  beanData: '{"ionBean":"Header"}'
   ↓NavBar [mobile.components.UIDynamicElement-1508945977208]: 
-    tagName: ion-navbar
     beanData: '{"ionBean":"NavBar","IonColor":"plain:light"}'
+    tagName: ion-navbar
     ↓BarTitle [mobile.components.UIDynamicElement-1508945977223]: 
-      tagName: ion-title
       beanData: '{"ionBean":"BarTitle"}'
+      tagName: ion-title
       ↓Text [mobile.components.UIText-1508945977241]: 
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: plain:Vols Publiés
     ↓Button [mobile.components.UIDynamicElement-1508945977260]: 
-      comment: A button to toggle the menu
-      tagName: button
       beanData: |
         '{
          "ionBean": "Button",
          "ButtonFormType": "plain:false",
          "MenuMode": "plain:menuToggle"
         }'
+      comment: A button to toggle the menu
+      tagName: button
       ↓Icon [mobile.components.UIDynamicElement-1508945977277]: 
-        tagName: ion-icon
         beanData: '{"ionBean":"Icon","IconName":"plain:menu"}'
+        tagName: ion-icon
     ↓ButtonSet [mobile.components.UIDynamicElement-1508945977295]: 
-      tagName: ion-buttons
       beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:right"}'
+      tagName: ion-buttons
       ↓Button [mobile.components.UIDynamicElement-1508945977317]: 
-        tagName: button
         beanData: '{"ionBean":"Button","ButtonFormType":"plain:false"}'
+        tagName: button
         ↓Icon [mobile.components.UIDynamicElement-1508945977338]: 
-          tagName: ion-icon
           beanData: '{"ionBean":"Icon","IconName":"plain:options"}'
+          tagName: ion-icon
         ↓Event [mobile.components.UIControlEvent-1519223596562]: 
           ↓Popover [mobile.components.UIDynamicAction-1519227923727]: 
             beanData: |
@@ -61,11 +61,11 @@ title: Vols partagés
                "enableBackdropDismiss": "plain:true"
               }'
 ↓Content [mobile.components.UIDynamicElement-1508945999552]: 
-  tagName: ion-content
   beanData: '{"ionBean":"Content"}'
+  tagName: ion-content
   ↓List [mobile.components.UIDynamicElement-1509572856435]: 
-    tagName: ion-list
     beanData: '{"ionBean":"List"}'
+    tagName: ion-list
     ↓Directive [mobile.components.UIControlDirective-1509573021875]: 
       directiveExpression: let i = index
       directiveSource: 
@@ -73,28 +73,28 @@ title: Vols partagés
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
           - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#SHAREDFLIGHTS, {ddoc='Design_document', view='PublishedFlights'}'])?.rows"}
       ↓Sliding [mobile.components.UIDynamicElement-1509573147492]: 
-        tagName: ion-item-sliding
         beanData: '{"ionBean":"Sliding"}'
+        tagName: ion-item-sliding
         ↓Button [mobile.components.UIDynamicElement-1509573147510]: 
-          tagName: button
           beanData: |
             '{
              "ionBean": "Button",
              "ButtonFormType": "plain:false",
              "ButtonType": "plain:ion-item"
             }'
+          tagName: button
           ↓Thumbnail [mobile.components.UIDynamicElement-1509573147677]: 
-            tagName: ion-thumbnail
             beanData: '{"ionBean":"Thumbnail"}'
+            tagName: ion-thumbnail
             ↓Image [mobile.components.UIDynamicElement-1509573147689]: 
-              selfClose: true
-              tagName: img
               beanData: |
                 '{
                  "ionBean": "Image",
                  "url": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"''assets\\\/images\\\/'' + item1509573021875?.doc?.PublishedFlight?.plane + ''.jpg''\"}",
                  "width": "plain:40%"
                 }'
+              selfClose: true
+              tagName: img
               ↓AdjustImageSize [mobile.components.UIStyle-1519029325667]: 
                 styleContent: 
                   - xmlizable: 
@@ -125,24 +125,24 @@ title: Vols partagés
                  "key": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1509573021875?.id\"}"
                 }'
             ↓selectedPubFlightKey [mobile.components.UIDynamicAction-1539940385774]: 
-              isEnabled: false
               beanData: |
                 '{
                  "ionBean": "SetGlobalAction",
                  "Property": "plain:selectedPubFlightKey",
                  "Value": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1509573021875?.key\"}"
                 }'
+              isEnabled: false
               ↓Log1 [mobile.components.UIDynamicAction-1539940473902]: 
-                isEnabled: false
                 beanData: |
                   '{
                    "ionBean": "LogAction",
                    "message": "script:JSON.stringify(out)",
                    "level": "plain:warn"
                   }'
+                isEnabled: false
           ↓Heading1 [mobile.components.UIDynamicElement-1509573147546]: 
-            tagName: h1
             beanData: '{"ionBean":"Heading1"}'
+            tagName: h1
             ↓Text3 [mobile.components.UIText-1539338873977]: 
               textValue: 
                 - xmlizable: 
@@ -189,8 +189,8 @@ title: Vols partagés
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509573021875?.value?.to"}
           ↓Heading2 [mobile.components.UIDynamicElement-1509573147627]: 
-            tagName: h2
             beanData: '{"ionBean":"Heading2"}'
+            tagName: h2
             ↓Text1 [mobile.components.UIText-1509573147640]: 
               textValue: 
                 - xmlizable: 
@@ -215,8 +215,8 @@ title: Vols partagés
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:0.1s
           ↓Heading51 [mobile.components.UIDynamicElement-1509574255504]: 
-            tagName: h5
             beanData: '{"ionBean":"Heading5"}'
+            tagName: h5
             ↓Attr [mobile.components.UIAttribute-1519667242518]: 
               attrName: class
               attrValue: 
@@ -252,8 +252,8 @@ title: Vols partagés
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"usersInfo[item1509573021875?.doc?.PublishedFlight?.by]"}
           ↓Heading511 [mobile.components.UIDynamicElement-1518453902811]: 
-            tagName: h5
             beanData: '{"ionBean":"Heading5"}'
+            tagName: h5
             ↓Directive [mobile.components.UIControlDirective-1518531659307]: 
               directiveName: If
               directiveSource: 
@@ -287,14 +287,14 @@ title: Vols partagés
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"seatsInfo[item1509573021875?.id] == 0"}
                 ↓NoMoreSteatsImage [mobile.components.UIDynamicElement-1518955273302]: 
-                  selfClose: true
-                  tagName: img
                   beanData: |
                     '{
                      "ionBean": "Image",
                      "url": "script:''assets\/images\/RedFlag.png''",
                      "width": "plain:60%"
                     }'
+                  selfClose: true
+                  tagName: img
                   ↓Style [mobile.components.UIStyle-1518957557894]: 
                     styleContent: 
                       - xmlizable: 
@@ -325,8 +325,8 @@ title: Vols partagés
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:0.1s
           ↓Heading5 [mobile.components.UIDynamicElement-1509573147652]: 
-            tagName: h5
             beanData: '{"ionBean":"Heading5"}'
+            tagName: h5
             ↓Text [mobile.components.UIText-1509573147665]: 
               textValue: 
                 - xmlizable: 
@@ -357,16 +357,16 @@ title: Vols partagés
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:0.1s
         ↓SlidingOption [mobile.components.UIDynamicElement-1509573147802]: 
-          tagName: ion-item-options
           beanData: '{"ionBean":"SlidingOption","side":"plain:left"}'
+          tagName: ion-item-options
           ↓Button [mobile.components.UIDynamicElement-1538570541742]: 
-            tagName: button
             beanData: |
               '{
                "ionBean": "Button",
                "ButtonFormType": "plain:false",
                "IonColor": "plain:danger"
               }'
+            tagName: button
             ↓Text [mobile.components.UIText-1538570541883]: 
               textValue: 
                 - xmlizable: 
@@ -388,9 +388,9 @@ title: Vols partagés
               ↓Toast [mobile.components.UIDynamicAction-1538570542611]: 
                 beanData: '{"ionBean":"ToastAction","message":"plain:Vol supprimé avec succés"}'
 ↓Footer [mobile.components.UIDynamicElement-1508945993860]: 
+  beanData: '{"ionBean":"Footer"}'
   comment: Page footer
   tagName: ion-footer
-  beanData: '{"ionBean":"Footer"}'
 ↓PageEvent [mobile.components.UIPageEvent-1509572889304]: 
   viewEvent: onWillEnter
   ↓SubscribeToSettingChanges [mobile.components.UICustomAction-1519307482313]: 

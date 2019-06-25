@@ -19,35 +19,34 @@ scriptContent:
 segment: ListAirports
 title: Title for ListAirports
 ↓Header [mobile.components.UIDynamicElement-1508989654234]: 
+  beanData: '{"ionBean":"Header"}'
   comment: Page header
   tagName: ion-header
-  beanData: '{"ionBean":"Header"}'
   ↓NavBar [mobile.components.UIDynamicElement-1508989654244]: 
-    tagName: ion-navbar
     beanData: '{"ionBean":"NavBar","IonColor":"plain:light"}'
+    tagName: ion-navbar
     ↓BarTitle [mobile.components.UIDynamicElement-1508989654253]: 
-      tagName: ion-title
       beanData: '{"ionBean":"BarTitle"}'
+      tagName: ion-title
       ↓Text [mobile.components.UIText-1508989654262]: 
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: plain:Recherche Terrain
     ↓ButtonSet [mobile.components.UIDynamicElement-1508989654271]: 
-      tagName: ion-buttons
       beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:right"}'
+      tagName: ion-buttons
       ↓Button [mobile.components.UIDynamicElement-1508989654279]: 
-        tagName: button
         beanData: '{"ionBean":"Button","ButtonFormType":"plain:false"}'
+        tagName: button
         ↓Icon [mobile.components.UIDynamicElement-1508989654288]: 
-          tagName: ion-icon
           beanData: '{"ionBean":"Icon","IconName":"plain:more"}'
+          tagName: ion-icon
 ↓Content [mobile.components.UIDynamicElement-1508989669868]: 
-  tagName: ion-content
   beanData: '{"ionBean":"Content"}'
+  tagName: ion-content
   ↓Form [mobile.components.UIForm-1508989761555]: 
     ↓Searchbar [mobile.components.UIDynamicElement-1508989772620]: 
-      tagName: ion-searchbar
       beanData: |
         '{
          "ionBean": "Searchbar",
@@ -56,6 +55,7 @@ title: Title for ListAirports
          "placeholder": "plain:Recherche par code OACI ou ville",
          "showCancelButton": "plain:true"
         }'
+      tagName: ion-searchbar
       ↓Event [mobile.components.UIControlEvent-1508989892579]: 
         attrName: (ionInput)
         eventName: ionInput
@@ -95,35 +95,35 @@ title: Title for ListAirports
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: script:15
   ↓List [mobile.components.UIDynamicElement-1508989800535]: 
-    tagName: ion-list
     beanData: '{"ionBean":"List"}'
+    tagName: ion-list
     ↓Directive [mobile.components.UIControlDirective-1508990922923]: 
       directiveSource: 
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
           - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#AIRPORTS, {ddoc='Design_document', view='AirportsByIACO'}'])?.rows"}
       ↓Sliding [mobile.components.UIDynamicElement-1508991723555]: 
-        tagName: ion-item-sliding
         beanData: '{"ionBean":"Sliding"}'
+        tagName: ion-item-sliding
         ↓Button [mobile.components.UIDynamicElement-1508989821268]: 
-          tagName: button
           beanData: |
             '{
              "ionBean": "Button",
              "ButtonFormType": "plain:false",
              "ButtonType": "plain:ion-item"
             }'
+          tagName: button
           ↓Heading1 [mobile.components.UIDynamicElement-1508989844439]: 
-            tagName: h1
             beanData: '{"ionBean":"Heading1"}'
+            tagName: h1
             ↓Text [mobile.components.UIText-1508989855713]: 
               textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1508990922923?.value?.iaco"}
           ↓Paragraph [mobile.components.UIDynamicElement-1508991128801]: 
-            tagName: p
             beanData: '{"ionBean":"Paragraph"}'
+            tagName: p
             ↓Text [mobile.components.UIText-1508991135346]: 
               textValue: 
                 - xmlizable: 
@@ -174,25 +174,25 @@ title: Title for ListAirports
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1508990922923?.value?.iaco"}
         ↓SlidingOption [mobile.components.UIDynamicElement-1508992101299]: 
-          tagName: ion-item-options
           beanData: '{"ionBean":"SlidingOption","side":"plain:left"}'
+          tagName: ion-item-options
           ↓Button1 [mobile.components.UIDynamicElement-1508992125804]: 
-            tagName: button
             beanData: |
               '{
                "ionBean": "Button",
                "ButtonFormType": "plain:false",
                "IconPosition": "plain:icon-start"
               }'
+            tagName: button
             ↓Icon [mobile.components.UIDynamicElement-1508992240074]: 
-              tagName: ion-icon
               beanData: '{"ionBean":"Icon","IconName":"plain:eye"}'
+              tagName: ion-icon
             ↓Text [mobile.components.UIText-1508992143753]: 
               textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:Détails
 ↓Footer [mobile.components.UIDynamicElement-1508989659450]: 
+  beanData: '{"ionBean":"Footer"}'
   comment: Page footer
   tagName: ion-footer
-  beanData: '{"ionBean":"Footer"}'

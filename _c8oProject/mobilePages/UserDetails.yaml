@@ -2,26 +2,26 @@ inAutoMenu: false
 segment: UserDetails
 title: Liste des utilisateurs
 ↓Header [mobile.components.UIDynamicElement-1511712095757]: 
+  beanData: '{"ionBean":"Header"}'
   comment: Page header
   tagName: ion-header
-  beanData: '{"ionBean":"Header"}'
   ↓NavBar [mobile.components.UIDynamicElement-1511712095796]: 
-    tagName: ion-navbar
     beanData: '{"ionBean":"NavBar","IonColor":"plain:light"}'
+    tagName: ion-navbar
     ↓BarTitle [mobile.components.UIDynamicElement-1511712095832]: 
-      tagName: ion-title
       beanData: '{"ionBean":"BarTitle"}'
+      tagName: ion-title
       ↓Text11 [mobile.components.UIText-1519120529825]: 
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.get#SHOWUSERDETAILS, {ddoc='Design_document', view='users', include_docs='false'}'])?.userinfo?.displayName"}
 ↓Content [mobile.components.UIDynamicElement-1511712566273]: 
-  tagName: ion-content
   beanData: '{"ionBean":"Content"}'
+  tagName: ion-content
   ↓TextFormat [mobile.components.UIDynamicElement-1511714522060]: 
-    tagName: div
     beanData: '{"ionBean":"TextFormat","TextCenter":"plain:text-center"}'
+    tagName: div
     ↓Directive [mobile.components.UIControlDirective-1519048234581]: 
       directiveName: If
       directiveSource: 
@@ -29,8 +29,6 @@ title: Liste des utilisateurs
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
           - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.get#SHOWUSERDETAILS, {ddoc='Design_document', view='users', include_docs='false'}'])?._attachments"}
       ↓FSImage [mobile.components.UIDynamicElement-1519037203883]: 
-        selfClose: true
-        tagName: img
         beanData: |
           '{
            "ionBean": "FSImage",
@@ -41,6 +39,8 @@ title: Liste des utilisateurs
            "width": "plain:100%",
            "alt": "plain:AvatarImg"
           }'
+        selfClose: true
+        tagName: img
         ↓Attr [mobile.components.UIAttribute-1519978078261]: 
           attrName: class
           attrValue: 
@@ -54,20 +54,20 @@ title: Liste des utilisateurs
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
           - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"! listen(['fs:\/\/flightshare_fullsync.get#SHOWUSERDETAILS, {ddoc='Design_document', view='users', include_docs='false'}'])?._attachments"}
       ↓Image [mobile.components.UIDynamicElement-1519048450063]: 
-        selfClose: true
-        tagName: img
         beanData: |
           '{
            "ionBean": "Image",
            "url": "source:{\"filter\":\"Database\",\"project\":\"FlightShare\",\"input\":\"listen([''fs:\\\/\\\/flightshare_fullsync.get#SHOWUSERDETAILS, {ddoc=''Design_document'', view=''users'', include_docs=''false''}''])?.userinfo?.imageUrl\"}",
            "width": "plain:100%"
           }'
+        selfClose: true
+        tagName: img
   ↓List [mobile.components.UIDynamicElement-1511712596533]: 
-    tagName: ion-list
     beanData: '{"ionBean":"List"}'
+    tagName: ion-list
     ↓ListItem1 [mobile.components.UIDynamicElement-1511712623838]: 
-      tagName: ion-item
       beanData: '{"ionBean":"ListItem"}'
+      tagName: ion-item
       ↓Text [mobile.components.UIText-1511712640268]: 
         textValue: 
           - xmlizable: 
@@ -93,34 +93,34 @@ title: Liste des utilisateurs
         - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
         - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.get#SHOWUSERDETAILS, {ddoc='Design_document', view='users', include_docs='false'}'])?.userinfo?.email == router.sharedObject.currentUser?.email"}
     ↓FabContainer [mobile.components.UIDynamicElement-1519036893498]: 
-      tagName: ion-fab
       beanData: |
         '{
          "ionBean": "FabContainer",
          "HorzPosition": "plain:right",
          "VertPosition": "plain:bottom"
         }'
+      tagName: ion-fab
       ↓FabButton [mobile.components.UIDynamicElement-1519036893536]: 
-        tagName: button
         beanData: '{"ionBean":"FabButton"}'
+        tagName: button
         ↓Icon [mobile.components.UIDynamicElement-1519036893569]: 
-          tagName: ion-icon
           beanData: '{"ionBean":"Icon","IconName":"plain:images"}'
+          tagName: ion-icon
       ↓FabList [mobile.components.UIDynamicElement-1519036893604]: 
-        tagName: ion-fab-list
         beanData: '{"ionBean":"FabList","side":"plain:top"}'
+        tagName: ion-fab-list
         ↓FabButton11 [mobile.components.UIDynamicElement-1519036893648]: 
-          tagName: button
           beanData: '{"ionBean":"FabButton"}'
+          tagName: button
           ↓Icon [mobile.components.UIDynamicElement-1519036893682]: 
-            comment: Image galley
-            tagName: ion-icon
             beanData: |
               '{
                "ionBean": "Icon",
                "IconName": "plain:images",
                "IonColor": "plain:primary"
               }'
+            comment: Image galley
+            tagName: ion-icon
           ↓Event [mobile.components.UIControlEvent-1519036893721]: 
             ↓Camera [mobile.components.UIDynamicAction-1519036893776]: 
               beanData: |
@@ -153,17 +153,17 @@ title: Liste des utilisateurs
                           		page.resetImageCache()
                           		resolve();
         ↓FabButton1 [mobile.components.UIDynamicElement-1519036893862]: 
-          tagName: button
           beanData: '{"ionBean":"FabButton"}'
+          tagName: button
           ↓Icon [mobile.components.UIDynamicElement-1519036893900]: 
-            comment: Camera
-            tagName: ion-icon
             beanData: |
               '{
                "ionBean": "Icon",
                "IconName": "plain:camera",
                "IonColor": "plain:primary"
               }'
+            comment: Camera
+            tagName: ion-icon
           ↓Event [mobile.components.UIControlEvent-1519036893936]: 
             ↓Camera [mobile.components.UIDynamicAction-1519036893970]: 
               beanData: |

@@ -2,33 +2,33 @@ inAutoMenu: false
 segment: path-to-nodatapage
 title: Title for NoDataPage
 ↓Content [mobile.components.UIDynamicElement-1558530853303]: 
-  tagName: ion-content
   beanData: '{"ionBean":"Content"}'
+  tagName: ion-content
   ↓Grid [mobile.components.UIDynamicElement-1558531621122]: 
-    tagName: ion-grid
     beanData: '{"ionBean":"Grid","Height":"plain:height:100%"}'
+    tagName: ion-grid
     ↓GridRow [mobile.components.UIDynamicElement-1558531625427]: 
-      tagName: ion-row
       beanData: |
         '{
          "ionBean": "GridRow",
          "Height": "plain:height:100%",
          "AlignItemsCenter": "plain:align-items-center"
         }'
+      tagName: ion-row
       ↓GridCol [mobile.components.UIDynamicElement-1558531628346]: 
-        tagName: ion-col
         beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
         ↓TextFormat [mobile.components.UIDynamicElement-1558533631903]: 
-          tagName: div
           beanData: '{"ionBean":"TextFormat","TextCenter":"plain:text-center"}'
+          tagName: div
           ↓Icon [mobile.components.UIDynamicElement-1558531789314]: 
-            tagName: ion-icon
             beanData: |
               '{
                "ionBean": "Icon",
                "IconName": "plain:notifications-outline",
                "IonColor": "plain:light"
               }'
+            tagName: ion-icon
             ↓Style [mobile.components.UIStyle-1558534160941]: 
               styleContent: 
                 - xmlizable: 
@@ -38,28 +38,28 @@ title: Title for NoDataPage
                       '	transform: scale(5.0);
                       '
           ↓Paragraph1 [mobile.components.UIDynamicElement-1558538029389]: 
-            tagName: p
             beanData: '{"ionBean":"Paragraph"}'
+            tagName: p
             ↓Text [mobile.components.UIText-1558538076927]: 
               textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: 'plain: '
           ↓H1 [mobile.components.UIDynamicElement-1558530866186]: 
-            tagName: h1
             beanData: '{"ionBean":"Heading1"}'
+            tagName: h1
             ↓Text [mobile.components.UIText-1558530875306]: 
               textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:L'application n'a pas été initialisée.
         ↓Image [mobile.components.UIDynamicElement-1558531755749]: 
+          beanData: '{"ionBean":"Image"}'
           selfClose: true
           tagName: img
-          beanData: '{"ionBean":"Image"}'
         ↓Paragraph [mobile.components.UIDynamicElement-1558531184639]: 
-          tagName: p
           beanData: '{"ionBean":"Paragraph"}'
+          tagName: p
           ↓Text [mobile.components.UIText-1558531193700]: 
             textValue: 
               - xmlizable: 

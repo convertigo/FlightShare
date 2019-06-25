@@ -3,64 +3,64 @@ inAutoMenu: false
 segment: path-to-nodatapage1
 title: Title for NoDataPage1
 ↓Content [mobile.components.UIDynamicElement-1558706996684]: 
-  tagName: ion-content
   beanData: '{"ionBean":"Content"}'
+  tagName: ion-content
   ↓Grid [mobile.components.UIDynamicElement-1558706996687]: 
-    tagName: ion-grid
     beanData: '{"ionBean":"Grid","Height":"plain:height:100%"}'
+    tagName: ion-grid
     ↓GridRow [mobile.components.UIDynamicElement-1558706996690]: 
-      tagName: ion-row
       beanData: |
         '{
          "ionBean": "GridRow",
          "Height": "plain:height:100%",
          "AlignItemsCenter": "plain:align-items-center"
         }'
+      tagName: ion-row
       ↓GridCol [mobile.components.UIDynamicElement-1558706996693]: 
-        tagName: ion-col
         beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
         ↓TextFormat [mobile.components.UIDynamicElement-1558706996696]: 
-          tagName: div
           beanData: '{"ionBean":"TextFormat","TextCenter":"plain:text-center"}'
+          tagName: div
           ↓Heading1 [mobile.components.UIDynamicElement-1559135496041]: 
-            tagName: h1
             beanData: |
               '{
                "ionBean": "Heading1",
                "ionText": "plain:ion-text",
                "IonColor": "plain:primary"
               }'
+            tagName: h1
             ↓Text [mobile.components.UIText-1559135496044]: 
               textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:AERO TOURING CLUB de FRANCE
           ↓Image [mobile.components.UIDynamicElement-1559135334374]: 
-            selfClose: true
-            tagName: img
             beanData: |
               '{
                "ionBean": "Image",
                "url": "script:''assets\/images\/atcf.png''",
                "width": "plain:80px"
               }'
+            selfClose: true
+            tagName: img
           ↓H1 [mobile.components.UIDynamicElement-1558706996711]: 
-            tagName: h1
             beanData: '{"ionBean":"Heading1"}'
+            tagName: h1
             ↓Text [mobile.components.UIText-1558706996714]: 
               textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:Chargement en cours...
           ↓Image1 [mobile.components.UIDynamicElement-1559135334377]: 
-            selfClose: true
-            tagName: img
             beanData: |
               '{
                "ionBean": "Image",
                "url": "script:''assets\/images\/touring.jpg''",
                "width": "plain:100%"
               }'
+            selfClose: true
+            tagName: img
             ↓MakeRoundCornerAndShadow [mobile.components.UIStyle-1559135334380]: 
               styleContent: 
                 - xmlizable: 
@@ -71,24 +71,24 @@ title: Title for NoDataPage1
                       	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                       '
           ↓H41 [mobile.components.UIDynamicElement-1520405173913]: 
-            tagName: h4
             beanData: |
               '{
                "ionBean": "Heading4",
                "ionText": "plain:ion-text",
                "IonColor": "plain:primary"
               }'
+            tagName: h4
             ↓Text [mobile.components.UIText-1520405174306]: 
               textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:Powered by Convertigo
           ↓Image11 [mobile.components.UIDynamicElement-1559135732870]: 
-            selfClose: true
-            tagName: img
             beanData: |
               '{
                "ionBean": "Image",
                "url": "script:''assets\/images\/logofix.png''",
                "width": "plain:100px"
               }'
+            selfClose: true
+            tagName: img

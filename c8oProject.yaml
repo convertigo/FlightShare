@@ -88,23 +88,21 @@
         comment: A menu with all pages added automatically
         tagName: ion-menu
         ↓Content [mobile.components.UIDynamicElement-1500890742326]: 
-          tagName: ion-content
           beanData: '{"ionBean":"Content","IonPadding":"plain:false"}'
+          tagName: ion-content
           ↓Image [mobile.components.UIDynamicElement-1511687507383]: 
-            selfClose: true
-            tagName: img
             beanData: |
               '{
                "ionBean": "Image",
                "url": "script:''assets\/images\/clouds.jpg''",
                "width": "plain:100%"
               }'
+            selfClose: true
+            tagName: img
           ↓Avatar [mobile.components.UIDynamicElement-1511687793258]: 
-            tagName: ion-avatar
             beanData: '{"ionBean":"Avatar"}'
+            tagName: ion-avatar
             ↓Image [mobile.components.UIDynamicElement-1511687808670]: 
-              selfClose: true
-              tagName: img
               beanData: |
                 '{
                  "ionBean": "Image",
@@ -112,6 +110,8 @@
                  "height": "plain:70px",
                  "alt": "script:router.sharedObject.currentUser?.imageUrl"
                 }'
+              selfClose: true
+              tagName: img
             ↓Attr [mobile.components.UIAttribute-1511688753099]: 
               attrName: style
               attrValue: 
@@ -127,8 +127,6 @@
                   - MobileSmartSourceType: script:router.sharedObject.currentUser
               isEnabled: false
               ↓FSImage [mobile.components.UIDynamicElement-1519977317720]: 
-                selfClose: true
-                tagName: img
                 beanData: |
                   '{
                    "ionBean": "FSImage",
@@ -137,9 +135,11 @@
                    "requestable": "plain:FlightShare.flightshare_fullsync",
                    "height": "plain:70px"
                   }'
+                selfClose: true
+                tagName: img
           ↓Heading2 [mobile.components.UIDynamicElement-1511688929698]: 
-            tagName: h2
             beanData: '{"ionBean":"Heading2"}'
+            tagName: h2
             ↓Text [mobile.components.UIText-1511688938984]: 
               textValue: 
                 - xmlizable: 
@@ -152,13 +152,13 @@
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: 'plain:position: absolute; top: 85px; left:20px; color: white'
           ↓List [mobile.components.UIDynamicElement-1501343197007]: 
-            tagName: ion-list
             beanData: |
               '{
                "ionBean": "List",
                "Nolines": "plain:no-lines",
                "Inset": "plain:inset"
               }'
+            tagName: ion-list
             ↓MenuAutoItems [mobile.components.UIDynamicMenuItems-1500890605250]: 
               beanData: '{"ionBean":"MenuAutoItems"}'
               itemtitle: ''''''

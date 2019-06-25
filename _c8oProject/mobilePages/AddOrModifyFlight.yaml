@@ -18,40 +18,39 @@ scriptContent:
 segment: AddFlight
 title: Title for AddFlight
 ↓Header [mobile.components.UIDynamicElement-1508950707664]: 
+  beanData: '{"ionBean":"Header"}'
   comment: Page header
   tagName: ion-header
-  beanData: '{"ionBean":"Header"}'
   ↓NavBar [mobile.components.UIDynamicElement-1508950707689]: 
-    tagName: ion-navbar
     beanData: '{"ionBean":"NavBar","IonColor":"plain:light"}'
+    tagName: ion-navbar
     ↓BarTitle [mobile.components.UIDynamicElement-1508950707708]: 
-      tagName: ion-title
       beanData: '{"ionBean":"BarTitle"}'
+      tagName: ion-title
       ↓Text1 [mobile.components.UIText-1538755023008]: 
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: 'script:this.navParams.data == ''ADD'' ? ''Ajouter un vol'' : ''Modifier un vol'''
 ↓Content [mobile.components.UIDynamicElement-1508950730361]: 
-  tagName: ion-content
   beanData: '{"ionBean":"Content"}'
+  tagName: ion-content
   ↓Form [mobile.components.UIForm-1508950872306]: 
     ↓List [mobile.components.UIDynamicElement-1508950839196]: 
-      tagName: ion-list
       beanData: '{"ionBean":"List"}'
+      tagName: ion-list
       ↓FROM [mobile.components.UIDynamicElement-1509565178879]: 
-        tagName: ion-item
         beanData: '{"ionBean":"ListItem"}'
+        tagName: ion-item
         ↓Label [mobile.components.UIDynamicElement-1509122730926]: 
-          tagName: ion-label
           beanData: '{"ionBean":"Label"}'
+          tagName: ion-label
           ↓Text [mobile.components.UIText-1509122730948]: 
             textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:De :
         ↓Input [mobile.components.UIDynamicElement-1509122730899]: 
-          tagName: ion-input
           beanData: |
             '{
              "ionBean": "Input",
@@ -61,6 +60,7 @@ title: Title for AddFlight
              "TextAlign": "plain:text-right",
              "Value": "script:this.global?.selectedAirports?.FROM"
             }'
+          tagName: ion-input
           ↓Event [mobile.components.UIControlEvent-1509004888034]: 
             ↓PushPage [mobile.components.UIDynamicAction-1509004893968]: 
               beanData: |
@@ -72,10 +72,9 @@ title: Title for AddFlight
           ↓ControlValidator [mobile.components.UIFormControlValidator-1509566247830]: 
             required: set
       ↓TO [mobile.components.UIDynamicElement-1509565934657]: 
-        tagName: ion-item
         beanData: '{"ionBean":"ListItem"}'
+        tagName: ion-item
         ↓Input [mobile.components.UIDynamicElement-1509122723672]: 
-          tagName: ion-input
           beanData: |
             '{
              "ionBean": "Input",
@@ -85,6 +84,7 @@ title: Title for AddFlight
              "TextAlign": "plain:text-right",
              "Value": "script:this.global?.selectedAirports?.TO"
             }'
+          tagName: ion-input
           ↓Event [mobile.components.UIControlEvent-1509074358925]: 
             ↓PushPage [mobile.components.UIDynamicAction-1509074358936]: 
               beanData: |
@@ -96,26 +96,25 @@ title: Title for AddFlight
           ↓ControlValidator [mobile.components.UIFormControlValidator-1509566268062]: 
             required: set
         ↓Label [mobile.components.UIDynamicElement-1509122723703]: 
-          tagName: ion-label
           beanData: '{"ionBean":"Label"}'
+          tagName: ion-label
           ↓Text [mobile.components.UIText-1509122723717]: 
             textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:A :
       ↓PLANE [mobile.components.UIDynamicElement-1509566035107]: 
-        tagName: ion-item
         beanData: '{"ionBean":"ListItem"}'
+        tagName: ion-item
         ↓Label [mobile.components.UIDynamicElement-1509122225495]: 
-          tagName: ion-label
           beanData: '{"ionBean":"Label"}'
+          tagName: ion-label
           ↓Text [mobile.components.UIText-1509079272523]: 
             textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Avion :
         ↓Input [mobile.components.UIDynamicElement-1509122209332]: 
-          tagName: ion-input
           beanData: |
             '{
              "ionBean": "Input",
@@ -125,6 +124,7 @@ title: Title for AddFlight
              "TextAlign": "plain:text-right",
              "Value": "script:this.global?.selectedPlane?.plane"
             }'
+          tagName: ion-input
           ↓Event [mobile.components.UIControlEvent-1509079272485]: 
             ↓PushPage [mobile.components.UIDynamicAction-1509079272496]: 
               beanData: '{"ionBean":"PushPageAction","page":"plain:FlightShare.MobileApplication.Application.SelectPlane"}'
@@ -135,19 +135,17 @@ title: Title for AddFlight
             eventName: (change)
             ↓CustomAction [mobile.components.UICustomAction-1511764975280]: 
       ↓SEATS [mobile.components.UIDynamicElement-1511763946860]: 
-        tagName: ion-item
         beanData: '{"ionBean":"ListItem"}'
+        tagName: ion-item
         ↓Label [mobile.components.UIDynamicElement-1511763946900]: 
-          tagName: ion-label
           beanData: '{"ionBean":"Label"}'
+          tagName: ion-label
           ↓Text [mobile.components.UIText-1511763946931]: 
             textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Places Libres
         ↓Range [mobile.components.UIDynamicElement-1511764058444]: 
-          comment: the variable used here is occupiedSeats but represensents in fact Free Seats
-          tagName: ion-range
           beanData: |
             '{
              "ionBean": "Range",
@@ -159,35 +157,36 @@ title: Title for AddFlight
              "Pin": "plain:true",
              "Snaps": "plain:true"
             }'
+          comment: the variable used here is occupiedSeats but represensents in fact Free Seats
+          tagName: ion-range
           ↓Label [mobile.components.UIDynamicElement-1511764252275]: 
-            tagName: ion-label
             beanData: '{"ionBean":"Label","RangeLeft":"plain:range-left"}'
+            tagName: ion-label
             ↓Text [mobile.components.UIText-1511764266891]: 
               textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:0
           ↓Label1 [mobile.components.UIDynamicElement-1511764256368]: 
-            tagName: ion-label
             beanData: '{"ionBean":"Label","RangeRight":"plain:range-right"}'
+            tagName: ion-label
             ↓Text [mobile.components.UIText-1511764274939]: 
               textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: script:this.global?.selectedPlane?.max
       ↓DATE [mobile.components.UIDynamicElement-1509076453468]: 
-        tagName: ion-item
         beanData: '{"ionBean":"ListItem"}'
+        tagName: ion-item
         ↓Label [mobile.components.UIDynamicElement-1509076453477]: 
-          tagName: ion-label
           beanData: '{"ionBean":"Label"}'
+          tagName: ion-label
           ↓Text [mobile.components.UIText-1509076453484]: 
             textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Date :
         ↓TextInput [mobile.components.UIDynamicElement-1518701364023]: 
-          tagName: ion-input
           beanData: |
             '{
              "ionBean": "Input",
@@ -197,11 +196,10 @@ title: Title for AddFlight
              "TextAlign": "plain:text-right",
              "Value": "script:this.global?.selectedDate?.date"
             }'
+          tagName: ion-input
           ↓ControlValidator [mobile.components.UIFormControlValidator-1509566292780]: 
             required: set
         ↓DateTime [mobile.components.UIDynamicElement-1509076486816]: 
-          isEnabled: false
-          tagName: ion-datetime
           beanData: |
             '{
              "ionBean": "DateTime",
@@ -212,6 +210,8 @@ title: Title for AddFlight
              "placeholder": "plain:Date du vol",
              "Value": "source:{\"filter\":\"Database\",\"project\":\"FlightShare\",\"input\":\"listen([''fs:\\\/\\\/flightshare_fullsync.view#MODIFYFLIGHT, {ddoc=''Design_document'', view=''Flights''}'']).rows ? listen([''fs:\\\/\\\/flightshare_fullsync.view#MODIFYFLIGHT, {ddoc=''Design_document'', view=''Flights''}'']).rows[0]?.doc?.flight?.date :''HELLO''\"}"
             }'
+          isEnabled: false
+          tagName: ion-datetime
         ↓Event [mobile.components.UIControlEvent-1518621592762]: 
           ↓CalendarPicker [mobile.components.UIDynamicAction-1518631088150]: 
             beanData: |
@@ -241,18 +241,17 @@ title: Title for AddFlight
                    "level": "plain:warn"
                   }'
       ↓TIME [mobile.components.UIDynamicElement-1509118067548]: 
-        tagName: ion-item
         beanData: '{"ionBean":"ListItem"}'
+        tagName: ion-item
         ↓Label [mobile.components.UIDynamicElement-1509118067592]: 
-          tagName: ion-label
           beanData: '{"ionBean":"Label"}'
+          tagName: ion-label
           ↓Text [mobile.components.UIText-1509118067615]: 
             textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Heure :
         ↓DateTime [mobile.components.UIDynamicElement-1509118067635]: 
-          tagName: ion-datetime
           beanData: |
             '{
              "ionBean": "DateTime",
@@ -263,21 +262,21 @@ title: Title for AddFlight
              "placeholder": "plain:Heure du vol",
              "Value": "script:this.global?.selectedTime?.time"
             }'
+          tagName: ion-datetime
           ↓ControlValidator [mobile.components.UIFormControlValidator-1509566297493]: 
             required: set
       ↓COMMENT [mobile.components.UIDynamicElement-1509076547715]: 
-        tagName: ion-item
         beanData: '{"ionBean":"ListItem"}'
+        tagName: ion-item
         ↓Label [mobile.components.UIDynamicElement-1509076547723]: 
-          tagName: ion-label
           beanData: '{"ionBean":"Label","Floating":"plain:floating"}'
+          tagName: ion-label
           ↓Text [mobile.components.UIText-1509076547731]: 
             textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Commentaires
         ↓TextArea [mobile.components.UIDynamicElement-1509118100057]: 
-          tagName: ion-textarea
           beanData: |
             '{
              "ionBean": "TextArea",
@@ -286,12 +285,13 @@ title: Title for AddFlight
              "AreaCols": "plain:0",
              "Value": "script:this.global?.selectedCom?.com"
             }'
+          tagName: ion-textarea
     ↓TextFormat [mobile.components.UIDynamicElement-1509117644862]: 
-      tagName: div
       beanData: '{"ionBean":"TextFormat","TextRight":"plain:text-right"}'
+      tagName: div
       ↓ResetButton [mobile.components.UIDynamicElement-1509641697333]: 
-        tagName: button
         beanData: '{"ionBean":"ResetButton"}'
+        tagName: button
         ↓Text [mobile.components.UIText-1509641736452]: 
           textValue: 
             - xmlizable: 
@@ -301,8 +301,8 @@ title: Title for AddFlight
           ↓PopPage [mobile.components.UIDynamicAction-1509641761709]: 
             beanData: '{"ionBean":"PopPageAction"}'
       ↓SubmitButton [mobile.components.UIDynamicElement-1509117615409]: 
-        tagName: button
         beanData: '{"ionBean":"SubmitButton"}'
+        tagName: button
         ↓Text [mobile.components.UIText-1509117624475]: 
           textValue: 
             - xmlizable: 
@@ -326,18 +326,18 @@ title: Title for AddFlight
           ↓PopPage [mobile.components.UIDynamicAction-1540199265674]: 
             beanData: '{"ionBean":"PopPageAction"}'
 ↓Footer [mobile.components.UIDynamicElement-1508950711098]: 
+  beanData: '{"ionBean":"Footer"}'
   comment: Page footer
   tagName: ion-footer
-  beanData: '{"ionBean":"Footer"}'
 ↓PageEvent [mobile.components.UIPageEvent-1518605721131]: 
   ↓SetGlobal [mobile.components.UIDynamicAction-1540201305681]: 
-    comment: We keep the page name here to set the toast message correctly
     beanData: |
       '{
        "ionBean": "SetGlobalAction",
        "Property": "plain:getPageName",
        "Value": "script:this.navParams.data == ''ADD'' ? ''add'' : ''modif''"
       }'
+    comment: We keep the page name here to set the toast message correctly
     ↓Log [mobile.components.UIDynamicAction-1540202209337]: 
       beanData: |
         '{

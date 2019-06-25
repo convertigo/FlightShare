@@ -3,25 +3,25 @@ inAutoMenu: false
 segment: Indexing
 title: Title for Indexing
 ↓Content [mobile.components.UIDynamicElement-1520963766919]: 
-  tagName: ion-content
   beanData: '{"ionBean":"Content"}'
+  tagName: ion-content
   ↓Grid [mobile.components.UIDynamicElement-1520964009356]: 
-    tagName: ion-grid
     beanData: '{"ionBean":"Grid","Height":"plain:height:100%"}'
+    tagName: ion-grid
     ↓GridRow [mobile.components.UIDynamicElement-1520964016330]: 
-      tagName: ion-row
       beanData: |
         '{
          "ionBean": "GridRow",
          "Height": "plain:height:80%",
          "AlignItemsCenter": "plain:align-items-center"
         }'
+      tagName: ion-row
       ↓GridCol [mobile.components.UIDynamicElement-1520964020265]: 
-        tagName: ion-col
         beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
         ↓TextFormat [mobile.components.UIDynamicElement-1520963840548]: 
-          tagName: div
           beanData: '{"ionBean":"TextFormat","TextCenter":"plain:text-center"}'
+          tagName: div
           ↓Directive [mobile.components.UIControlDirective-1521196461996]: 
             directiveName: If
             directiveSource: 
@@ -29,26 +29,26 @@ title: Title for Indexing
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: script:!global.indexed
             ↓H1 [mobile.components.UIDynamicElement-1520963872100]: 
-              tagName: h1
               beanData: |
                 '{
                  "ionBean": "Heading1",
                  "ionText": "plain:ion-text",
                  "IonColor": "plain:primary"
                 }'
+              tagName: h1
               ↓Text [mobile.components.UIText-1520963847569]: 
                 textValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: plain:Nous préparons l'application pour la première utilisation...
             ↓Icon [mobile.components.UIDynamicElement-1520964156811]: 
-              tagName: ion-icon
               beanData: |
                 '{
                  "ionBean": "Icon",
                  "IconName": "plain:plane",
                  "IonColor": "plain:primary"
                 }'
+              tagName: ion-icon
               ↓Style [mobile.components.UIStyle-1520964201138]: 
                 styleContent: 
                   - xmlizable: 
@@ -71,13 +71,13 @@ title: Title for Indexing
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: script:global.indexed
             ↓H1 [mobile.components.UIDynamicElement-1521196633991]: 
-              tagName: h1
               beanData: |
                 '{
                  "ionBean": "Heading1",
                  "ionText": "plain:ion-text",
                  "IonColor": "plain:primary"
                 }'
+              tagName: h1
               ↓Text [mobile.components.UIText-1521196634140]: 
                 textValue: 
                   - xmlizable: 
@@ -90,13 +90,13 @@ title: Title for Indexing
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: plain:animated fadeIn
             ↓Icon [mobile.components.UIDynamicElement-1521196515838]: 
-              tagName: ion-icon
               beanData: |
                 '{
                  "ionBean": "Icon",
                  "IconName": "plain:plane",
                  "IonColor": "plain:secondary"
                 }'
+              tagName: ion-icon
               ↓Style [mobile.components.UIStyle-1521196516043]: 
                 styleContent: 
                   - xmlizable: 
@@ -107,14 +107,14 @@ title: Title for Indexing
                         	animation-iteration-count :infinite;
                         '
         ↓SlidesContainer [mobile.components.UIDynamicElement-1520965274835]: 
-          tagName: ion-slides
           beanData: '{"ionBean":"Slides"}'
+          tagName: ion-slides
           ↓SlideItem [mobile.components.UIDynamicElement-1520965295794]: 
-            tagName: ion-slide
             beanData: '{"ionBean":"Slide"}'
+            tagName: ion-slide
             ↓H4 [mobile.components.UIDynamicElement-1520965324464]: 
-              tagName: h4
               beanData: '{"ionBean":"Heading4"}'
+              tagName: h4
               ↓Text [mobile.components.UIText-1520965332098]: 
                 textValue: 
                   - xmlizable: 
@@ -129,11 +129,11 @@ title: Title for Indexing
                         '	margin-bottom: 60px;
                         '
           ↓SlideItem1 [mobile.components.UIDynamicElement-1520965299603]: 
-            tagName: ion-slide
             beanData: '{"ionBean":"Slide"}'
+            tagName: ion-slide
             ↓H4 [mobile.components.UIDynamicElement-1520965701427]: 
-              tagName: h4
               beanData: '{"ionBean":"Heading4"}'
+              tagName: h4
               ↓Text [mobile.components.UIText-1520965701584]: 
                 textValue: 
                   - xmlizable: 
@@ -149,22 +149,22 @@ title: Title for Indexing
                         
                         '
           ↓SlideItem2 [mobile.components.UIDynamicElement-1520965302303]: 
-            tagName: ion-slide
             beanData: '{"ionBean":"Slide"}'
+            tagName: ion-slide
     ↓GridRow1 [mobile.components.UIDynamicElement-1521194521765]: 
-      tagName: ion-row
       beanData: |
         '{
          "ionBean": "GridRow",
          "Height": "plain:height:20%",
          "AlignItemsCenter": "plain:align-items-center"
         }'
+      tagName: ion-row
       ↓GridCol [mobile.components.UIDynamicElement-1521194522203]: 
-        tagName: ion-col
         beanData: '{"ionBean":"GridCol","AlignItemsEnd":"plain:align-self-end"}'
+        tagName: ion-col
         ↓TextFormat [mobile.components.UIDynamicElement-1521194522471]: 
-          tagName: div
           beanData: '{"ionBean":"TextFormat","TextCenter":"plain:text-center"}'
+          tagName: div
           ↓Directive [mobile.components.UIControlDirective-1521196344957]: 
             directiveName: If
             directiveSource: 
@@ -172,8 +172,8 @@ title: Title for Indexing
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: script:global.indexed
             ↓Button [mobile.components.UIDynamicElement-1521194600258]: 
-              tagName: button
               beanData: '{"ionBean":"Button"}'
+              tagName: button
               ↓Text [mobile.components.UIText-1521194613802]: 
                 textValue: 
                   - xmlizable: 
