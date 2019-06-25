@@ -2,8 +2,8 @@ inAutoMenu: false
 segment: FlightConf
 title: Title for FlightConf
 ↓H1 [mobile.components.UIDynamicElement-1519228117247]: 
-  beanData: '{"ionBean":"Heading1"}'
   tagName: h1
+  beanData: '{"ionBean":"Heading1"}'
   ↓Text [mobile.components.UIText-1519224981511]: 
     textValue: 
       - xmlizable: 
@@ -19,27 +19,27 @@ title: Title for FlightConf
             '
 ↓Form [mobile.components.UIForm-1519228043128]: 
   ↓ListContainer [mobile.components.UIDynamicElement-1519228053578]: 
-    beanData: '{"ionBean":"List"}'
     tagName: ion-list
+    beanData: '{"ionBean":"List"}'
     ↓GenericItem [mobile.components.UIDynamicElement-1519228058359]: 
-      beanData: '{"ionBean":"ListItem"}'
       tagName: ion-item
+      beanData: '{"ionBean":"ListItem"}'
       ↓Label [mobile.components.UIDynamicElement-1519228074878]: 
-        beanData: '{"ionBean":"Label"}'
         tagName: ion-label
+        beanData: '{"ionBean":"Label"}'
         ↓Text [mobile.components.UIText-1519228084531]: 
           textValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Futurs seulement
       ↓ToggleButton [mobile.components.UIDynamicElement-1519228077654]: 
+        tagName: ion-toggle
         beanData: |
           '{
            "ionBean": "Toggle",
            "FormControlName": "plain:onlyFuture",
            "Checked": "script:this.router.sharedObject?.onlyFuture"
           }'
-        tagName: ion-toggle
         ↓Event [mobile.components.UIControlEvent-1519229121545]: 
           attrName: (ionChange)
           eventName: ionChange
@@ -67,24 +67,24 @@ title: Title for FlightConf
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: source:{"filter":"Form","project":"FlightShare","input":"form1519228043128?.value"}
     ↓GenericItem1 [mobile.components.UIDynamicElement-1519228416923]: 
-      beanData: '{"ionBean":"ListItem"}'
       tagName: ion-item
+      beanData: '{"ionBean":"ListItem"}'
       ↓Label [mobile.components.UIDynamicElement-1519228416959]: 
-        beanData: '{"ionBean":"Label"}'
         tagName: ion-label
+        beanData: '{"ionBean":"Label"}'
         ↓Text [mobile.components.UIText-1519228416989]: 
           textValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Dates décroissantes
       ↓ToggleButton [mobile.components.UIDynamicElement-1519228417019]: 
+        tagName: ion-toggle
         beanData: |
           '{
            "ionBean": "Toggle",
            "FormControlName": "plain:firstBefore",
            "Checked": "script:this.router.sharedObject?.firstBefore"
           }'
-        tagName: ion-toggle
         ↓Event [mobile.components.UIControlEvent-1519228985756]: 
           attrName: (ionChange)
           eventName: ionChange

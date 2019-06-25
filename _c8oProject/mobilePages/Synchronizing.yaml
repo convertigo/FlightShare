@@ -28,87 +28,87 @@ scriptContent:
 segment: Synchronizing
 title: Synchronisation données
 ↓Content [mobile.components.UIDynamicElement-1510002573293]: 
-  beanData: '{"ionBean":"Content","IonPadding":"plain:false"}'
   tagName: ion-content
+  beanData: '{"ionBean":"Content","IonPadding":"plain:false"}'
   ↓Grid [mobile.components.UIDynamicElement-1510002628795]: 
-    beanData: '{"ionBean":"Grid","Height":"plain:height:100%"}'
     tagName: ion-grid
+    beanData: '{"ionBean":"Grid","Height":"plain:height:100%"}'
     ↓GridRow1 [mobile.components.UIDynamicElement-1510222281087]: 
-      beanData: '{"ionBean":"GridRow"}'
       tagName: ion-row
+      beanData: '{"ionBean":"GridRow"}'
       ↓GridCol [mobile.components.UIDynamicElement-1510222296332]: 
-        beanData: '{"ionBean":"GridCol"}'
         tagName: ion-col
+        beanData: '{"ionBean":"GridCol"}'
         ↓TextFormat1 [mobile.components.UIDynamicElement-1510237701726]: 
-          beanData: '{"ionBean":"TextFormat","TextCenter":"plain:text-center"}'
           tagName: div
+          beanData: '{"ionBean":"TextFormat","TextCenter":"plain:text-center"}'
           ↓Heading1 [mobile.components.UIDynamicElement-1510237565195]: 
+            tagName: h1
             beanData: |
               '{
                "ionBean": "Heading1",
                "ionText": "plain:ion-text",
                "IonColor": "plain:primary"
               }'
-            tagName: h1
             ↓Text [mobile.components.UIText-1510237577396]: 
               textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:AERO TOURING CLUB de FRANCE
           ↓Heading11 [mobile.components.UIDynamicElement-1510238781695]: 
+            tagName: h1
             beanData: |
               '{
                "ionBean": "Heading1",
                "ionText": "plain:ion-text",
                "IonColor": "plain:primary"
               }'
-            tagName: h1
             ↓Text [mobile.components.UIText-1510238781725]: 
               textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:"Flight Share"
         ↓TextFormat [mobile.components.UIDynamicElement-1510002665092]: 
-          beanData: '{"ionBean":"TextFormat","TextCenter":"plain:text-center"}'
           tagName: div
+          beanData: '{"ionBean":"TextFormat","TextCenter":"plain:text-center"}'
           ↓H4 [mobile.components.UIDynamicElement-1520404855177]: 
+            tagName: h4
             beanData: |
               '{
                "ionBean": "Heading4",
                "ionText": "plain:ion-text",
                "IonColor": "plain:primary"
               }'
-            tagName: h4
             ↓Text [mobile.components.UIText-1510002590339]: 
               textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:Téléchargement des données initiales en cours...
           ↓Heading21 [mobile.components.UIDynamicElement-1510223380193]: 
-            beanData: '{"ionBean":"Heading2"}'
             tagName: h2
+            beanData: '{"ionBean":"Heading2"}'
             ↓Text [mobile.components.UIText-1510223392800]: 
               textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: 'plain: '
           ↓Heading2 [mobile.components.UIDynamicElement-1510153317991]: 
-            beanData: '{"ionBean":"Heading2"}'
             tagName: h2
+            beanData: '{"ionBean":"Heading2"}'
             ↓ProgressBar [mobile.components.UIDynamicElement-1559984017605]: 
-              beanData: '{"ionBean":"ProgressBar","progress":"script:router.sharedObject?.FullSyncSyncAction?.progress?.current \/ 550 * 100"}'
               comment: There are 550 objects on the database so we calc a % according to this
               tagName: progress-bar
+              beanData: '{"ionBean":"ProgressBar","progress":"script:router.sharedObject?.FullSyncSyncAction?.progress?.current \/ 560 * 100"}'
 ↓PageEvent [mobile.components.UIPageEvent-1510002823128]: 
   ↓IfRunningOnDevice [mobile.components.UIDynamicAction-1512659937536]: 
-    beanData: '{"ionBean":"IfAction","condition":"script:window.cordova"}'
     comment: Are we running on a device or just in test mode ?
+    beanData: '{"ionBean":"IfAction","condition":"script:window.cordova"}'
     ↓LoginWithGoogle [mobile.components.UIDynamicAction-1535032572232]: 
-      beanData: '{"ionBean":"GooglePlusLoginAction","webClientId":"plain:465373723999-vbta9svj9t2f6117ja6n3qtle807er1e.apps.googleusercontent.com"}'
       comment: |
         'For Android, the app must be signed with a keystore having one of the SHA1 fingerprints found here : 
         
         https://console.firebase.google.com/project/flight-share/settings/general/android:com.convertigo.flightshare'
+      beanData: '{"ionBean":"GooglePlusLoginAction","webClientId":"plain:465373723999-vbta9svj9t2f6117ja6n3qtle807er1e.apps.googleusercontent.com"}'
       ↓CallSequence [mobile.components.UIDynamicAction-1535032572295]: 
         beanData: |
           '{
@@ -144,8 +144,8 @@ title: Synchronisation données
   ↓IfRunningOnWebForTests [mobile.components.UIDynamicAction-1512660186634]: 
     beanData: '{"ionBean":"IfAction","condition":"script:window.cordova == undefined"}'
     ↓CallSequence [mobile.components.UIDynamicAction-1510002823204]: 
-      beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:FlightShare.Login"}'
       comment: Use a fake identity for tests
+      beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:FlightShare.Login"}'
       ↓email [mobile.components.UIControlVariable-1510002823263]: 
         varValue: 
           - xmlizable: 

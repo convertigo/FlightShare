@@ -2,54 +2,54 @@ icon: contacts
 segment: UserList
 title: Liste des utilisateurs
 ↓Header [mobile.components.UIDynamicElement-1511716863162]: 
-  beanData: '{"ionBean":"Header"}'
   comment: Page header
   tagName: ion-header
+  beanData: '{"ionBean":"Header"}'
   ↓NavBar [mobile.components.UIDynamicElement-1511716863210]: 
-    beanData: '{"ionBean":"NavBar","IonColor":"plain:light"}'
     tagName: ion-navbar
+    beanData: '{"ionBean":"NavBar","IonColor":"plain:light"}'
     ↓BarTitle [mobile.components.UIDynamicElement-1511716863253]: 
-      beanData: '{"ionBean":"BarTitle"}'
       tagName: ion-title
+      beanData: '{"ionBean":"BarTitle"}'
       ↓Text1 [mobile.components.UIText-1511716863303]: 
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: plain:Liste des utilisateurs
     ↓Button [mobile.components.UIDynamicElement-1511717579534]: 
+      comment: A button to toggle the menu
+      tagName: button
       beanData: |
         '{
          "ionBean": "Button",
          "ButtonFormType": "plain:false",
          "MenuMode": "plain:menuToggle"
         }'
-      comment: A button to toggle the menu
-      tagName: button
       ↓Icon [mobile.components.UIDynamicElement-1511717579567]: 
-        beanData: '{"ionBean":"Icon","IconName":"plain:menu"}'
         tagName: ion-icon
+        beanData: '{"ionBean":"Icon","IconName":"plain:menu"}'
 ↓Content [mobile.components.UIDynamicElement-1511717013196]: 
-  beanData: '{"ionBean":"Content"}'
   tagName: ion-content
+  beanData: '{"ionBean":"Content"}'
   ↓List [mobile.components.UIDynamicElement-1511717190400]: 
-    beanData: '{"ionBean":"List"}'
     tagName: ion-list
+    beanData: '{"ionBean":"List"}'
     ↓Directive [mobile.components.UIControlDirective-1511717215770]: 
       directiveSource: 
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
           - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view, {ddoc='Design_document', view='users', include_docs='false'}'])?.rows"}
       ↓Button [mobile.components.UIDynamicElement-1511717742271]: 
+        tagName: button
         beanData: |
           '{
            "ionBean": "Button",
            "ButtonFormType": "plain:false",
            "ButtonType": "plain:ion-item"
           }'
-        tagName: button
         ↓Avatar [mobile.components.UIDynamicElement-1511717205554]: 
-          beanData: '{"ionBean":"Avatar"}'
           tagName: ion-avatar
+          beanData: '{"ionBean":"Avatar"}'
           ↓Directive [mobile.components.UIControlDirective-1519048931053]: 
             directiveName: If
             directiveSource: 
@@ -57,6 +57,8 @@ title: Liste des utilisateurs
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1511717215770?.value?._attachments"}
             ↓FSImage [mobile.components.UIDynamicElement-1519048931226]: 
+              selfClose: true
+              tagName: img
               beanData: |
                 '{
                  "ionBean": "FSImage",
@@ -67,8 +69,6 @@ title: Liste des utilisateurs
                  "width": "plain:100%",
                  "alt": "plain:AvatarImg"
                 }'
-              selfClose: true
-              tagName: img
           ↓Directive1 [mobile.components.UIControlDirective-1519048931254]: 
             directiveName: If
             directiveSource: 
@@ -76,9 +76,9 @@ title: Liste des utilisateurs
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"! item1511717215770?.value?._attachments"}
             ↓Image [mobile.components.UIDynamicElement-1511717286719]: 
-              beanData: '{"ionBean":"Image","url":"source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1511717215770?.value?.userinfo?.imageUrl\"}"}'
               selfClose: true
               tagName: img
+              beanData: '{"ionBean":"Image","url":"source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1511717215770?.value?.userinfo?.imageUrl\"}"}'
         ↓Event [mobile.components.UIControlEvent-1511717790831]: 
           ↓GetData [mobile.components.UIDynamicAction-1519120142160]: 
             beanData: |
@@ -90,8 +90,8 @@ title: Liste des utilisateurs
                "__live": "plain:ID1"
               }'
         ↓Heading1 [mobile.components.UIDynamicElement-1511717322518]: 
-          beanData: '{"ionBean":"Heading1"}'
           tagName: h1
+          beanData: '{"ionBean":"Heading1"}'
           ↓Text [mobile.components.UIText-1511717333004]: 
             textValue: 
               - xmlizable: 

@@ -16,8 +16,8 @@ scriptContent:
 segment: Page
 title: Liste des vols
 ↓Tabs [mobile.components.UIDynamicElement-1508938130335]: 
-  beanData: '{"ionBean":"Tabs"}'
   tagName: ion-tabs
+  beanData: '{"ionBean":"Tabs"}'
   ↓Tab [mobile.components.UIDynamicTab-1508938135647]: 
     beanData: |
       '{
