@@ -53,13 +53,7 @@ title: Vols partagés
           tagName: ion-icon
         ↓Event [mobile.components.UIControlEvent-1519223596562]: 
           ↓Popover [mobile.components.UIDynamicAction-1519227923727]: 
-            beanData: |
-              '{
-               "ionBean": "PopoverAction",
-               "page": "plain:FlightShare.MobileApplication.Application.FlightConf",
-               "showBackdrop": "plain:true",
-               "enableBackdropDismiss": "plain:true"
-              }'
+            beanData: '{"ionBean":"PopoverAction","page":"plain:FlightShare.MobileApplication.Application.FlightConf"}'
 ↓Content [mobile.components.UIDynamicElement-1508945999552]: 
   beanData: '{"ionBean":"Content"}'
   tagName: ion-content
@@ -118,10 +112,12 @@ title: Vols partagés
               beanData: |
                 '{
                  "ionBean": "FullSyncViewAction",
+                 "noLoading": "plain",
                  "marker": "plain:SHOWPUBLISHEDFLIGHTSDETAILS",
                  "fsview": "plain:FlightShare.flightshare_fullsync.Design_document.PublishedFlightsDetails",
                  "__live": "plain:ID2",
                  "include_docs": "plain:true",
+                 "reduce": "plain",
                  "key": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1509573021875?.id\"}"
                 }'
             ↓selectedPubFlightKey [mobile.components.UIDynamicAction-1539940385774]: 
@@ -378,7 +374,8 @@ title: Vols partagés
                   '{
                    "ionBean": "CallFullSyncAction",
                    "requestable": "plain:FlightShare.flightshare_fullsync",
-                   "verb": "plain:delete"
+                   "verb": "plain:delete",
+                   "noLoading": "plain"
                   }'
                 ↓docid [mobile.components.UIControlVariable-1538570542563]: 
                   varValue: 
@@ -386,7 +383,13 @@ title: Vols partagés
                       - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                       - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509573021875?.id"}
               ↓Toast [mobile.components.UIDynamicAction-1538570542611]: 
-                beanData: '{"ionBean":"ToastAction","message":"plain:Vol supprimé avec succés"}'
+                beanData: |
+                  '{
+                   "ionBean": "ToastAction",
+                   "message": "plain:Vol supprimé avec succés",
+                   "showCloseButton": "plain",
+                   "dismissOnPageChange": "plain"
+                  }'
 ↓Footer [mobile.components.UIDynamicElement-1508945993860]: 
   beanData: '{"ionBean":"Footer"}'
   comment: Page footer

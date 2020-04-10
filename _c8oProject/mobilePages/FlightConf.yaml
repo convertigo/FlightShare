@@ -57,6 +57,7 @@ title: Title for FlightConf
                 '{
                  "ionBean": "FullSyncPostAction",
                  "requestable": "plain:FlightShare.flightshare_fullsync",
+                 "noLoading": "plain",
                  "_id": "script:this.router.sharedObject?.currentUser?.email",
                  "_use_policy": "plain:merge",
                  "RootKey": "plain:settings"
@@ -100,6 +101,7 @@ title: Title for FlightConf
                 '{
                  "ionBean": "FullSyncPostAction",
                  "requestable": "plain:FlightShare.flightshare_fullsync",
+                 "noLoading": "plain",
                  "_id": "script:this.router.sharedObject?.currentUser?.email",
                  "_use_policy": "plain:merge",
                  "RootKey": "plain:settings"

@@ -134,6 +134,14 @@ title: Title for AddFlight
             attrName: (change)
             eventName: (change)
             ↓CustomAction [mobile.components.UICustomAction-1511764975280]: 
+              actionValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                  - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                    →: |
+                      		page.c8o.log.debug(event ? event.toString():'no event');
+                      		resolve();
+                      
       ↓SEATS [mobile.components.UIDynamicElement-1511763946860]: 
         beanData: '{"ionBean":"ListItem"}'
         tagName: ion-item
@@ -222,6 +230,9 @@ title: Title for AddFlight
                "IonColor": "plain:light",
                "closeLabel": "plain:Annuler",
                "doneLabel": "plain:Ok",
+               "canBackwardsSelected": "plain",
+               "closeIcon": "plain",
+               "doneIcon": "plain",
                "title": "plain:Choisir une date",
                "weekdays": "script:[''D'', ''L'', ''M'', ''M'', ''J'', ''V'', ''S'']",
                "weekStart": "plain:1"
@@ -316,13 +327,20 @@ title: Title for AddFlight
           '{
            "ionBean": "FullSyncPostAction",
            "requestable": "plain:FlightShare.flightshare_fullsync",
+           "noLoading": "plain",
            "_id": "script:this.global?.selectedFlightID?.id",
            "RootKey": "plain:flight"
           }'
         ↓PopPage [mobile.components.UIDynamicAction-1511255907641]: 
           beanData: '{"ionBean":"PopPageAction"}'
           ↓ModifMsg [mobile.components.UIDynamicAction-1511255907595]: 
-            beanData: '{"ionBean":"ToastAction","message":"script:this.global.getPageName == ''add'' ? this.message = ''Vol créé avec succès'' : this.message = ''Modifications réalisées avec succès''"}'
+            beanData: |
+              '{
+               "ionBean": "ToastAction",
+               "message": "script:this.global.getPageName == ''add'' ? this.message = ''Vol créé avec succès'' : this.message = ''Modifications réalisées avec succès''",
+               "showCloseButton": "plain",
+               "dismissOnPageChange": "plain"
+              }'
           ↓PopPage [mobile.components.UIDynamicAction-1540199265674]: 
             beanData: '{"ionBean":"PopPageAction"}'
 ↓Footer [mobile.components.UIDynamicElement-1508950711098]: 

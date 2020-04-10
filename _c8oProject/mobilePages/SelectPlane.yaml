@@ -203,7 +203,8 @@ title: Title for SelectPlane
        "ionBean": "CallFullSyncAction",
        "requestable": "plain:FlightShare.flightshare_fullsync",
        "marker": "plain:PLANES",
-       "verb": "plain:view"
+       "verb": "plain:view",
+       "noLoading": "plain"
       }'
     ↓ddoc [mobile.components.UIControlVariable-1509077047560]: 
       varValue: 

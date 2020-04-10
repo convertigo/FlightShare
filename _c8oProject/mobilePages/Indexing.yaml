@@ -190,28 +190,36 @@ title: Title for Indexing
     beanData: |
       '{
        "ionBean": "FullSyncViewAction",
+       "noLoading": "plain",
        "fsview": "plain:FlightShare.flightshare_fullsync.Design_document.AirportsByIACOOrCity",
+       "reduce": "plain",
        "limit": "script:1"
       }'
     ↓QueryViewPlanes [mobile.components.UIDynamicAction-1520964576631]: 
       beanData: |
         '{
          "ionBean": "FullSyncViewAction",
+         "noLoading": "plain",
          "fsview": "plain:FlightShare.flightshare_fullsync.Design_document.PlanesByTag",
+         "reduce": "plain",
          "limit": "script:1"
         }'
       ↓QueryViewFlights [mobile.components.UIDynamicAction-1520964621105]: 
         beanData: |
           '{
            "ionBean": "FullSyncViewAction",
+           "noLoading": "plain",
            "fsview": "plain:FlightShare.flightshare_fullsync.Design_document.Flights",
+           "reduce": "plain",
            "limit": "script:1"
           }'
         ↓QueryViewSharedFlights [mobile.components.UIDynamicAction-1520964726817]: 
           beanData: |
             '{
              "ionBean": "FullSyncViewAction",
+             "noLoading": "plain",
              "fsview": "plain:FlightShare.flightshare_fullsync.Design_document.PublishedFlights",
+             "reduce": "plain",
              "limit": "script:1"
             }'
           ↓SetGlobal [mobile.components.UIDynamicAction-1521196401687]: 

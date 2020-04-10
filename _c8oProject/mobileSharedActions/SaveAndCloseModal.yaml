@@ -1,0 +1,33 @@
+↓Post [mobile.components.UIDynamicAction-1558543554010]: 
+  beanData: |
+    '{
+     "ionBean": "FullSyncPostAction",
+     "requestable": "plain:FlightShare.flightshare_fullsync",
+     "noLoading": "plain",
+     "_id": "script:params.UserInfo.email",
+     "_use_policy": "plain:merge"
+    }'
+  ↓userinfo [mobile.components.UIControlVariable-1558543554013]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:params.UserInfo
+  ↓c8oGrp [mobile.components.UIControlVariable-1558543554016]: 
+    comment: all users a shared in the ATCF fullSYnc group
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: plain:ATCF
+  ↓ClosePopover [mobile.components.UIDynamicAction-1559983007104]: 
+    beanData: '{"ionBean":"ClosePopoverAction"}'
+    ↓RootPage [mobile.components.UIDynamicAction-1510002875075]: 
+      beanData: '{"ionBean":"RootPageAction","page":"plain:FlightShare.MobileApplication.Application.Page"}'
+↓SetUserInformationGlobal [mobile.components.UIDynamicAction-1519289305285]: 
+  beanData: |
+    '{
+     "ionBean": "SetGlobalAction",
+     "Property": "plain:currentUser",
+     "Value": "script:params.UserInfo"
+    }'
+↓UserInfo [mobile.components.UIStackVariable-1558952363666]: 
+  comment: The whole data structure coming from a Google login

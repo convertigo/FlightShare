@@ -51,10 +51,17 @@ title: Configuration
           '{
            "ionBean": "CallFullSyncAction",
            "requestable": "plain:FlightShare.flightshare_fullsync",
-           "verb": "plain:reset"
+           "verb": "plain:reset",
+           "noLoading": "plain"
           }'
         ↓ToastAction [mobile.components.UIDynamicAction-1509567175975]: 
-          beanData: '{"ionBean":"ToastAction","message":"plain:La base a été réinitilaisée... Relancez l''application pour resynchroniser les données. "}'
+          beanData: |
+            '{
+             "ionBean": "ToastAction",
+             "message": "plain:La base a été réinitilaisée... Relancez l''application pour resynchroniser les données. ",
+             "showCloseButton": "plain",
+             "dismissOnPageChange": "plain"
+            }'
   ↓Paragraph [mobile.components.UIDynamicElement-1512659268506]: 
     beanData: '{"ionBean":"Paragraph"}'
     tagName: p
@@ -87,13 +94,19 @@ title: Configuration
           - MobileSmartSourceType: plain:Relancer une synchronisation
     ↓Event [mobile.components.UIControlEvent-1509977830843]: 
       ↓CallSequence [mobile.components.UIDynamicAction-1509978139918]: 
-        beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:FlightShare.Login"}'
+        beanData: |
+          '{
+           "ionBean": "CallSequenceAction",
+           "requestable": "plain:FlightShare.Login",
+           "noLoading": "plain"
+          }'
         ↓CallFullSync [mobile.components.UIDynamicAction-1509978139943]: 
           beanData: |
             '{
              "ionBean": "CallFullSyncAction",
              "requestable": "plain:FlightShare.flightshare_fullsync",
-             "verb": "plain:sync"
+             "verb": "plain:sync",
+             "noLoading": "plain"
             }'
           ↓continuous [mobile.components.UIControlVariable-1509978139964]: 
             varValue: 

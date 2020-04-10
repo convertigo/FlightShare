@@ -135,10 +135,12 @@ title: Mes vols
                 beanData: |
                   '{
                    "ionBean": "FullSyncViewAction",
+                   "noLoading": "plain",
                    "marker": "plain:SHOWFLIGHT",
                    "fsview": "plain:FlightShare.flightshare_fullsync.Design_document.Flights",
                    "__live": "plain:none",
                    "include_docs": "plain:true",
+                   "reduce": "plain",
                    "descending": "plain:false",
                    "key": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1509123535617?.key\"}"
                   }'
@@ -171,10 +173,12 @@ title: Mes vols
                   beanData: |
                     '{
                      "ionBean": "FullSyncViewAction",
+                     "noLoading": "plain",
                      "marker": "plain:MODIFYFLIGHT",
                      "fsview": "plain:FlightShare.flightshare_fullsync.Design_document.Flights",
                      "__live": "plain:none",
                      "include_docs": "plain:true",
+                     "reduce": "plain",
                      "descending": "plain:false",
                      "key": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1509123535617.key\"}"
                     }'
@@ -234,7 +238,8 @@ title: Mes vols
                     '{
                      "ionBean": "CallFullSyncAction",
                      "requestable": "plain:FlightShare.flightshare_fullsync",
-                     "verb": "plain:delete"
+                     "verb": "plain:delete",
+                     "noLoading": "plain"
                     }'
                   ↓docid [mobile.components.UIControlVariable-1538149266553]: 
                     varValue: 
@@ -242,7 +247,13 @@ title: Mes vols
                         - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                         - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509123535617?.doc?._id"}
                 ↓Toast [mobile.components.UIDynamicAction-1538146727045]: 
-                  beanData: '{"ionBean":"ToastAction","message":"plain:Vol supprimé avec succés"}'
+                  beanData: |
+                    '{
+                     "ionBean": "ToastAction",
+                     "message": "plain:Vol supprimé avec succés",
+                     "showCloseButton": "plain",
+                     "dismissOnPageChange": "plain"
+                    }'
   ↓FabContainer [mobile.components.UIDynamicElement-1508947025708]: 
     beanData: |
       '{
@@ -282,8 +293,10 @@ title: Mes vols
     beanData: |
       '{
        "ionBean": "FullSyncViewAction",
+       "noLoading": "plain",
        "marker": "plain:SHOWMYFLIGHTS",
        "fsview": "plain:FlightShare.flightshare_fullsync.Design_document.Flights",
        "__live": "plain:ID1",
-       "include_docs": "plain:true"
+       "include_docs": "plain:true",
+       "reduce": "plain"
       }'

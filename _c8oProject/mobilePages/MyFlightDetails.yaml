@@ -258,10 +258,12 @@ title: Title for MyFlightDetails
                       beanData: |
                         '{
                          "ionBean": "FullSyncViewAction",
+                         "noLoading": "plain",
                          "marker": "plain:",
                          "fsview": "plain:FlightShare.flightshare_fullsync.Design_document.Flights",
                          "__live": "plain:none",
                          "include_docs": "plain:true",
+                         "reduce": "plain",
                          "descending": "plain:false",
                          "key": "script:this.global?.selectedFlightKey"
                         }'
@@ -346,6 +348,7 @@ title: Title for MyFlightDetails
                         '{
                          "ionBean": "FullSyncPostAction",
                          "requestable": "plain:FlightShare.flightshare_fullsync",
+                         "noLoading": "plain",
                          "_use_policy": "plain:none"
                         }'
                       ↓publish [mobile.components.UIControlVariable-1511282503968]: 
@@ -362,7 +365,8 @@ title: Title for MyFlightDetails
                            "message": "plain:Votre vol a été partagé. Tous les autres utilisateurs vont pouvoir le visualiser et se proposer comme co-pilote. Vous serez libre de d''accepter ou de refuser un co-pilote. Celui-ci recevra une notification que dans le cas ou vous acceptez",
                            "duration": "plain:5000",
                            "showCloseButton": "plain:true",
-                           "closeButtonText": "plain:Fermer"
+                           "closeButtonText": "plain:Fermer",
+                           "dismissOnPageChange": "plain"
                           }'
     ↓Directive1 [mobile.components.UIControlDirective-1510521043430]: 
       directiveName: SwitchCase
@@ -404,6 +408,7 @@ title: Title for MyFlightDetails
                 beanData: |
                   '{
                    "ionBean": "MapMarker",
+                   "IconUrl": "script:",
                    "Latitude": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1510580345914?.doc?.airport?.latitude * 1\"}",
                    "Longitude": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1510580345914?.doc?.airport?.longitude * 1\"}"
                   }'
@@ -458,7 +463,12 @@ title: Title for MyFlightDetails
           comment: We use here a custom event so we write it using parenthesis.. ex (mapClick)
           eventName: (mapClick)
           ↓ToastAction [mobile.components.UIDynamicAction-1510769467189]: 
-            beanData: '{"ionBean":"ToastAction"}'
+            beanData: |
+              '{
+               "ionBean": "ToastAction",
+               "showCloseButton": "plain",
+               "dismissOnPageChange": "plain"
+              }'
         ↓Attr1 [mobile.components.UIAttribute-1538145111906]: 
           attrName: '[fitBounds]'
           attrValue: 

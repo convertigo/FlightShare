@@ -114,7 +114,8 @@ title: Synchronisation données
           '{
            "ionBean": "CallSequenceAction",
            "requestable": "plain:FlightShare.Login",
-           "cacheTtl": "plain:86400000"
+           "cacheTtl": "plain:86400000",
+           "noLoading": "plain"
           }'
         ↓email [mobile.components.UIControlVariable-1535032572357]: 
           varValue: 
@@ -144,7 +145,12 @@ title: Synchronisation données
   ↓IfRunningOnWebForTests [mobile.components.UIDynamicAction-1512660186634]: 
     beanData: '{"ionBean":"IfAction","condition":"script:window.cordova == undefined"}'
     ↓CallSequence [mobile.components.UIDynamicAction-1510002823204]: 
-      beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:FlightShare.Login"}'
+      beanData: |
+        '{
+         "ionBean": "CallSequenceAction",
+         "requestable": "plain:FlightShare.Login",
+         "noLoading": "plain"
+        }'
       comment: Use a fake identity for tests
       ↓email [mobile.components.UIControlVariable-1510002823263]: 
         varValue: 
@@ -162,6 +168,14 @@ title: Synchronisation données
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: 'script:{ email: ''olivierp@convertigo.com'', displayName: ''Olivier Picciotto''}'
   ↓ConfigureGooglePluginForIOS [mobile.components.UICustomAction-1516036537967]: 
+    actionValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+        - com.twinsoft.convertigo.beans.common.FormatedContent: 
+          →: |
+            		page.c8o.log.debug(event ? event.toString():'no event');
+            		resolve();
+            
     comment: This is just to decralre the plugin parameter in Config.xml for iOS
     cordova_plugins: 
       - xmlizable: 
@@ -177,6 +191,14 @@ title: Synchronisation données
               - java.lang.String: 
                 - ↑value: '{REVERSED_CLIENT_ID:"com.googleusercontent.apps.465373723999-473lfu4591v78mopjgo96t0m4fqmu17u"}'
   ↓AddPageTransitions [mobile.components.UICustomAction-1559640816967]: 
+    actionValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+        - com.twinsoft.convertigo.beans.common.FormatedContent: 
+          →: |
+            		page.c8o.log.debug(event ? event.toString():'no event');
+            		resolve();
+            
     cordova_plugins: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector

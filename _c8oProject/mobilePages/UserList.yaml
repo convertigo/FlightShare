@@ -85,6 +85,7 @@ title: Liste des utilisateurs
               '{
                "ionBean": "FullSyncGetAction",
                "requestable": "plain:FlightShare.flightshare_fullsync",
+               "noLoading": "plain",
                "marker": "plain:SHOWUSERDETAILS",
                "_id": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1511717215770?.id\"}",
                "__live": "plain:ID1"
@@ -99,4 +100,10 @@ title: Liste des utilisateurs
                 - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1511717215770?.value?.userinfo?.displayName"}
 ↓PageEvent [mobile.components.UIPageEvent-1511717048201]: 
   ↓QueryView [mobile.components.UIDynamicAction-1511717134821]: 
-    beanData: '{"ionBean":"FullSyncViewAction","fsview":"plain:FlightShare.flightshare_fullsync.Design_document.users"}'
+    beanData: |
+      '{
+       "ionBean": "FullSyncViewAction",
+       "noLoading": "plain",
+       "fsview": "plain:FlightShare.flightshare_fullsync.Design_document.users",
+       "reduce": "plain"
+      }'

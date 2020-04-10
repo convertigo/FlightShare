@@ -131,13 +131,15 @@ title: Liste des utilisateurs
                  "sourceType": "plain:PHOTOLIBRARY",
                  "targetWidth": "plain:",
                  "targetHeight": "plain:",
-                 "mediaType": "plain:PICTURE"
+                 "mediaType": "plain:PICTURE",
+                 "saveToPhotoAlbum": "plain"
                 }'
               ↓PutAttachment [mobile.components.UIDynamicAction-1519036893825]: 
                 beanData: |
                   '{
                    "ionBean": "FullSyncPutAttachmentAction",
                    "requestable": "plain:FlightShare.flightshare_fullsync",
+                   "noLoading": "plain",
                    "docid": "source:{\"filter\":\"Database\",\"project\":\"FlightShare\",\"input\":\"listen([''fs:\\\/\\\/flightshare_fullsync.get#SHOWUSERDETAILS, {ddoc=''Design_document'', view=''users'', include_docs=''false''}''])?._id\"}",
                    "name": "plain:avatarImg",
                    "content_type": "plain:image\/jpg",
@@ -172,13 +174,15 @@ title: Liste des utilisateurs
                  "quality": "script:60",
                  "targetWidth": "plain:false",
                  "targetHeight": "plain:false",
-                 "mediaType": "plain:VIDEO"
+                 "mediaType": "plain:VIDEO",
+                 "saveToPhotoAlbum": "plain"
                 }'
               ↓ResetImageCache [mobile.components.UIDynamicAction-1519036894005]: 
                 beanData: |
                   '{
                    "ionBean": "FullSyncPutAttachmentAction",
                    "requestable": "plain:FlightShare.flightshare_fullsync",
+                   "noLoading": "plain",
                    "docid": "source:{\"filter\":\"Database\",\"project\":\"FlightShare\",\"input\":\"listen([''fs:\\\/\\\/flightshare_fullsync.get#SHOWUSERDETAILS, {ddoc=''Design_document'', view=''users'', include_docs=''false''}''])?._id\"}",
                    "name": "plain:avatarImg",
                    "content_type": "plain:image\/jpg",

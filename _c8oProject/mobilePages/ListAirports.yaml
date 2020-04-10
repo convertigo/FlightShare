@@ -67,7 +67,8 @@ title: Title for ListAirports
              "ionBean": "CallFullSyncAction",
              "requestable": "plain:FlightShare.flightshare_fullsync",
              "marker": "plain:AIRPORTS",
-             "verb": "plain:view"
+             "verb": "plain:view",
+             "noLoading": "plain"
             }'
           ↓ddoc [mobile.components.UIControlVariable-1509004659329]: 
             varValue: 

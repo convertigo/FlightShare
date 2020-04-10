@@ -417,16 +417,24 @@ title: Title for MyFlightDetails1
                         attrName: (click)
                         eventName: onClick
                         ↓Toast [mobile.components.UIDynamicAction-1539358709164]: 
-                          beanData: '{"ionBean":"ToastAction","message":"plain:Vol modifié avec succès"}'
+                          beanData: |
+                            '{
+                             "ionBean": "ToastAction",
+                             "message": "plain:Vol modifié avec succès",
+                             "showCloseButton": "plain",
+                             "dismissOnPageChange": "plain"
+                            }'
                           isEnabled: false
                         ↓QueryView_ModifyPub [mobile.components.UIDynamicAction-1539939223755]: 
                           beanData: |
                             '{
                              "ionBean": "FullSyncViewAction",
+                             "noLoading": "plain",
                              "marker": "plain:",
                              "fsview": "plain:FlightShare.flightshare_fullsync.Design_document.PublishedFlights",
                              "__live": "plain:none",
                              "include_docs": "plain:true",
+                             "reduce": "plain",
                              "descending": "plain:false",
                              "key": "script:this.global?.selectedPubFlightKey"
                             }'
@@ -485,7 +493,9 @@ title: Title for MyFlightDetails1
                             beanData: |
                               '{
                                "ionBean": "FullSyncViewAction",
+                               "noLoading": "plain",
                                "fsview": "plain:FlightShare.flightshare_fullsync.Design_document.PlanesByTag",
+                               "reduce": "plain",
                                "limit": "script:50",
                                "key": "script:this.global?.selectedPlane?.plane"
                               }'
@@ -531,14 +541,17 @@ title: Title for MyFlightDetails1
                             '{
                              "ionBean": "CallFullSyncAction",
                              "requestable": "plain:FlightShare.flightshare_fullsync",
-                             "verb": "plain:post"
+                             "verb": "plain:post",
+                             "noLoading": "plain"
                             }'
                           ↓ToastAction [mobile.components.UIDynamicAction-1509602578345]: 
                             beanData: |
                               '{
                                "ionBean": "ToastAction",
                                "message": "plain:Vous vous êtes inscrit comme intéressé par ce vol. Celui qui l''a publié sera informé de votre intérêt et acceptera votre inscription.",
-                               "duration": "plain:5000"
+                               "duration": "plain:5000",
+                               "showCloseButton": "plain",
+                               "dismissOnPageChange": "plain"
                               }'
                           ↓register [mobile.components.UIControlVariable-1509602578362]: 
                             varValue: 
@@ -603,8 +616,10 @@ title: Title for MyFlightDetails1
                   beanData: |
                     '{
                      "ionBean": "FullSyncViewAction",
+                     "noLoading": "plain",
                      "marker": "plain:SHOWUSERDETAILS",
                      "fsview": "plain:FlightShare.flightshare_fullsync.Design_document.users",
+                     "reduce": "plain",
                      "key": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1509637919301\"}"
                     }'
             ↓SlidingOption [mobile.components.UIDynamicElement-1510479747534]: 
@@ -669,6 +684,7 @@ title: Title for MyFlightDetails1
                   beanData: |
                     '{
                      "ionBean": "MapMarker",
+                     "IconUrl": "script:",
                      "Latitude": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1511723177563?.doc?.airport?.latitude *1\"}",
                      "Longitude": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1511723177563?.doc?.airport?.longitude * 1\"}",
                      "Title": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1511723177563?.doc?.airport?.name\"}"
@@ -791,11 +807,18 @@ title: Title for MyFlightDetails1
                         '{
                          "ionBean": "FullSyncDeleteAttachmentAction",
                          "requestable": "plain:FlightShare.flightshare_fullsync",
+                         "noLoading": "plain",
                          "docid": "source:{\"filter\":\"Database\",\"project\":\"FlightShare\",\"input\":\"listen([''fs:\\\/\\\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc=''Design_document'', view=''PublishedFlightsDetails'', include_docs=''true''}''])?.rows[0]?.doc?._id\"}",
                          "name": "source:{\"filter\":\"Iteration\",\"project\":\"FlightShare\",\"input\":\"item1515578761631\"}"
                         }'
                       ↓Toast [mobile.components.UIDynamicAction-1516114729772]: 
-                        beanData: '{"ionBean":"ToastAction","message":"plain:La photo a été supprimée..."}'
+                        beanData: |
+                          '{
+                           "ionBean": "ToastAction",
+                           "message": "plain:La photo a été supprimée...",
+                           "showCloseButton": "plain",
+                           "dismissOnPageChange": "plain"
+                          }'
       ↓FabContainer [mobile.components.UIDynamicElement-1512150116667]: 
         beanData: |
           '{
@@ -841,7 +864,8 @@ title: Title for MyFlightDetails1
                      "sourceType": "plain:PHOTOLIBRARY",
                      "targetWidth": "plain:",
                      "targetHeight": "plain:",
-                     "mediaType": "plain:PICTURE"
+                     "mediaType": "plain:PICTURE",
+                     "saveToPhotoAlbum": "plain"
                     }'
                   comment: We will use the output out as an attachment name but
                   ↓PutAttachment [mobile.components.UIDynamicAction-1519031020987]: 
@@ -849,6 +873,7 @@ title: Title for MyFlightDetails1
                       '{
                        "ionBean": "FullSyncPutAttachmentAction",
                        "requestable": "plain:FlightShare.flightshare_fullsync",
+                       "noLoading": "plain",
                        "docid": "source:{\"filter\":\"Database\",\"project\":\"FlightShare\",\"input\":\"listen([''fs:\\\/\\\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc=''Design_document'', view=''PublishedFlightsDetails'', include_docs=''true''}''])?.rows[0]?.id\"}",
                        "name": "script:out.href ? out.href.substring(out.href.lastIndexOf(''\/'') + 1) : out.substring(out.lastIndexOf(''\/'') + 1)",
                        "content_type": "plain:image\/jpg",
@@ -875,13 +900,15 @@ title: Title for MyFlightDetails1
                      "quality": "script:60",
                      "targetWidth": "plain:",
                      "targetHeight": "plain:",
-                     "mediaType": "plain:VIDEO"
+                     "mediaType": "plain:VIDEO",
+                     "saveToPhotoAlbum": "plain"
                     }'
                   ↓PutAttachment [mobile.components.UIDynamicAction-1515168628419]: 
                     beanData: |
                       '{
                        "ionBean": "FullSyncPutAttachmentAction",
                        "requestable": "plain:FlightShare.flightshare_fullsync",
+                       "noLoading": "plain",
                        "docid": "source:{\"filter\":\"Database\",\"project\":\"FlightShare\",\"input\":\"listen([''fs:\\\/\\\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc=''Design_document'', view=''PublishedFlightsDetails'', include_docs=''true''}''])?.rows[0]?.id\"}",
                        "name": "script:out.href ? out.href.substring(out.href.lastIndexOf(''\/'') + 1): out.substring(out.lastIndexOf(''\/'') + 1)",
                        "content_type": "plain:image\/jpg",
