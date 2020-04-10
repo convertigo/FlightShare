@@ -41,7 +41,8 @@ title: Title for NoDataPage
             beanData: '{"ionBean":"Paragraph"}'
             tagName: p
             ↓Text [mobile.components.UIText-1558538076927]: 
-              textValue: 
+              i18n: false
+              textValue:  
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: 'plain: '
@@ -49,7 +50,8 @@ title: Title for NoDataPage
             beanData: '{"ionBean":"Heading1"}'
             tagName: h1
             ↓Text [mobile.components.UIText-1558530875306]: 
-              textValue: 
+              i18n: false
+              textValue:  
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:L'application n'a pas été initialisée.
@@ -61,7 +63,8 @@ title: Title for NoDataPage
           beanData: '{"ionBean":"Paragraph"}'
           tagName: p
           ↓Text [mobile.components.UIText-1558531193700]: 
-            textValue: 
+            i18n: false
+            textValue:  
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Pour démarrer, cette application nécessite une connexion réseau au moins au premier démarrage. Par la suite, l'application va pouvoir démarrer même sans connexion réseau.

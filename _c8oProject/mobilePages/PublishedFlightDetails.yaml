@@ -95,7 +95,8 @@ title: Title for MyFlightDetails1
       beanData: '{"ionBean":"BarTitle"}'
       tagName: ion-title
       ↓Text [mobile.components.UIText-1509602577407]: 
-        textValue: 
+        i18n: false
+        textValue:  
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: plain:Détails du vol partagé
@@ -115,7 +116,8 @@ title: Title for MyFlightDetails1
         beanData: '{"ionBean":"SegmentButton","Name":"plain:Flights"}'
         tagName: ion-segment-button
         ↓Text [mobile.components.UIText-1510088642660]: 
-          textValue: 
+          i18n: false
+          textValue:  
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Vol
@@ -123,7 +125,8 @@ title: Title for MyFlightDetails1
         beanData: '{"ionBean":"SegmentButton","Name":"plain:Pilots"}'
         tagName: ion-segment-button
         ↓Text [mobile.components.UIText-1510088665244]: 
-          textValue: 
+          i18n: false
+          textValue:  
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Pilotes
@@ -131,7 +134,8 @@ title: Title for MyFlightDetails1
         beanData: '{"ionBean":"SegmentButton","Name":"plain:Map"}'
         tagName: ion-segment-button
         ↓Text [mobile.components.UIText-1510089221654]: 
-          textValue: 
+          i18n: false
+          textValue:  
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Carte
@@ -139,7 +143,8 @@ title: Title for MyFlightDetails1
         beanData: '{"ionBean":"SegmentButton","Name":"plain:Photos"}'
         tagName: ion-segment-button
         ↓Text [mobile.components.UIText-1512149961856]: 
-          textValue: 
+          i18n: false
+          textValue:  
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Photos
@@ -192,12 +197,14 @@ title: Title for MyFlightDetails1
                       beanData: '{"ionBean":"Heading1"}'
                       tagName: h1
                       ↓Text [mobile.components.UIText-1509602577587]: 
-                        textValue: 
+                        i18n: false
+                        textValue:  
                           - xmlizable: 
                             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                             - MobileSmartSourceType: plain:De:
                       ↓Text1 [mobile.components.UIText-1509602577599]: 
-                        textValue: 
+                        i18n: false
+                        textValue:  
                           - xmlizable: 
                             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                             - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc='Design_document', view='PublishedFlights'}'])?.rows[0]?.doc?.PublishedFlight?.from"}
@@ -208,12 +215,14 @@ title: Title for MyFlightDetails1
                     beanData: '{"ionBean":"Heading1"}'
                     tagName: h1
                     ↓Text [mobile.components.UIText-1509602577642]: 
-                      textValue: 
+                      i18n: false
+                      textValue:  
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: plain:A:
                     ↓Text11 [mobile.components.UIText-1509602577659]: 
-                      textValue: 
+                      i18n: false
+                      textValue:  
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc='Design_document', view='PublishedFlights'}'])?.rows[0]?.doc?.PublishedFlight?.to"}
@@ -227,17 +236,20 @@ title: Title for MyFlightDetails1
                     beanData: '{"ionBean":"Heading4"}'
                     tagName: h4
                     ↓Text11 [mobile.components.UIText-1509602577793]: 
-                      textValue: 
+                      i18n: false
+                      textValue:  
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc='Design_document', view='PublishedFlights'}'])?.rows[3]?.doc?.airport?.name"}
                     ↓Text [mobile.components.UIText-1509602577809]: 
-                      textValue: 
+                      i18n: false
+                      textValue:  
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: 'plain: - '
                     ↓Text112 [mobile.components.UIText-1509602577824]: 
-                      textValue: 
+                      i18n: false
+                      textValue:  
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc='Design_document', view='PublishedFlights'}'])?.rows[2]?.doc?.airport?.name"}
@@ -251,7 +263,8 @@ title: Title for MyFlightDetails1
                     beanData: '{"ionBean":"Heading2"}'
                     tagName: h2
                     ↓Text [mobile.components.UIText-1509602577886]: 
-                      textValue: 
+                      i18n: false
+                      textValue:  
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: plain:Date :
@@ -262,7 +275,8 @@ title: Title for MyFlightDetails1
                     beanData: '{"ionBean":"Heading2"}'
                     tagName: h2
                     ↓Text11 [mobile.components.UIText-1509602577945]: 
-                      textValue: 
+                      i18n: false
+                      textValue:  
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc='Design_document', view='PublishedFlights'}'])?.rows[0]?.doc?.PublishedFlight?.date"}
@@ -276,7 +290,8 @@ title: Title for MyFlightDetails1
                     beanData: '{"ionBean":"Heading2"}'
                     tagName: h2
                     ↓Text [mobile.components.UIText-1509602578017]: 
-                      textValue: 
+                      i18n: false
+                      textValue:  
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: plain:Heure :
@@ -287,12 +302,14 @@ title: Title for MyFlightDetails1
                     beanData: '{"ionBean":"Heading2"}'
                     tagName: h2
                     ↓Text11 [mobile.components.UIText-1509602578077]: 
-                      textValue: 
+                      i18n: false
+                      textValue:  
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc='Design_document', view='PublishedFlights'}'])?.rows[0]?.doc?.PublishedFlight?.time"}
                     ↓Text1 [mobile.components.UIText-1509602578096]: 
-                      textValue: 
+                      i18n: false
+                      textValue:  
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: 'plain: Local'
@@ -306,7 +323,8 @@ title: Title for MyFlightDetails1
                     beanData: '{"ionBean":"Heading2"}'
                     tagName: h2
                     ↓Text [mobile.components.UIText-1509604332008]: 
-                      textValue: 
+                      i18n: false
+                      textValue:  
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: plain:Proposé par :
@@ -317,7 +335,8 @@ title: Title for MyFlightDetails1
                     beanData: '{"ionBean":"Heading2"}'
                     tagName: h2
                     ↓Text11 [mobile.components.UIText-1509604332055]: 
-                      textValue: 
+                      i18n: false
+                      textValue:  
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: 'source:{"filter":"Database","project":"FlightShare","input":"usersInfo ? usersInfo[listen([''fs:\/\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc=''Design_document'', view=''PublishedFlights''}''])?.rows[0]?.doc?.PublishedFlight?.by] : ''''"}'
@@ -331,7 +350,8 @@ title: Title for MyFlightDetails1
                     beanData: '{"ionBean":"Heading2"}'
                     tagName: h2
                     ↓Text [mobile.components.UIText-1533028538970]: 
-                      textValue: 
+                      i18n: false
+                      textValue:  
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: plain:Places disponibles
@@ -343,12 +363,14 @@ title: Title for MyFlightDetails1
                     tagName: h2
                     ↓Text11 [mobile.components.UIText-1533028539643]: 
                       isEnabled: false
-                      textValue: 
+                      i18n: false
+                      textValue:  
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc='Design_document', view='PublishedFlightsDetails', include_docs='true'}'])?.rows[0]?.doc?.PublishedFlight?.occupiedSeats - this[\"RegisteredPilotsNumber\"]"}
                     ↓Text111 [mobile.components.UIText-1539338715119]: 
-                      textValue: 
+                      i18n: false
+                      textValue:  
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc='Design_document', view='PublishedFlightsDetails', include_docs='true'}'])?.rows[0]?.doc?.PublishedFlight?.occupiedSeats - this[\"RegisteredPilotsNumber\"]"}
@@ -362,7 +384,8 @@ title: Title for MyFlightDetails1
                     beanData: '{"ionBean":"Heading2"}'
                     tagName: h2
                     ↓Text [mobile.components.UIText-1511798618139]: 
-                      textValue: 
+                      i18n: false
+                      textValue:  
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: plain:Commentaires
@@ -373,7 +396,8 @@ title: Title for MyFlightDetails1
                     beanData: '{"ionBean":"Heading2"}'
                     tagName: h2
                     ↓Text11 [mobile.components.UIText-1511798618218]: 
-                      textValue: 
+                      i18n: false
+                      textValue:  
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.view#SHOWPUBLISHEDFLIGHTSDETAILS, {ddoc='Design_document', view='PublishedFlightsDetails', include_docs='true'}'])?.rows[0]?.doc?.PublishedFlight?.comment"}
@@ -409,7 +433,8 @@ title: Title for MyFlightDetails1
                           }'
                         tagName: ion-icon
                       ↓Text [mobile.components.UIText-1539358709158]: 
-                        textValue: 
+                        i18n: false
+                        textValue:  
                           - xmlizable: 
                             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                             - MobileSmartSourceType: plain:Modifier
@@ -531,7 +556,8 @@ title: Title for MyFlightDetails1
                         beanData: '{"ionBean":"Icon","IconName":"plain:share"}'
                         tagName: ion-icon
                       ↓Text [mobile.components.UIText-1509602578297]: 
-                        textValue: 
+                        i18n: false
+                        textValue:  
                           - xmlizable: 
                             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                             - MobileSmartSourceType: plain:S'inscrire
@@ -571,7 +597,8 @@ title: Title for MyFlightDetails1
           beanData: '{"ionBean":"Listheader"}'
           tagName: ion-list-header
           ↓Text [mobile.components.UIText-1509639614111]: 
-            textValue: 
+            i18n: false
+            textValue:  
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Liste des pilotes Inscrits :
@@ -588,7 +615,8 @@ title: Title for MyFlightDetails1
               beanData: '{"ionBean":"Heading2"}'
               tagName: h2
               ↓Text [mobile.components.UIText-1509638264007]: 
-                textValue: 
+                i18n: false
+                textValue:  
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509637919301"}
@@ -607,7 +635,8 @@ title: Title for MyFlightDetails1
                 beanData: '{"ionBean":"Heading1"}'
                 tagName: h1
                 ↓Text [mobile.components.UIText-1510479746930]: 
-                  textValue: 
+                  i18n: false
+                  textValue:  
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                       - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"usersInfo[item1509637919301]"}
@@ -634,7 +663,8 @@ title: Title for MyFlightDetails1
                   }'
                 tagName: button
                 ↓Text [mobile.components.UIText-1510479747612]: 
-                  textValue: 
+                  i18n: false
+                  textValue:  
                     - xmlizable: 
                       - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                       - MobileSmartSourceType: plain:Supprimer...
@@ -697,7 +727,8 @@ title: Title for MyFlightDetails1
                       beanData: '{"ionBean":"Heading1"}'
                       tagName: h1
                       ↓Text [mobile.components.UIText-1511723177713]: 
-                        textValue: 
+                        i18n: false
+                        textValue:  
                           - xmlizable: 
                             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                             - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1511723177563?.doc?.airport?.id"}
@@ -705,7 +736,8 @@ title: Title for MyFlightDetails1
                       beanData: '{"ionBean":"Heading4"}'
                       tagName: h4
                       ↓Text [mobile.components.UIText-1511723177768]: 
-                        textValue: 
+                        i18n: false
+                        textValue:  
                           - xmlizable: 
                             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                             - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1511723177563?.doc?.airport?.name"}
@@ -753,7 +785,8 @@ title: Title for MyFlightDetails1
           beanData: '{"ionBean":"TextFormat","TextCenter":"plain:text-center"}'
           tagName: div
           ↓Text [mobile.components.UIText-1515521068227]: 
-            textValue: 
+            i18n: false
+            textValue:  
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Glisser une photo sur la gauche pour l'effacer...
@@ -797,7 +830,8 @@ title: Title for MyFlightDetails1
                   beanData: '{"ionBean":"Button","ButtonFormType":"plain:false"}'
                   tagName: button
                   ↓Text [mobile.components.UIText-1516117081023]: 
-                    textValue: 
+                    i18n: false
+                    textValue:  
                       - xmlizable: 
                         - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                         - MobileSmartSourceType: plain:Supprimer

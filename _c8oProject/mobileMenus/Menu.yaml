@@ -55,7 +55,8 @@ tagName: ion-menu
     beanData: '{"ionBean":"Heading2"}'
     tagName: h2
     ↓Text [mobile.components.UIText-1511688938984]: 
-      textValue: 
+      i18n: false
+      textValue:  
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
           - MobileSmartSourceType: script:router.sharedObject.currentUser?.displayName

@@ -12,7 +12,8 @@ title: Configuration
       beanData: '{"ionBean":"BarTitle"}'
       tagName: ion-title
       ↓Text [mobile.components.UIText-1509566916887]: 
-        textValue: 
+        i18n: false
+        textValue:  
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: plain:Configuration
@@ -41,7 +42,8 @@ title: Configuration
       }'
     tagName: button
     ↓Text [mobile.components.UIText-1509567013041]: 
-      textValue: 
+      i18n: false
+      textValue:  
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
           - MobileSmartSourceType: plain:Réinitialiser la base
@@ -66,7 +68,8 @@ title: Configuration
     beanData: '{"ionBean":"Paragraph"}'
     tagName: p
     ↓Text [mobile.components.UIText-1512659280913]: 
-      textValue: 
+      i18n: false
+      textValue:  
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
           - MobileSmartSourceType: plain:Réinitiliser la base aura pour effet d'effacer toutes les données présente pour l'application Flight Share sur votre mobile.  Par contre, comme ces données sont également stockées au niveau du serveur, elles seront automatiquement téléchargées lors de la prochaine demande de synchronisation.
@@ -74,7 +77,8 @@ title: Configuration
     beanData: '{"ionBean":"Paragraph"}'
     tagName: p
     ↓Text [mobile.components.UIText-1512659432080]: 
-      textValue: 
+      i18n: false
+      textValue:  
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
           - MobileSmartSourceType: plain:N'utilisez cette option que si vous voulez repartir d'une base vierge sur votre mobile. L'application ne fonctionnera pas tant que vous n'avez pas resynchronisé les données.
@@ -88,7 +92,8 @@ title: Configuration
       }'
     tagName: button
     ↓Text [mobile.components.UIText-1509977830821]: 
-      textValue: 
+      i18n: false
+      textValue:  
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
           - MobileSmartSourceType: plain:Relancer une synchronisation
@@ -122,7 +127,8 @@ title: Configuration
     beanData: '{"ionBean":"Paragraph"}'
     tagName: p
     ↓Text [mobile.components.UIText-1512659538536]: 
-      textValue: 
+      i18n: false
+      textValue:  
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
           - MobileSmartSourceType: plain:Resynchronisez les données si vous avez réinitialisé la base ou si vous voulez que vos vols partagés et privés soient synchronisés sur le serveur. Normalement, cette opération est automatique, mais il se peut que vous ayez à le faire manuellement en cas de perte de réseau.

@@ -37,7 +37,8 @@ title: Title for Indexing
                 }'
               tagName: h1
               ↓Text [mobile.components.UIText-1520963847569]: 
-                textValue: 
+                i18n: false
+                textValue:  
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: plain:Nous préparons l'application pour la première utilisation...
@@ -79,7 +80,8 @@ title: Title for Indexing
                 }'
               tagName: h1
               ↓Text [mobile.components.UIText-1521196634140]: 
-                textValue: 
+                i18n: false
+                textValue:  
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: plain:Votre application est prête...
@@ -116,7 +118,8 @@ title: Title for Indexing
               beanData: '{"ionBean":"Heading4"}'
               tagName: h4
               ↓Text [mobile.components.UIText-1520965332098]: 
-                textValue: 
+                i18n: false
+                textValue:  
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: plain:Créez vos vols dans votre espace personnel. Vous pourrez spécifier l'origine, la destination, l'avion de votre choix et le nombre de siéges (y compris vous) que vous allez occuper dans l'avion.
@@ -135,7 +138,8 @@ title: Title for Indexing
               beanData: '{"ionBean":"Heading4"}'
               tagName: h4
               ↓Text [mobile.components.UIText-1520965701584]: 
-                textValue: 
+                i18n: false
+                textValue:  
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: plain:Créez vos vols dans votre espace personnel. Vous pourrez spécifier l'origine, la destination, l'avion de votre choix et le nombre de siéges (y compris vous) que vous allez occuper dans l'avion.
@@ -175,7 +179,8 @@ title: Title for Indexing
               beanData: '{"ionBean":"Button"}'
               tagName: button
               ↓Text [mobile.components.UIText-1521194613802]: 
-                textValue: 
+                i18n: false
+                textValue:  
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: plain:Commencer...

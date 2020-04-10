@@ -29,7 +29,8 @@ title: Title for ListAirports
       beanData: '{"ionBean":"BarTitle"}'
       tagName: ion-title
       ↓Text [mobile.components.UIText-1508989654262]: 
-        textValue: 
+        i18n: false
+        textValue:  
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: plain:Recherche Terrain
@@ -118,7 +119,8 @@ title: Title for ListAirports
             beanData: '{"ionBean":"Heading1"}'
             tagName: h1
             ↓Text [mobile.components.UIText-1508989855713]: 
-              textValue: 
+              i18n: false
+              textValue:  
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1508990922923?.value?.iaco"}
@@ -126,29 +128,34 @@ title: Title for ListAirports
             beanData: '{"ionBean":"Paragraph"}'
             tagName: p
             ↓Text [mobile.components.UIText-1508991135346]: 
-              textValue: 
+              i18n: false
+              textValue:  
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1508990922923?.value?.city"}
             ↓Text1 [mobile.components.UIText-1508991165632]: 
-              textValue: 
+              i18n: false
+              textValue:  
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:, 
             ↓Text3 [mobile.components.UIText-1518453263062]: 
-              textValue: 
+              i18n: false
+              textValue:  
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1508990922923?.value?.name"}
             ↓Text11 [mobile.components.UIText-1518453291249]: 
               isEnabled: false
-              textValue: 
+              i18n: false
+              textValue:  
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:, 
             ↓Text2 [mobile.components.UIText-1508991176844]: 
               isEnabled: false
-              textValue: 
+              i18n: false
+              textValue:  
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1508990922923?.value?.country"}
@@ -189,7 +196,8 @@ title: Title for ListAirports
               beanData: '{"ionBean":"Icon","IconName":"plain:eye"}'
               tagName: ion-icon
             ↓Text [mobile.components.UIText-1508992143753]: 
-              textValue: 
+              i18n: false
+              textValue:  
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:Détails

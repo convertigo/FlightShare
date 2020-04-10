@@ -12,7 +12,8 @@ title: Liste des utilisateurs
       beanData: '{"ionBean":"BarTitle"}'
       tagName: ion-title
       ↓Text1 [mobile.components.UIText-1511716863303]: 
-        textValue: 
+        i18n: false
+        textValue:  
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: plain:Liste des utilisateurs
@@ -94,7 +95,8 @@ title: Liste des utilisateurs
           beanData: '{"ionBean":"Heading1"}'
           tagName: h1
           ↓Text [mobile.components.UIText-1511717333004]: 
-            textValue: 
+            i18n: false
+            textValue:  
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1511717215770?.value?.userinfo?.displayName"}

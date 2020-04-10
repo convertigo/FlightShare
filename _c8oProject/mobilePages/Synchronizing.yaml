@@ -51,7 +51,8 @@ title: Synchronisation données
               }'
             tagName: h1
             ↓Text [mobile.components.UIText-1510237577396]: 
-              textValue: 
+              i18n: false
+              textValue:  
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:AERO TOURING CLUB de FRANCE
@@ -64,7 +65,8 @@ title: Synchronisation données
               }'
             tagName: h1
             ↓Text [mobile.components.UIText-1510238781725]: 
-              textValue: 
+              i18n: false
+              textValue:  
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:"Flight Share"
@@ -80,7 +82,8 @@ title: Synchronisation données
               }'
             tagName: h4
             ↓Text [mobile.components.UIText-1510002590339]: 
-              textValue: 
+              i18n: false
+              textValue:  
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:Téléchargement des données initiales en cours...
@@ -88,7 +91,8 @@ title: Synchronisation données
             beanData: '{"ionBean":"Heading2"}'
             tagName: h2
             ↓Text [mobile.components.UIText-1510223392800]: 
-              textValue: 
+              i18n: false
+              textValue:  
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: 'plain: '

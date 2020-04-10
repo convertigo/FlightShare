@@ -13,7 +13,8 @@ title: Mes vols
       beanData: '{"ionBean":"BarTitle"}'
       tagName: ion-title
       ↓Text [mobile.components.UIText-1508938649873]: 
-        textValue: 
+        i18n: false
+        textValue:  
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: plain:ATCF Flight Share
@@ -73,17 +74,20 @@ title: Mes vols
               beanData: '{"ionBean":"Heading1"}'
               tagName: h1
               ↓Text [mobile.components.UIText-1508946399286]: 
-                textValue: 
+                i18n: false
+                textValue:  
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509123535617?.doc.flight.from"}
               ↓Text2 [mobile.components.UIText-1509123662013]: 
-                textValue: 
+                i18n: false
+                textValue:  
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: plain:-
               ↓Text1 [mobile.components.UIText-1509123645382]: 
-                textValue: 
+                i18n: false
+                textValue:  
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509123535617?.doc.flight.to"}
@@ -91,7 +95,8 @@ title: Mes vols
               beanData: '{"ionBean":"Heading2"}'
               tagName: h2
               ↓Text1 [mobile.components.UIText-1509555731704]: 
-                textValue: 
+                i18n: false
+                textValue:  
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509123535617?.doc.flight.date"}
@@ -99,7 +104,8 @@ title: Mes vols
               beanData: '{"ionBean":"Heading5"}'
               tagName: h5
               ↓Text [mobile.components.UIText-1508946970768]: 
-                textValue: 
+                i18n: false
+                textValue:  
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509123535617?.doc.flight.comment"}
@@ -164,7 +170,8 @@ title: Mes vols
                 }'
               tagName: button
               ↓Text [mobile.components.UIText-1509567810831]: 
-                textValue: 
+                i18n: false
+                textValue:  
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: plain:Supprimer...

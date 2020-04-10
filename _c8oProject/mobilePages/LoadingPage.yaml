@@ -31,7 +31,8 @@ title: Title for NoDataPage1
               }'
             tagName: h1
             ↓Text [mobile.components.UIText-1559135496044]: 
-              textValue: 
+              i18n: false
+              textValue:  
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:AERO TOURING CLUB de FRANCE
@@ -48,7 +49,8 @@ title: Title for NoDataPage1
             beanData: '{"ionBean":"Heading1"}'
             tagName: h1
             ↓Text [mobile.components.UIText-1558706996714]: 
-              textValue: 
+              i18n: false
+              textValue:  
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:Chargement en cours...
@@ -79,7 +81,8 @@ title: Title for NoDataPage1
               }'
             tagName: h4
             ↓Text [mobile.components.UIText-1520405174306]: 
-              textValue: 
+              i18n: false
+              textValue:  
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:Powered by Convertigo

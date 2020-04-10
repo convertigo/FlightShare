@@ -5,7 +5,8 @@ title: Title for FlightConf
   beanData: '{"ionBean":"Heading1"}'
   tagName: h1
   ↓Text [mobile.components.UIText-1519224981511]: 
-    textValue: 
+    i18n: false
+    textValue:  
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
         - MobileSmartSourceType: plain:Options...
@@ -28,7 +29,8 @@ title: Title for FlightConf
         beanData: '{"ionBean":"Label"}'
         tagName: ion-label
         ↓Text [mobile.components.UIText-1519228084531]: 
-          textValue: 
+          i18n: false
+          textValue:  
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Futurs seulement
@@ -74,7 +76,8 @@ title: Title for FlightConf
         beanData: '{"ionBean":"Label"}'
         tagName: ion-label
         ↓Text [mobile.components.UIText-1519228416989]: 
-          textValue: 
+          i18n: false
+          textValue:  
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Dates décroissantes

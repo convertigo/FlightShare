@@ -28,7 +28,8 @@ title: Title for AddFlight
       beanData: '{"ionBean":"BarTitle"}'
       tagName: ion-title
       ↓Text1 [mobile.components.UIText-1538755023008]: 
-        textValue: 
+        i18n: false
+        textValue:  
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: 'script:this.navParams.data == ''ADD'' ? ''Ajouter un vol'' : ''Modifier un vol'''
@@ -46,7 +47,8 @@ title: Title for AddFlight
           beanData: '{"ionBean":"Label"}'
           tagName: ion-label
           ↓Text [mobile.components.UIText-1509122730948]: 
-            textValue: 
+            i18n: false
+            textValue:  
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:De :
@@ -99,7 +101,8 @@ title: Title for AddFlight
           beanData: '{"ionBean":"Label"}'
           tagName: ion-label
           ↓Text [mobile.components.UIText-1509122723717]: 
-            textValue: 
+            i18n: false
+            textValue:  
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:A :
@@ -110,7 +113,8 @@ title: Title for AddFlight
           beanData: '{"ionBean":"Label"}'
           tagName: ion-label
           ↓Text [mobile.components.UIText-1509079272523]: 
-            textValue: 
+            i18n: false
+            textValue:  
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Avion :
@@ -149,7 +153,8 @@ title: Title for AddFlight
           beanData: '{"ionBean":"Label"}'
           tagName: ion-label
           ↓Text [mobile.components.UIText-1511763946931]: 
-            textValue: 
+            i18n: false
+            textValue:  
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Places Libres
@@ -171,7 +176,8 @@ title: Title for AddFlight
             beanData: '{"ionBean":"Label","RangeLeft":"plain:range-left"}'
             tagName: ion-label
             ↓Text [mobile.components.UIText-1511764266891]: 
-              textValue: 
+              i18n: false
+              textValue:  
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:0
@@ -179,7 +185,8 @@ title: Title for AddFlight
             beanData: '{"ionBean":"Label","RangeRight":"plain:range-right"}'
             tagName: ion-label
             ↓Text [mobile.components.UIText-1511764274939]: 
-              textValue: 
+              i18n: false
+              textValue:  
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: script:this.global?.selectedPlane?.max
@@ -190,7 +197,8 @@ title: Title for AddFlight
           beanData: '{"ionBean":"Label"}'
           tagName: ion-label
           ↓Text [mobile.components.UIText-1509076453484]: 
-            textValue: 
+            i18n: false
+            textValue:  
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Date :
@@ -258,7 +266,8 @@ title: Title for AddFlight
           beanData: '{"ionBean":"Label"}'
           tagName: ion-label
           ↓Text [mobile.components.UIText-1509118067615]: 
-            textValue: 
+            i18n: false
+            textValue:  
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Heure :
@@ -283,7 +292,8 @@ title: Title for AddFlight
           beanData: '{"ionBean":"Label","Floating":"plain:floating"}'
           tagName: ion-label
           ↓Text [mobile.components.UIText-1509076547731]: 
-            textValue: 
+            i18n: false
+            textValue:  
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Commentaires
@@ -304,7 +314,8 @@ title: Title for AddFlight
         beanData: '{"ionBean":"ResetButton"}'
         tagName: button
         ↓Text [mobile.components.UIText-1509641736452]: 
-          textValue: 
+          i18n: false
+          textValue:  
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Cancel
@@ -315,7 +326,8 @@ title: Title for AddFlight
         beanData: '{"ionBean":"SubmitButton"}'
         tagName: button
         ↓Text [mobile.components.UIText-1509117624475]: 
-          textValue: 
+          i18n: false
+          textValue:  
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Ok
