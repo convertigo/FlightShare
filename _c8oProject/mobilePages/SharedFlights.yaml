@@ -27,7 +27,7 @@ title: Vols partagés
       tagName: ion-title
       ↓Text [mobile.components.UIText-1508945977241]: 
         i18n: false
-        textValue:  
+        textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: plain:Vols Publiés
@@ -142,27 +142,27 @@ title: Vols partagés
             tagName: h1
             ↓Text3 [mobile.components.UIText-1539338873977]: 
               i18n: false
-              textValue:  
+              textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509573021875?.value?.from"}
             ↓Text [mobile.components.UIText-1509573147587]: 
-              isEnabled: false
               i18n: false
-              textValue:  
+              isEnabled: false
+              textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509573021875?.doc?.PublishedFlight?.from"}
             ↓Text2 [mobile.components.UIText-1509573147599]: 
               i18n: false
-              textValue:  
+              textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:-
             ↓Text1 [mobile.components.UIText-1509573147614]: 
-              isEnabled: false
               i18n: false
-              textValue:  
+              isEnabled: false
+              textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509573021875?.doc?.PublishedFlight?.to"}
@@ -186,7 +186,7 @@ title: Vols partagés
                   - MobileSmartSourceType: plain:0.1s
             ↓Text11 [mobile.components.UIText-1539338836292]: 
               i18n: false
-              textValue:  
+              textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509573021875?.value?.to"}
@@ -195,7 +195,7 @@ title: Vols partagés
             tagName: h2
             ↓Text1 [mobile.components.UIText-1509573147640]: 
               i18n: false
-              textValue:  
+              textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509573021875?.doc?.PublishedFlight?.date"}
@@ -246,13 +246,13 @@ title: Vols partagés
                   - MobileSmartSourceType: script:usersInfo
               ↓Text1 [mobile.components.UIText-1509574418278]: 
                 i18n: false
-                textValue:  
+                textValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: 'plain:Par : '
               ↓Text [mobile.components.UIText-1509574255518]: 
                 i18n: false
-                textValue:  
+                textValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"usersInfo[item1509573021875?.doc?.PublishedFlight?.by]"}
@@ -267,25 +267,25 @@ title: Vols partagés
                   - MobileSmartSourceType: script:seatsInfo != undefined
               ↓Text1 [mobile.components.UIText-1518453902949]: 
                 i18n: false
-                textValue:  
+                textValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: plain:Places libres :
               ↓Text111 [mobile.components.UIText-1518516641699]: 
                 i18n: false
-                textValue:  
+                textValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"seatsInfo[item1509573021875?.id]"}
               ↓Text [mobile.components.UIText-1518981068518]: 
                 i18n: false
-                textValue:  
+                textValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: 'plain: / '
               ↓Text2 [mobile.components.UIText-1518981083267]: 
                 i18n: false
-                textValue:  
+                textValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"seatsByPlane[item1509573021875?.value?.plane]"}
@@ -338,7 +338,7 @@ title: Vols partagés
             tagName: h5
             ↓Text [mobile.components.UIText-1509573147665]: 
               i18n: false
-              textValue:  
+              textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509573021875?.doc?.PublishedFlight?.comment"}
@@ -379,7 +379,7 @@ title: Vols partagés
             tagName: button
             ↓Text [mobile.components.UIText-1538570541883]: 
               i18n: false
-              textValue:  
+              textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:Supprimer...

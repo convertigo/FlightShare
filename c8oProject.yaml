@@ -40,4 +40,4 @@
   ↓CouchDb_schema [references.ImportXsdSchemaReference]: 
     urlpath: http://localhost:18080/convertigo/xsd/couchdb/CouchDb.xsd
   ↓lib_FullSyncGrp_reference [references.ProjectSchemaReference]: 
-    projectName: lib_FullSyncGrp
+    projectName: lib_FullSyncGrp=https://github.com/convertigo/c8oprj-lib-fullsync-grp.git

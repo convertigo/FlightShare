@@ -13,7 +13,7 @@ title: Liste des utilisateurs
       tagName: ion-title
       ↓Text11 [mobile.components.UIText-1519120529825]: 
         i18n: false
-        textValue:  
+        textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.get#SHOWUSERDETAILS, {ddoc='Design_document', view='users', include_docs='false'}'])?.userinfo?.displayName"}
@@ -71,7 +71,7 @@ title: Liste des utilisateurs
       tagName: ion-item
       ↓Text [mobile.components.UIText-1511712640268]: 
         i18n: false
-        textValue:  
+        textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: 'plain:email: '
@@ -85,7 +85,7 @@ title: Liste des utilisateurs
               - MobileSmartSourceType: script:'mailto:' + listen(['fs://flightshare_fullsync.get#SHOWUSERDETAILS'])?.userinfo?.email
         ↓Text1 [mobile.components.UIText-1511714360183]: 
           i18n: false
-          textValue:  
+          textValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
               - MobileSmartSourceType: source:{"filter":"Database","project":"FlightShare","input":"listen(['fs:\/\/flightshare_fullsync.get#SHOWUSERDETAILS, {ddoc='Design_document', view='users', include_docs='false'}'])?.userinfo?.email"}

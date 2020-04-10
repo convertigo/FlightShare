@@ -6,7 +6,7 @@ title: Title for FlightConf
   tagName: h1
   ↓Text [mobile.components.UIText-1519224981511]: 
     i18n: false
-    textValue:  
+    textValue: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
         - MobileSmartSourceType: plain:Options...
@@ -30,7 +30,7 @@ title: Title for FlightConf
         tagName: ion-label
         ↓Text [mobile.components.UIText-1519228084531]: 
           i18n: false
-          textValue:  
+          textValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Futurs seulement
@@ -77,7 +77,7 @@ title: Title for FlightConf
         tagName: ion-label
         ↓Text [mobile.components.UIText-1519228416989]: 
           i18n: false
-          textValue:  
+          textValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Dates décroissantes

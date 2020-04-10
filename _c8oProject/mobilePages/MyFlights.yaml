@@ -14,7 +14,7 @@ title: Mes vols
       tagName: ion-title
       ↓Text [mobile.components.UIText-1508938649873]: 
         i18n: false
-        textValue:  
+        textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: plain:ATCF Flight Share
@@ -75,19 +75,19 @@ title: Mes vols
               tagName: h1
               ↓Text [mobile.components.UIText-1508946399286]: 
                 i18n: false
-                textValue:  
+                textValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509123535617?.doc.flight.from"}
               ↓Text2 [mobile.components.UIText-1509123662013]: 
                 i18n: false
-                textValue:  
+                textValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: plain:-
               ↓Text1 [mobile.components.UIText-1509123645382]: 
                 i18n: false
-                textValue:  
+                textValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509123535617?.doc.flight.to"}
@@ -96,7 +96,7 @@ title: Mes vols
               tagName: h2
               ↓Text1 [mobile.components.UIText-1509555731704]: 
                 i18n: false
-                textValue:  
+                textValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509123535617?.doc.flight.date"}
@@ -105,7 +105,7 @@ title: Mes vols
               tagName: h5
               ↓Text [mobile.components.UIText-1508946970768]: 
                 i18n: false
-                textValue:  
+                textValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509123535617?.doc.flight.comment"}
@@ -171,7 +171,7 @@ title: Mes vols
               tagName: button
               ↓Text [mobile.components.UIText-1509567810831]: 
                 i18n: false
-                textValue:  
+                textValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                     - MobileSmartSourceType: plain:Supprimer...

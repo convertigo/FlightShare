@@ -13,7 +13,7 @@ title: Title for SelectPlane
       tagName: ion-title
       ↓Text [mobile.components.UIText-1509076997079]: 
         i18n: false
-        textValue:  
+        textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: plain:Selection Avion
@@ -133,7 +133,7 @@ title: Title for SelectPlane
                     tagName: h1
                     ↓Text [mobile.components.UIText-1509077826420]: 
                       i18n: false
-                      textValue:  
+                      textValue: 
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509077739049?.value?.TAG"}
@@ -148,13 +148,13 @@ title: Title for SelectPlane
                       tagName: h1
                       ↓Text1 [mobile.components.UIText-1509078594799]: 
                         i18n: false
-                        textValue:  
+                        textValue: 
                           - xmlizable: 
                             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                             - MobileSmartSourceType: plain:Places :
                       ↓Text [mobile.components.UIText-1509078509309]: 
                         i18n: false
-                        textValue:  
+                        textValue: 
                           - xmlizable: 
                             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                             - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509077739049?.value?.SEATS"}
@@ -169,7 +169,7 @@ title: Title for SelectPlane
                     tagName: h3
                     ↓Text [mobile.components.UIText-1509078136839]: 
                       i18n: false
-                      textValue:  
+                      textValue: 
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509077739049?.value?.TYPE"}
@@ -184,19 +184,19 @@ title: Title for SelectPlane
                       tagName: h3
                       ↓Text1 [mobile.components.UIText-1509078685649]: 
                         i18n: false
-                        textValue:  
+                        textValue: 
                           - xmlizable: 
                             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                             - MobileSmartSourceType: plain:Vitesse :
                       ↓Text [mobile.components.UIText-1509078655637]: 
                         i18n: false
-                        textValue:  
+                        textValue: 
                           - xmlizable: 
                             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                             - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1509077739049?.value?.SPEED"}
                       ↓Text2 [mobile.components.UIText-1509078699389]: 
                         i18n: false
-                        textValue:  
+                        textValue: 
                           - xmlizable: 
                             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                             - MobileSmartSourceType: 'plain: Kt'

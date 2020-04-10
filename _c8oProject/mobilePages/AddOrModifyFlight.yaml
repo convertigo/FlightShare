@@ -29,7 +29,7 @@ title: Title for AddFlight
       tagName: ion-title
       ↓Text1 [mobile.components.UIText-1538755023008]: 
         i18n: false
-        textValue:  
+        textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: 'script:this.navParams.data == ''ADD'' ? ''Ajouter un vol'' : ''Modifier un vol'''
@@ -48,7 +48,7 @@ title: Title for AddFlight
           tagName: ion-label
           ↓Text [mobile.components.UIText-1509122730948]: 
             i18n: false
-            textValue:  
+            textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:De :
@@ -102,7 +102,7 @@ title: Title for AddFlight
           tagName: ion-label
           ↓Text [mobile.components.UIText-1509122723717]: 
             i18n: false
-            textValue:  
+            textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:A :
@@ -114,7 +114,7 @@ title: Title for AddFlight
           tagName: ion-label
           ↓Text [mobile.components.UIText-1509079272523]: 
             i18n: false
-            textValue:  
+            textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Avion :
@@ -154,7 +154,7 @@ title: Title for AddFlight
           tagName: ion-label
           ↓Text [mobile.components.UIText-1511763946931]: 
             i18n: false
-            textValue:  
+            textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Places Libres
@@ -177,7 +177,7 @@ title: Title for AddFlight
             tagName: ion-label
             ↓Text [mobile.components.UIText-1511764266891]: 
               i18n: false
-              textValue:  
+              textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:0
@@ -186,7 +186,7 @@ title: Title for AddFlight
             tagName: ion-label
             ↓Text [mobile.components.UIText-1511764274939]: 
               i18n: false
-              textValue:  
+              textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: script:this.global?.selectedPlane?.max
@@ -198,7 +198,7 @@ title: Title for AddFlight
           tagName: ion-label
           ↓Text [mobile.components.UIText-1509076453484]: 
             i18n: false
-            textValue:  
+            textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Date :
@@ -267,7 +267,7 @@ title: Title for AddFlight
           tagName: ion-label
           ↓Text [mobile.components.UIText-1509118067615]: 
             i18n: false
-            textValue:  
+            textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Heure :
@@ -293,7 +293,7 @@ title: Title for AddFlight
           tagName: ion-label
           ↓Text [mobile.components.UIText-1509076547731]: 
             i18n: false
-            textValue:  
+            textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Commentaires
@@ -315,7 +315,7 @@ title: Title for AddFlight
         tagName: button
         ↓Text [mobile.components.UIText-1509641736452]: 
           i18n: false
-          textValue:  
+          textValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Cancel
@@ -327,7 +327,7 @@ title: Title for AddFlight
         tagName: button
         ↓Text [mobile.components.UIText-1509117624475]: 
           i18n: false
-          textValue:  
+          textValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
               - MobileSmartSourceType: plain:Ok

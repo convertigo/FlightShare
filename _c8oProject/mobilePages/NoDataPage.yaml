@@ -42,7 +42,7 @@ title: Title for NoDataPage
             tagName: p
             ↓Text [mobile.components.UIText-1558538076927]: 
               i18n: false
-              textValue:  
+              textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: 'plain: '
@@ -51,7 +51,7 @@ title: Title for NoDataPage
             tagName: h1
             ↓Text [mobile.components.UIText-1558530875306]: 
               i18n: false
-              textValue:  
+              textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: plain:L'application n'a pas été initialisée.
@@ -64,7 +64,7 @@ title: Title for NoDataPage
           tagName: p
           ↓Text [mobile.components.UIText-1558531193700]: 
             i18n: false
-            textValue:  
+            textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: plain:Pour démarrer, cette application nécessite une connexion réseau au moins au premier démarrage. Par la suite, l'application va pouvoir démarrer même sans connexion réseau.

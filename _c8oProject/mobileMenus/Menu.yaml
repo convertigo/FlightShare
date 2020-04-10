@@ -56,7 +56,7 @@ tagName: ion-menu
     tagName: h2
     ↓Text [mobile.components.UIText-1511688938984]: 
       i18n: false
-      textValue:  
+      textValue: 
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
           - MobileSmartSourceType: script:router.sharedObject.currentUser?.displayName

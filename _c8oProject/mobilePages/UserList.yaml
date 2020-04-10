@@ -13,7 +13,7 @@ title: Liste des utilisateurs
       tagName: ion-title
       ↓Text1 [mobile.components.UIText-1511716863303]: 
         i18n: false
-        textValue:  
+        textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
             - MobileSmartSourceType: plain:Liste des utilisateurs
@@ -96,7 +96,7 @@ title: Liste des utilisateurs
           tagName: h1
           ↓Text [mobile.components.UIText-1511717333004]: 
             i18n: false
-            textValue:  
+            textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                 - MobileSmartSourceType: source:{"filter":"Iteration","project":"FlightShare","input":"item1511717215770?.value?.userinfo?.displayName"}
