@@ -1,3 +1,4 @@
+![Java CI with Gradle](https://github.com/convertigo/FlightShare/workflows/Java%20CI%20with%20Gradle/badge.svg)
 # Flight Share #
 Flight Share is an application able to share flights within Pilots using Flyin Club Planes
  
