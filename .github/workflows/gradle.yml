@@ -24,3 +24,8 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew --info -Pconvertigo.compileMobileBuilder.mode=debug car
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: C8oCloudSignup.car
+        path: ./build/FlightShare.car
