@@ -27,5 +27,5 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v1
       with:
-        name: C8oCloudSignup.car
+        name: FlightShare.car
         path: ./build/FlightShare.car
